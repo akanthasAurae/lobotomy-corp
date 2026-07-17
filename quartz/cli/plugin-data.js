@@ -225,7 +225,7 @@ export function createConfigFromDefault() {
         analytics: { provider: "plausible" },
         locale: "en-US",
         baseUrl: "quartz.jzhao.xyz",
-        ignorePatterns: ["private", "templates", ".obsidian"],
+        ignorePatterns: ["private", "templates"],
         theme: {
           cdnCaching: true,
           typography: {

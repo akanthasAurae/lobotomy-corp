@@ -15,9 +15,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Carrois Gothic SC
+      body: Gill Sans
+      code: Jetbrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
