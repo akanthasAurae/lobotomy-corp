@@ -193,7 +193,7 @@
         /* Carrois Gothic SC */
 @font-face {
   font-family: 'Carrois Gothic SC';
-  src: url('../lobotomy-corporation/static/fonts/CarroisGothicSC-Regular.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/CarroisGothicSC-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -202,70 +202,70 @@
         /* Gill Sans */
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-Light.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-LightItalic.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-LightItalic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-Italic.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-Medium.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-MediumItalic.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-MediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-Bold.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-BoldItalic.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-Heavy.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-Heavy.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gill Sans';
-  src: url('../lobotomy-corporation/static/fonts/GillSans-HeavyItalic.otf') format('opentype');
+  src: url('../lobotomy-corp/static/fonts/GillSans-HeavyItalic.otf') format('opentype');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -274,108 +274,108 @@
         /* JetBrains Mono */
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Thin.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-ThinItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-ExtraLight.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-ExtraLightItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-ExtraLightItalic.ttf') format('truetype');
   font-weight: 200;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Light.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-LightItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Regular.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Italic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Italic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Medium.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }@font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-MediumItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-SemiBold.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }@font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetBrainsMono-SemiBoldItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetBrainsMono-SemiBoldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetbrainsMono-Bold.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetbrainsMono-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }@font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }@font-face {
   font-family: 'JetBrains Mono';
-  src: url('../lobotomy-corporation/static/fonts/JetBrainsMono-ExtraBoldItalic.ttf') format('truetype');
+  src: url('../lobotomy-corp/static/fonts/JetBrainsMono-ExtraBoldItalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
   font-display: swap;
