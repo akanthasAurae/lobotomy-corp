@@ -1,22 +1,22 @@
 @use "./variables.scss" as *;
 @use "./fonts.css" as *;
 
-// put your custom CSS here!
+// put your custom css here!
 // oh i'm gonna put it in alright
 h1, h2, h3, h4, h5, h6 {
     &::selection {
-        font-family: 'Carrois Gothic SC';
+        font-family: 'carrois gothic sc';
         color: var(--light);
     }
 }
 p, span, button, a, b, i, em, strong, thead, table, td, th {
-    font-family: 'Gill Sans';
+    font-family: 'gill sans';
 }
 code {
-    font-family: 'JetBrains Mono';
-    background-color: color-mix(in oklab, currentColor 10%, transparent 100%);
+    font-family: 'Jetbrains mono';
+    background-color: color-mix(in oklab, currentcolor 10%, transparent 100%);
     & > p, span, a, b, i, em, strong {
-        font-family: 'JetBrains Mono';
+        font-family: 'Jetbrains mono';
     }
 }
 
@@ -54,14 +54,14 @@ code {
     --b-execute: var(--dead);
     --rabbits: #fc3e1a;
 
-    --risk-A: var(--dead);
-    --risk-W: #7a2ff2;
-    --risk-H: #fff900;
-    --risk-T: #1aa1ff;
-    --risk-Z: #22f900;
-    --risk-U: #5a5a5a;
+    --risk-a: var(--dead);
+    --risk-w: #7a2ff2;
+    --risk-h: #fff900;
+    --risk-t: #1aa1ff;
+    --risk-z: #22f900;
+    --risk-u: #5a5a5a;
 
-    --o-amber: var(--res-W);
+    --o-amber: var(--res-w);
     --o-crimson: #dc143c;
     --o-green: #008000;
     --o-indigo: #1e90ff;
@@ -82,44 +82,44 @@ code {
     --hopeless: #ff5100;
     --overwhelm: var(--dead);
     --reverence: #ffffff;
-    --dead: #FF0000;
+    --dead: #ff0000;
     --panic: #2d75ff;
-    --working: ##EBD853
+    --working: ##ebd853
     --en-route: var(--working);
     --uncontrol: #ff69b4;
 
     --suit: #4682b4;
     --weap: #b22222;
     --gift: #b28039;
-    --damage: #C26667;
-    --res: #BD986F;
+    --damage: #c26667;
+    --res: #bd986f;
 
-    --res-A: #4169e1;
-    --res-I: #14b19c;
-    --res-R: #00ff00;
-    --res-E: #90ee90;
-    --res-N: var(--reverence);
-    --res-W: #ffa500;
-    --res-V: var(--dead);
+    --res-a: #4169e1;
+    --res-i: #14b19c;
+    --res-r: #00ff00;
+    --res-e: #90ee90;
+    --res-n: var(--reverence);
+    --res-w: #ffa500;
+    --res-v: var(--dead);
 
     --warn-1: var(--terrify);
     --warn-2: var(--hopeless);
     --warn-3: var(--overwhelm);
-    --meltdown: #ED7D31;
+    --meltdown: #ed7d31;
 
-    --team-control: #D8D556;
-    --team-info: #81339C;
-    --team-train: #DA7F2F;
-    --team-safety: #69A448;
-    --team-central: #FFC50B;
+    --team-control: #d8d556;
+    --team-info: #81339c;
+    --team-train: #da7f2f;
+    --team-safety: #69a448;
+    --team-central: #ffc50b;
     --team-disc: var(--dead);
-    --team-welfare: #456FFF;
+    --team-welfare: #456fff;
     --team-extr: #ecd808;
     --team-record: #606060;
     --team-arch: var(--reverence);
 
     --l-asiyah: #ffff00;
-    --l-briah: var(--res-R);
+    --l-briah: var(--res-r);
     --l-atziluth: #c0c0c0;
 }
 
@@ -134,18 +134,18 @@ code {
     --shadow-2: calc(var(--shadow) / 2);
     --invert-2: calc(var(--shadow-2) * -1);
     --border: #1a1a1a;
-    --bordOne: /* Text shadow */
+    --bordone: /* text shadow */
         var(--shadow) var(--shadow) 0px var(--border),
         var(--invert) var(--shadow) 0px var(--border),
         var(--shadow) var(--invert) 0px var(--border),
         var(--invert) var(--invert) 0px var(--border);
-    --bordTwo: /* Border */
+    --bordtwo: /* border */
         drop-shadow(var(--shadow-2) 0px 0px var(--border))
         drop-shadow(0px var(--shadow-2) 0px var(--border))
         drop-shadow(var(--invert-2) 0px 0px var(--border))
         drop-shadow(0px var(--invert-2) 0px var(--border));
-    filter: var(--bordTwo);
-    text-shadow: var(--bordOne);
+    filter: var(--bordtwo);
+    text-shadow: var(--bordone);
     --gradient: calc(0.1em + var(--size-w));
     --begin: calc(var(--gradient) + 0.5em);
     --end: calc(100% - 0.2em);
@@ -184,7 +184,7 @@ h1[class^="team"] {
     }
 }
     /*
-        Checkboxes
+        checkboxes
     */
 li:has(> input[type=checkbox][checked]) {
     text-decoration: underline;
@@ -202,7 +202,7 @@ li:has(> input[type=checkbox]:not([checked])) {
 }
 
     /*
-        Body
+        body
     */
 h1, h2, h3 {
     color: var(--light);
@@ -217,7 +217,7 @@ h1, h2, h3 {
     padding-right: calc(var(--padding)*8);
     & > a {
         color: var(--light);
-        font-family: 'Carrois Gothic SC';
+        font-family: 'carrois gothic sc';
     }
     &.has-subtitle {
         margin-bottom: 0px;
@@ -235,7 +235,7 @@ a:hover {
 }
 
     /*
-        Callouts
+        callouts
     */
 .callout {
     --size-em: 2em;
@@ -281,7 +281,7 @@ a:hover {
             div.callout-title-inner > p {
                 padding-left: calc(var(--size-em) * 3);
                 padding-right: calc(var(--size-em) * 3);
-                font-family: 'Carrois Gothic SC';
+                font-family: 'carrois gothic sc';
                 color: var(--light);
                 background-color: var(--color, var(--light));
                 mask-image: linear-gradient(135deg, transparent 15%, black 15%), linear-gradient(45deg, black 85%, transparent 85%);
@@ -314,10 +314,10 @@ a:hover {
 
 
     /*
-        Colors & Icons
+        colors & icons
     */
 
-    /* Shared colors */
+    /* shared colors */
 .fort, .inst, .red, .shieldred {
     --color: var(--red);
 }
@@ -331,7 +331,7 @@ a:hover {
     --color: var(--pale);
 }
 .special {
-    /* Special work types */
+    /* special work types */
     --color: var(--special);
 }
 
@@ -339,172 +339,172 @@ a:hover {
     --color: var(--dead);
 }
 .resistant, .briah {
-    --color: var(--res-R);
+    --color: var(--res-r);
 }
 .working, .en-route {
     --color: var(--working);
 }
 .relaxed, .calm {
     --color: var(--relax);
-    --icon-local: url('../assets/panic0.png');
+    --icon-local: url('../assets/icons/panic0.png');
     --icon: url('/assets/icons/panic0.png');  
 }
-.ordealAmber, .weak {
-    --color: var(--res-W);
+.ordealamber, .weak {
+    --color: var(--res-w);
 }
-.team-arch, .reverence, .normal, .ordealWhite .denyW, .plus, .plusI, .minus, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, .calmI, .terrifyI, .hopelessI, .overwhelmI {
+.team-arch, .reverence, .normal, .ordealwhite .denyw, .plus, .plusi, .minus, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, .calmi, .terrifyi, .hopelessi, .overwhelmi {
     --color: var(--reverence);
 }
 .pe, .bullets {
     --color: var(--bullet);
 }
-.ordealCrimson {
+.ordealcrimson {
     --color: var(--o-crimson);
 }
-.ordealIndigo {
+.ordealindigo {
     --color: var(--o-indigo);
 }
-.ordealGreen {
+.ordealgreen {
     --color: var(--o-green);
 }
 
     /*
-        Stats
+        stats
     */
 .sp, .def, .spregen {
     --color: var(--sp);
 }
-.infoI, .suitI, .weapI, .giftI, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6 {
+.infoi, .suiti, .weapi, .gifti, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6 {
     --color: var(--info);
 }
 .hp {
     --color: var(--hp);
-    --icon-local: url('../assets/statHP.png');
-    --icon: url('/assets/icons/statHP.png');  
+    --icon-local: url('../assets/icons/stathp.png');
+    --icon: url('/assets/icons/stathp.png');  
 }
 .hpregen {
     --color: var(--hp-regen);
-    --icon-local: url('../assets/statHPRegen.png');
-    --icon: url('statHPRegen.png');  
+    --icon-local: url('../assets/icons/stathpregen.png');
+    --icon: url('//stathpregen.png');  
 }
 
 .atk {
     --color: var(--atk);
-    --icon-local: url('../assets/statAtkDmg.png');
-    --icon: url('/assets/icons/statAtkDmg.png');  
+    --icon-local: url('../assets/icons/statatkdmg.png');
+    --icon: url('/assets/icons/statatkdmg.png');  
 }
 .def {
-    --icon-local: url('../assets/statSuitDef.png');
-    --icon: url('/assets/icons/statSuitDef.png');  
+    --icon-local: url('../assets/icons/statsuitdef.png');
+    --icon: url('/assets/icons/statsuitdef.png');  
 }
 .defw {
-    --icon-local: url('../assets/iconDef.png');
-    --icon: url('/assets/icons/iconDef.png');  
+    --icon-local: url('../assets/icons/icondef.png');
+    --icon: url('/assets/icons/icondef.png');  
 }
 .atkspd {
     --color: var(--atk-spd);
-    --icon-local: url('../assets/statAtkSpd.png');
-    --icon: url('/assets/icons/statAtkSpd.png');  
+    --icon-local: url('../assets/icons/statatkspd.png');
+    --icon: url('/assets/icons/statatkspd.png');  
 }
 .spd {
     --color: var(--spd);
-    --icon-local: url('../assets/statMovSpd.png');
-    --icon: url('/assets/icons/statMovSpd.png');  
+    --icon-local: url('../assets/icons/statmovspd.png');
+    --icon: url('/assets/icons/statmovspd.png');  
 }
 .wrkspd {
     --color: var(--wrk-spd);
-    --icon-local: url('../assets/statwrkspd.png');
+    --icon-local: url('../assets/icons/statwrkspd.png');
     --icon: url('/assets/icons/statwrkspd.png');  
 }
 .wrkscc {
     --color: var(--wrk-scc);
-    --icon-local: url('../assets/statwrkscc.png');
+    --icon-local: url('../assets/icons/statwrkscc.png');
     --icon: url('/assets/icons/statwrkscc.png');  
 }
 .growrate {
     --color: var(--grow-rate);
-    --icon-local: url('../assets/statgrowrate.png');
+    --icon-local: url('../assets/icons/statgrowrate.png');
     --icon: url('/assets/icons/statgrowrate.png');  
 }
 
 .nervous {
     --color: var(--nervous);
-    --icon-local: url('../assets/panic2.png');
+    --icon-local: url('../assets/icons/panic2.png');
     --icon: url('/assets/icons/panic2.png');  
 }
 .terrify {
-    --icon-local: url('../assets/panic3.png');
+    --icon-local: url('../assets/icons/panic3.png');
     --icon: url('/assets/icons/panic3.png');  
 }
 .terrify {
-    --icon-local: url('../assets/panic3w.png');
+    --icon-local: url('../assets/icons/panic3w.png');
     --icon: url('/assets/icons/panic3w.png');  
 }
 .hopeless {
-    --icon-local: url('../assets/panic4.png');
+    --icon-local: url('../assets/icons/panic4.png');
     --icon: url('/assets/icons/panic4.png');  
 
 }
 .hopeless {
-    --icon-local: url('../assets/panic4w.png');
+    --icon-local: url('../assets/icons/panic4w.png');
     --icon: url('/assets/icons/panic4w.png');  
 }
 .overwhelm {
-    --icon-local: url('../assets/iconPanic2.png');
+    --icon-local: url('../assets/icons/iconpanic2.png');
     --icon: url('/assets/icons/panic5.png');  
 }
-.overwhelmI {
-    --icon-local: url('../assets/panic5w.png');
+.overwhelmi {
+    --icon-local: url('../assets/icons/panic5w.png');
     --icon: url('/assets/icons/panic5w.png');  
 }
 .reverence {
-    --icon-local: url('../assets/panic6.png');
+    --icon-local: url('../assets/icons/panic6.png');
     --icon: url('/assets/icons/panic6.png');  
 }
 
 .panic {
     --color: var(--panic);
-    --icon-local: url('../assets/iconPanic2.png');
-    --icon: url('/assets/icons/iconPanic2.png');  
+    --icon-local: url('../assets/icons/iconpanic2.png');
+    --icon: url('/assets/icons/iconpanic2.png');  
 }
-.panicI {
-    --icon-local: url('../assets/iconPanic.png');
-    --icon: url('/assets/icons/iconPanic.png');  
+.panici {
+    --icon-local: url('../assets/icons/iconpanic.png');
+    --icon: url('/assets/icons/iconpanic.png');  
 }
 .uncontrol {
     --color: var(--uncontrol);
-    --icon-local: url('../assets/iconUncontrol.png');
-    --icon: url('/assets/icons/iconUncontrol.png');  
+    --icon-local: url('../assets/icons/iconuncontrol.png');
+    --icon: url('/assets/icons/iconuncontrol.png');  
 }
 .suit {
     --color: var(--suit);
-    --icon-local: url('../assets/iconSuit.png');
-    --icon: url('/assets/icons/iconSuit.png');  
+    --icon-local: url('../assets/icons/iconsuit.png');
+    --icon: url('/assets/icons/iconsuit.png');  
 }
 .weap {
     --color: var(--weap);
-    --icon-local: url('../assets/iconWeap.png');
-    --icon: url('/assets/icons/iconWeap.png');  
+    --icon-local: url('../assets/icons/iconweap.png');
+    --icon: url('/assets/icons/iconweap.png');  
 }
 .gift {
     --color: var(--gift);
-    --icon-local: url('../assets/iconGift.png');
-    --icon: url('/assets/icons/iconGift.png');  
+    --icon-local: url('../assets/icons/icongift.png');
+    --icon: url('/assets/icons/icongift.png');  
 }
-.suitI   {
+.suiti   {
     --color: var(--suit);
-    --icon-local: url('../assets/equipSuit.png');
-    --icon: url('/assets/icons/equipSuit.png');  
+    --icon-local: url('../assets/icons/equipsuit.png');
+    --icon: url('/assets/icons/equipsuit.png');  
 }
-.weapI {
+.weapi {
     --color: var(--weap);
-    --icon-local: url('../assets/equipWeap.png');
-    --icon: url('/assets/icons/equipWeap.png');  
+    --icon-local: url('../assets/icons/equipweap.png');
+    --icon: url('/assets/icons/equipweap.png');  
 }
-.giftI {
+.gifti {
     --color: var(--gift);
-    --icon-local: url('../assets/equipGift.png');
-    --icon: url('/assets/icons/equipGift.png');  
+    --icon-local: url('../assets/icons/equipgift.png');
+    --icon: url('/assets/icons/equipgift.png');  
 }
 .damage {
     --color: var(--damage);
@@ -514,112 +514,112 @@ a:hover {
 }
 
 .absorb {
-    --color: var(--res-A);
+    --color: var(--res-a);
 }
 .immune {
-    --color: var(--res-I);
+    --color: var(--res-i);
 }
 .endured {
-    --color: var(--res-E);
+    --color: var(--res-e);
 }
 
     /*
-        Facility stuff
+        facility stuff
     */
 .confirm {
     --color: var(--confirm);
-    --icon-local: url('../assets/iconCheck.png');
-    --icon: url('/assets/icons/iconCheck.png');
+    --icon-local: url('../assets/icons/iconcheck.png');
+    --icon: url('/assets/icons/iconcheck.png');
 }
 .deny {
     --color: var(--deny);
-    --icon-local: url('../assets/iconDeny.png');
-    --icon: url('/assets/icons/iconDeny.png');
+    --icon-local: url('../assets/icons/icondeny.png');
+    --icon: url('/assets/icons/icondeny.png');
 }
-.denyW {
-    --icon-local: url('../assets/iconDeny2.png');
-    --icon: url('/assets/icons/iconDeny2.png');
+.denyw {
+    --icon-local: url('../assets/icons/icondeny2.png');
+    --icon: url('/assets/icons/icondeny2.png');
 }
 .plus {
-    --icon-local: url('../assets/iconPlus.png');
-    --icon: url('/assets/icons/iconPlus.png');
+    --icon-local: url('../assets/icons/iconplus.png');
+    --icon: url('/assets/icons/iconplus.png');
 }
-.plusI {
-    --icon-local: url('../assets/iconPlus2.png');
-    --icon: url('/assets/icons/iconPlus2.png');
+.plusi {
+    --icon-local: url('../assets/icons/iconplus2.png');
+    --icon: url('/assets/icons/iconplus2.png');
 }
 .minus {
-    --icon-local: url('../assets/iconMinus.png');
-    --icon: url('/assets/icons/iconMinus.png');
+    --icon-local: url('../assets/icons/iconminus.png');
+    --icon: url('/assets/icons/iconminus.png');
 }
-.calmI {
-    --icon-local: url('../assets/panic0w.png');
+.calmi {
+    --icon-local: url('../assets/icons/panic0w.png');
     --icon: url('/assets/icons/panic0w.png');
 }
-.terrifyI {
-    --icon-local: url('../assets/panic3w.png');
+.terrifyi {
+    --icon-local: url('../assets/icons/panic3w.png');
     --icon: url('/assets/icons/panic3w.png');
 }
-.hopelessI {
-    --icon-local: url('../assets/panic4w.png');
+.hopelessi {
+    --icon-local: url('../assets/icons/panic4w.png');
     --icon: url('/assets/icons/panic4w.png');
 }
-.overwhelmI {
-    --icon-local: url('../assets/panic5w.png');
+.overwhelmi {
+    --icon-local: url('../assets/icons/panic5w.png');
     --icon: url('/assets/icons/panic5w.png');
 }
 .rank1 {
-    --icon-local: url('../assets/rank1.png');
+    --icon-local: url('../assets/icons/rank1.png');
     --icon: url('/assets/icons/rank1.png');
 }
 .rank2 {
-    --icon-local: url('../assets/rank2.png');
+    --icon-local: url('../assets/icons/rank2.png');
     --icon: url('/assets/icons/rank2.png');
 }
 .rank3 {
-    --icon-local: url('../assets/rank3.png');
+    --icon-local: url('../assets/icons/rank3.png');
     --icon: url('/assets/icons/rank3.png');
 }
 .rank4 {
-    --icon-local: url('../assets/rank4.png');
+    --icon-local: url('../assets/icons/rank4.png');
     --icon: url('/assets/icons/rank4.png');
 }
 .rank5 {
-    --icon-local: url('../assets/rank5.png');
+    --icon-local: url('../assets/icons/rank5.png');
     --icon: url('/assets/icons/rank5.png');
 }
 .rank6 {
-    --icon-local: url('../assets/rank6.png');
+    --icon-local: url('../assets/icons/rank6.png');
     --icon: url('/assets/icons/rank6.png');
 }
 .rank1w {
-    --icon-local: url('../assets/rank1w.png');
+    --icon-local: url('../assets/icons/rank1w.png');
     --icon: url('/assets/icons/rank1w.png');
 }
 .rank2w {
-    --icon-local: url('../assets/rank2w.png');
+    --icon-local: url('../assets/icons/rank2w.png');
     --icon: url('/assets/icons/rank2w.png');
 }
 .rank3w {
-    --icon-local: url('../assets/rank3w.png');
+    --icon-local: url('../assets/icons/rank3w.png');
     --icon: url('/assets/icons/rank3w.png');
 }
 .rank4w {
-    --icon-local: url('../assets/rank4w.png');
+    --icon-local: url('../assets/icons/rank4w.png');
     --icon: url('/assets/icons/rank4w.png');
 }
 .rank5w {
-    --icon-local: url('../assets/rank5w.png');
+    --icon-local: url('../assets/icons/rank5w.png');
     --icon: url('/assets/icons/rank5w.png');
 }
 .rank6w {
-    --icon-local: url('../assets/rank6w.png');
+    --icon-local: url('../assets/icons/rank6w.png');
     --icon: url('/assets/icons/rank6w.png');
 }
 
 .qliphoth {
-    --icon-local: url('../assets/iconQliphoth.png');
-    --icon: url('/assets/icons/iconQliphoth.png');
+    --icon-local: url('../assets/icons/iconqliphoth.png');
+    --icon: url('/assets/icons/iconqliphoth.png');
 }
 
 .warn1, .terrify {
@@ -632,179 +632,179 @@ a:hover {
     --color: var(--overwhelm);
 }
 .warn1 {
-    --icon-local: url('../assets/warn1.png');
+    --icon-local: url('../assets/icons/warn1.png');
     --icon: url('/assets/icons/warn1.png');  
 }
 .warn2 {
-    --icon-local: url('../assets/warn2.png');
+    --icon-local: url('../assets/icons/warn2.png');
     --icon: url('/assets/icons/warn2.png');  
 }
 .warn3 {
-    --icon-local: url('../assets/warn3.png');
+    --icon-local: url('../assets/icons/warn3.png');
     --icon: url('/assets/icons/warn3.png');  
 }
 
 .bullets {
-    --icon-local: url('../assets/iconBullet.png');
-    --icon: url('/assets/icons/iconBullet.png');  
+    --icon-local: url('../assets/icons/iconbullet.png');
+    --icon: url('/assets/icons/iconbullet.png');  
 }
-.bulletsI {
-    --icon-local: url('../assets/iconBulletH.png');
-    --icon: url('/assets/icons/iconBulletH.png');  
+.bulletsi {
+    --icon-local: url('../assets/icons/iconbulleth.png');
+    --icon: url('/assets/icons/iconbulleth.png');  
 }
 .bullet-slow {
     --color: var(--b-slow);
-    --icon-local: url('../assets/bulletSlow.png');
-    --icon: url('/assets/icons/bulletSlow.png');  
+    --icon-local: url('../assets/icons/bulletslow.png');
+    --icon: url('/assets/icons/bulletslow.png');  
 }
 .execute {
-    --icon-local: url('../assets/bulletExec.png');
-    --icon: url('/assets/icons/bulletExec.png');  
+    --icon-local: url('../assets/icons/bulletexec.png');
+    --icon: url('/assets/icons/bulletexec.png');  
 }
 .rabbits {
     --color: var(--rabbits);
-    --icon-local: url('../assets/iconRabbits.png');
-    --icon: url('/assets/icons/iconRabbits.png');  
+    --icon-local: url('../assets/icons/iconrabbits.png');
+    --icon: url('/assets/icons/iconrabbits.png');  
 }
 
 .dawn {
-    --icon-local: url('../assets/iconOrdDawn.png');
-    --icon: url('/assets/icons/iconOrdDawn.png');   
+    --icon-local: url('../assets/icons/iconorddawn.png');
+    --icon: url('/assets/icons/iconorddawn.png');   
 }
 .noon {
-    --icon-local: url('../assets/iconOrdNoon.png');
-    --icon: url('/assets/icons/iconOrdNoon.png');   
+    --icon-local: url('../assets/icons/iconordnoon.png');
+    --icon: url('/assets/icons/iconordnoon.png');   
 }
 .dusk {
-    --icon-local: url('../assets/iconOrdDusk.png');
-    --icon: url('/assets/icons/iconOrdDusk.png');   
+    --icon-local: url('../assets/icons/iconorddusk.png');
+    --icon: url('/assets/icons/iconorddusk.png');   
 }
 .midnight {
-    --icon-local: url('../assets/iconOrdMidnight.png');
-    --icon: url('/assets/icons/iconOrdMidnight.png');   
+    --icon-local: url('../assets/icons/iconordmidnight.png');
+    --icon: url('/assets/icons/iconordmidnight.png');   
 }
-.dawnI {
-    --icon-local: url('../assets/iconDawn.png');
-    --icon: url('/assets/icons/iconDawn.png');   
+.dawni {
+    --icon-local: url('../assets/icons/icondawn.png');
+    --icon: url('/assets/icons/icondawn.png');   
 }
-.noonI {
-    --icon-local: url('../assets/iconNoon.png');
-    --icon: url('/assets/icons/iconNoon.png');   
+.nooni {
+    --icon-local: url('../assets/icons/iconnoon.png');
+    --icon: url('/assets/icons/iconnoon.png');   
 }
-.duskI {
-    --icon-local: url('../assets/iconDusk.png');
-    --icon: url('/assets/icons/iconDusk.png');   
+.duski {
+    --icon-local: url('../assets/icons/icondusk.png');
+    --icon: url('/assets/icons/icondusk.png');   
 }
-.midnightI {
-    --icon-local: url('../assets/iconMidnight.png');
-    --icon: url('/assets/icons/iconMidnight.png');   
+.midnighti {
+    --icon-local: url('../assets/icons/iconmidnight.png');
+    --icon: url('/assets/icons/iconmidnight.png');   
 }
 
 .pos {
     --color: var(--pos);
-    --icon-local: url('../assets/abnoGood.png');
-    --icon: url('/assets/icons/abnoGood.png');   
+    --icon-local: url('../assets/icons/abnogood.png');
+    --icon: url('/assets/icons/abnogood.png');   
 }
 .neu {
     --color: var(--neu);
-    --icon-local: url('../assets/abnoNeu.png');
-    --icon: url('/assets/icons/abnoNeu.png');   
+    --icon-local: url('../assets/icons/abnoneu.png');
+    --icon: url('/assets/icons/abnoneu.png');   
 }
 .neg {
     --color: var(--neg);
-    --icon-local: url('../assets/abnoNeg.png');
-    --icon: url('/assets/icons/abnoNeg.png');   
+    --icon-local: url('../assets/icons/abnoneg.png');
+    --icon: url('/assets/icons/abnoneg.png');   
 }
 .ne {
     --color: var(--ne);
-    --icon-local: url('../assets/iconEN.png');
-    --icon: url('/assets/icons/iconEN.png');   
+    --icon-local: url('../assets/icons/iconen.png');
+    --icon: url('/assets/icons/iconen.png');   
 }
 .pe {
-    --icon-local: url('../assets/iconEP.png');
-    --icon: url('/assets/icons/iconEP.png');   
+    --icon-local: url('../assets/icons/iconep.png');
+    --icon: url('/assets/icons/iconep.png');   
 }
 
 .aleph {
-    --icon-local: url('../assets/riskALEPH.png');
-    --icon: url('/assets/icons/riskALEPH.png');   
+    --icon-local: url('../assets/icons/riskaleph.png');
+    --icon: url('/assets/icons/riskaleph.png');   
 }
 .waw {
-    --color: var(--risk-W);
-    --icon-local: url('../assets/riskWAW.png');
-    --icon: url('/assets/icons/riskWAW.png');   
+    --color: var(--risk-w);
+    --icon-local: url('../assets/icons/riskwaw.png');
+    --icon: url('/assets/icons/riskwaw.png');   
 }
 .he {
-    --color: var(--risk-H);
-    --icon-local: url('../assets/riskHE.png');
-    --icon: url('/assets/icons/riskHE.png');   
+    --color: var(--risk-h);
+    --icon-local: url('../assets/icons/riskhe.png');
+    --icon: url('/assets/icons/riskhe.png');   
 }
 .teth {
-    --color: var(--risk-T);
-    --icon-local: url('../assets/riskTETH.png');
-    --icon: url('/assets/icons/riskTETH.png');   
+    --color: var(--risk-t);
+    --icon-local: url('../assets/icons/riskteth.png');
+    --icon: url('/assets/icons/riskteth.png');   
 }
 .zayin {
-    --color: var(--risk-Z);
-    --icon-local: url('../assets/riskZAYIN.png');
-    --icon: url('/assets/icons/riskZAYIN.png');   
+    --color: var(--risk-z);
+    --icon-local: url('../assets/icons/riskzayin.png');
+    --icon: url('/assets/icons/riskzayin.png');   
 }
 .unknown {
-    --color: var(--risk-U);
-    --icon-local: url('../assets/riskUNKNOWN.png');
-    --icon: url('/assets/icons/riskUNKNOWN.png');   
+    --color: var(--risk-u);
+    --icon-local: url('../assets/icons/riskunknown.png');
+    --icon: url('/assets/icons/riskunknown.png');   
 }
     /*
-        Sephirot
+        sephirot
     */
 
 .team-control, [data-callout="control"] {
     --color: var(--team-control);
-    --icon-local: url('../assets/teamCont.png');
-    --icon: url('/assets/icons/teamCont.png');   
+    --icon-local: url('../assets/icons/teamcont.png');
+    --icon: url('/assets/icons/teamcont.png');   
 }
 .team-info, [data-callout="info"] {
     --color: var(--team-info);
-    --icon-local: url('../assets/teamInfo.png');
-    --icon: url('/assets/icons/teamInfo.png');   
+    --icon-local: url('../assets/icons/teaminfo.png');
+    --icon: url('/assets/icons/teaminfo.png');   
 }
 .team-train, [data-callout="train"] {
     --color: var(--team-train);
-    --icon-local: url('../assets/teamTrain.png');
-    --icon: url('/assets/icons/teamTrain.png');   
+    --icon-local: url('../assets/icons/teamtrain.png');
+    --icon: url('/assets/icons/teamtrain.png');   
 }
 .team-safety, [data-callout="safety"] {
     --color: var(--team-safety);
-    --icon-local: url('../assets/teamSafe.png');
-    --icon: url('/assets/icons/teamSafe.png');   
+    --icon-local: url('../assets/icons/teamsafe.png');
+    --icon: url('/assets/icons/teamsafe.png');   
 }
 .team-cmd, [data-callout="cmd"] {
     --color: var(--team-central);
-    --icon-local: url('../assets/teamCmd.png');
-    --icon: url('/assets/icons/teamCmd.png');   
+    --icon-local: url('../assets/icons/teamcmd.png');
+    --icon: url('/assets/icons/teamcmd.png');   
 }
 .team-welfare, [data-callout="welfare"] {
     --color: var(--team-welfare);
-    --icon-local: url('../assets/teamWelf.png');
-    --icon: url('/assets/icons/teamWelf.png');   
+    --icon-local: url('../assets/icons/teamwelf.png');
+    --icon: url('/assets/icons/teamwelf.png');   
 }
 .team-disc, [data-callout="disc"] {
-    --icon-local: url('../assets/teamDisc.png');
-    --icon: url('/assets/icons/teamDisc.png');   
+    --icon-local: url('../assets/icons/teamdisc.png');
+    --icon: url('/assets/icons/teamdisc.png');   
 }
 .team-extract, [data-callout="extract"] {
     --color: var(--team-extr);
-    --icon-local: url('../assets/teamExtract.png');
-    --icon: url('/assets/icons/teamExtract.png');   
+    --icon-local: url('../assets/icons/teamextract.png');
+    --icon: url('/assets/icons/teamextract.png');   
 }
 .team-record, [data-callout="record"] {
     --color: var(--team-record);
-    --icon-local: url('../assets/teamRecord.png');
-    --icon: url('/assets/icons/teamRecord.png');   
+    --icon-local: url('../assets/icons/teamrecord.png');
+    --icon: url('/assets/icons/teamrecord.png');   
 }
 .team-arch, [data-callout="arch"] {
-    --icon-local: url('../assets/teamArch.png');
-    --icon: url('/assets/icons/teamArch.png');   
+    --icon-local: url('../assets/icons/teamarch.png');
+    --icon: url('/assets/icons/teamarch.png');   
 }
 
 .asiyah {
@@ -815,159 +815,159 @@ a:hover {
 }
 
     /*
-       Work Icons
+       work icons
     */
 .inst {
-    --icon-local: url('../assets/workINST.png');
-    --icon: url('/assets/icons/workINST.png');    
+    --icon-local: url('../assets/icons/workinst.png');
+    --icon: url('/assets/icons/workinst.png');    
 }
 .insi {
-    --icon-local: url('../assets/workINSI.png');
-    --icon: url('/assets/icons/workINSI.png');
+    --icon-local: url('../assets/icons/workinsi.png');
+    --icon: url('/assets/icons/workinsi.png');
         
 }
 .atta {
-    --icon-local: url('../assets/workATTA.png');
-    --icon: url('/assets/icons/workATTA.png');
+    --icon-local: url('../assets/icons/workatta.png');
+    --icon: url('/assets/icons/workatta.png');
 }
 .repr {
-    --icon-local: url('../assets/workREPR.png');
-    --icon: url('/assets/icons/workREPR.png');
+    --icon-local: url('../assets/icons/workrepr.png');
+    --icon: url('/assets/icons/workrepr.png');
 }
 .sacr {
-    --icon-local: url('../assets/workSACR.png');
-    --icon: url('/assets/icons/workSACR.png');  
+    --icon-local: url('../assets/icons/worksacr.png');
+    --icon: url('/assets/icons/worksacr.png');  
 }
 .perf {
-    --icon-local: url('../assets/workPERF.png');
-    --icon: url('/assets/icons/workPERF.png');  
+    --icon-local: url('../assets/icons/workperf.png');
+    --icon: url('/assets/icons/workperf.png');  
 }
 .conf {
-    --icon-local: url('../assets/workCONF.png');
-    --icon: url('/assets/icons/workCONF.png');  
+    --icon-local: url('../assets/icons/workconf.png');
+    --icon: url('/assets/icons/workconf.png');  
 }
 .req {
-    --icon-local: url('../assets/workREQ.png');
-    --icon: url('/assets/icons/workREQ.png');  
+    --icon-local: url('../assets/icons/workreq.png');
+    --icon: url('/assets/icons/workreq.png');  
 }
 .prot {
-    --icon-local: url('../assets/workPROT.png');
-    --icon: url('/assets/icons/workPROT.png');  
+    --icon-local: url('../assets/icons/workprot.png');
+    --icon: url('/assets/icons/workprot.png');  
 }
 .neu {
-    --icon-local: url('../assets/abnoNeu.png');
-    --icon: url('/assets/icons/abnoNeu.png');  
+    --icon-local: url('../assets/icons/abnoneu.png');
+    --icon: url('/assets/icons/abnoneu.png');  
 }
 .pos {
-    --icon-local: url('../assets/abnoGood.png');
-    --icon: url('/assets/icons/abnoGood.png');  
+    --icon-local: url('../assets/icons/abnogood.png');
+    --icon: url('/assets/icons/abnogood.png');  
 }
 .neg {
-    --icon-local: url('../assets/abnoBad.png');
-    --icon: url('/assets/icons/abnoBad.png');  
+    --icon-local: url('../assets/icons/abnobad.png');
+    --icon: url('/assets/icons/abnobad.png');  
 }
-.neuW {
-    --icon-local: url('../assets/abnoGood.png');
-    --icon: url('/assets/icons/abnoNeuW.png');  
+.neuw {
+    --icon-local: url('../assets/icons/abnogood.png');
+    --icon: url('/assets/icons/abnoneuw.png');  
 }
-.posW {
-    --icon-local: url('../assets/abnoGood.png');
-    --icon: url('/assets/icons/abnoGoodW.png');  
+.posw {
+    --icon-local: url('../assets/icons/abnogood.png');
+    --icon: url('/assets/icons/abnogoodw.png');  
 }
-.negW {
-    --icon-local: url('../assets/abnoBad.png');
-    --icon: url('/assets/icons/abnoBadW.png');  
+.negw {
+    --icon-local: url('../assets/icons/abnobad.png');
+    --icon: url('/assets/icons/abnobadw.png');  
 }
 .meltdown {
     --color: var(--meltdown);
-    --icon-local: url('../assets/iconMeltdown.png');
-    --icon: url('/assets/icons/iconMeltdown.png');  
+    --icon-local: url('../assets/icons/iconmeltdown.png');
+    --icon: url('/assets/icons/iconmeltdown.png');  
 }
 .abno {
-    --icon-local: url('../assets/iconAbno.png');
-    --icon: url('/assets/icons/iconAbno.png');  
+    --icon-local: url('../assets/icons/iconabno.png');
+    --icon: url('/assets/icons/iconabno.png');  
 }
     /*
-        Stat icons
+        stat icons
     */
 .fort {
-    --icon-local: url('../assets/statFORT.png');
-    --icon: url('/assets/icons/statFORT.png');    
+    --icon-local: url('../assets/icons/statfort.png');
+    --icon: url('/assets/icons/statfort.png');    
 }
 .prud {
-    --icon-local: url('../assets/statPRUD.png');
-    --icon: url('/assets/icons/statPRUD.png');
+    --icon-local: url('../assets/icons/statprud.png');
+    --icon: url('/assets/icons/statprud.png');
         
 }
 .temp {
-    --icon-local: url('../assets/statTEMP.png');
-    --icon: url('/assets/icons/statTEMP.png');
+    --icon-local: url('../assets/icons/stattemp.png');
+    --icon: url('/assets/icons/stattemp.png');
 }
 .just {
-    --icon-local: url('../assets/statJUST.png');
-    --icon: url('/assets/icons/statJUST.png');
+    --icon-local: url('../assets/icons/statJust.png');
+    --icon: url('/assets/icons/statJust.png');
 }
 
     /*
-        Other icons
+        other icons
     */
 .shieldred {
-    --icon-local: url('../assets/shieldR.png');
-    --icon: url('/assets/icons/shieldR.png');    
+    --icon-local: url('../assets/icons/shieldr.png');
+    --icon: url('/assets/icons/shieldr.png');    
 }
 .shieldwhite {
-    --icon-local: url('../assets/shieldW.png');
-    --icon: url('/assets/icons/shieldW.png');    
+    --icon-local: url('../assets/icons/shieldw.png');
+    --icon: url('/assets/icons/shieldw.png');    
 }
 .shieldblack {
-    --icon-local: url('../assets/shieldB.png');
-    --icon: url('/assets/icons/shieldB.png');    
+    --icon-local: url('../assets/icons/shieldb.png');
+    --icon: url('/assets/icons/shieldb.png');    
 }
 .shieldpale {
-    --icon-local: url('../assets/shieldP.png');
-    --icon: url('/assets/icons/shieldP.png');    
+    --icon-local: url('../assets/icons/shieldp.png');
+    --icon: url('/assets/icons/shieldp.png');    
 }
     /*
-        Damages
+        damages
     */
 .red {
-    --icon-local: url('../assets/dmgR.png');
-    --icon: url('/assets/icons/dmgR.png');    
+    --icon-local: url('../assets/icons/dmgr.png');
+    --icon: url('/assets/icons/dmgr.png');    
 }
 .white {
-    --icon-local: url('../assets/dmgW.png');
-    --icon: url('/assets/icons/dmgW.png');    
+    --icon-local: url('../assets/icons/dmgw.png');
+    --icon: url('/assets/icons/dmgw.png');    
 }
 .black {
-    --icon-local: url('../assets/dmgB.png');
-    --icon: url('/assets/icons/dmgB.png');    
+    --icon-local: url('../assets/icons/dmgb.png');
+    --icon: url('/assets/icons/dmgb.png');    
 }
 .pale {
-    --icon-local: url('../assets/dmgP.png');
-    --icon: url('/assets/icons/dmgP.png');    
+    --icon-local: url('../assets/icons/dmgp.png');
+    --icon: url('/assets/icons/dmgp.png');    
 }
     /*
-        Special gradients
+        special gradients
     */
 .rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, .regen {
     --color: transparent;
     background-clip: text;
 }
     /*
-        Thicker shadow, no text-shadow
+        thicker shadow, no text-shadow
     */
 .rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp,
 .regen, .execute, .hp, .hpregen, .sp, .spregen, .def, .atkspd, 
 .shieldblack, .shieldpale, .shieldwhite, .shieldred, 
-.suit, .weap, .gift, .suitI, .weapI, .giftI,
+.suit, .weap, .gift, .suiti, .weapi, .gifti,
 .rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w,
-.logo, .minus, .plus, .plusI, .deny, .denyW, .abno, .defw,
-.pos, .posW, .neu, .neuW, .neg, .negW,
-.dawn, .noon, .dusk, .midnight, .dawnI, .noonI, .duskI, .midnightI,
+.logo, .minus, .plus, .plusi, .deny, .denyw, .abno, .defw,
+.pos, .posw, .neu, .neuw, .neg, .negw,
+.dawn, .noon, .dusk, .midnight, .dawni, .nooni, .duski, .midnighti,
 .insi, .inst, .atta, .repr, .req, .conf, .sacr, .perf, .prot  {
     text-shadow: unset;
     --shadow: 0.6px;
-    --bordTwo: /* Border */
+    --bordtwo: /* border */
         drop-shadow(var(--shadow) var(--shadow) 0px var(--border))
         drop-shadow(var(--invert) var(--shadow) 0px var(--border))
         drop-shadow(var(--shadow) var(--invert) 0px var(--border))
@@ -979,7 +979,7 @@ a:hover {
 }
 
     /*
-        Special (wider) icons
+        special (wider) icons
     */
 .regen {
     --size-w: 50px;
@@ -987,57 +987,57 @@ a:hover {
 
 .regen {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--hp-regen) var(--gradient) var(--begin), var(--sp-regen) var(--end));
-    --icon-local: url('../assets/SPHPregen.png');
-    --icon: url('/assets/icons/SPHPregen.png');  
+    --icon-local: url('../assets/icons/sphpregen.png');
+    --icon: url('/assets/icons/sphpregen.png');  
 }
 
 .rb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--black) var(--end));
-    --icon-local: url('../assets/dmgRB.png');
-    --icon: url('/assets/icons/dmgRB.png');  
+    --icon-local: url('../assets/icons/dmgrb.png');
+    --icon: url('/assets/icons/dmgrb.png');  
 }
 .rbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgRBP.png');
-    --icon: url('/assets/icons/dmgRBP.png');  
+    --icon-local: url('../assets/icons/dmgrbp.png');
+    --icon: url('/assets/icons/dmgrbp.png');  
 }
 .rp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgRP.png');
-    --icon: url('/assets/icons/dmgRP.png');  
+    --icon-local: url('../assets/icons/dmgrp.png');
+    --icon: url('/assets/icons/dmgrp.png');  
 }
 .rw {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white) var(--end));
-    --icon-local: url('../assets/dmgRW.png');
-    --icon: url('/assets/icons/dmgRW.png');  
+    --icon-local: url('../assets/icons/dmgrw.png');
+    --icon: url('/assets/icons/dmgrw.png');  
 }
 .rwb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--black) var(--end));
-    --icon-local: url('../assets/dmgRWB.png');
-    --icon: url('/assets/icons/dmgRWB.png');  
+    --icon-local: url('../assets/icons/dmgrwb.png');
+    --icon: url('/assets/icons/dmgrwb.png');  
 }
 .rwp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgRWP.png');
-    --icon: url('/assets/icons/dmgRWP.png');  
+    --icon-local: url('../assets/icons/dmgrwp.png');
+    --icon: url('/assets/icons/dmgrwp.png');  
 }
 .wb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--black) var(--end));
-    --icon-local: url('../assets/dmgWB.png');
-    --icon: url('/assets/icons/dmgWB.png');  
+    --icon-local: url('../assets/icons/dmgwb.png');
+    --icon: url('/assets/icons/dmgwb.png');  
 }
 .wbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgWBP.png');
-    --icon: url('/assets/icons/dmgWBP.png');  
+    --icon-local: url('../assets/icons/dmgwbp.png');
+    --icon: url('/assets/icons/dmgwbp.png');  
 }
 .wp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgWP.png');
-    --icon: url('/assets/icons/dmgWP.png');  
+    --icon-local: url('../assets/icons/dmgwp.png');
+    --icon: url('/assets/icons/dmgwp.png');  
 }
 .rwbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/dmgRWBP.png');
-    --icon: url('/assets/icons/dmgRWBP.png');
+    --icon-local: url('../assets/icons/dmgrwbp.png');
+    --icon: url('/assets/icons/dmgrwbp.png');
 }
