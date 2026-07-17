@@ -167,7 +167,7 @@ code {
         background-position-y: center;
         background-position-x: center;
         background-size: contain;
-        background-image: var(--icon-local, var(--icon));
+        background-image: var(--icon-local) var(--icon);
         background-repeat: no-repeat;
         z-index: 1;
         filter: none;
