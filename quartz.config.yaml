@@ -12,33 +12,33 @@ configuration:
     - private
     - templates
   theme:
-    fontOrigin: googleFonts
-    cdnCaching: true
+    fontOrigin: selfHosted
+    cdnCaching: false
     typography:
-      header: Carrois Gothic SC
-      body: Gill Sans
-      code: Jetbrains Mono
+      header: "Carrois Gothic SC"
+      body: "Gill Sans"
+      code: "JetBrains Mono"
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#efecbf"
+        lightgray: "#782336"
+        gray: "#782336"
+        darkgray: "#000000"
+        dark: "#782336"
+        secondary: "#14b19c"
+        tertiary: "#14b19c"
+        highlight: rgba(20, 177, 156, 0.15)
+        textHighlight: "#14b19c88"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#000000"
+        lightgray: "#fc3a39"
+        gray: "#1fffae"
+        darkgray: "#ffffb0"
+        dark: "#1fffae"
+        secondary: "#14b19c"
+        tertiary: "#cc2743"
+        highlight: rgba(204, 39, 67, 0.15)
+        textHighlight: "#cc274388"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -71,7 +71,7 @@ plugins:
       enableInHtmlEmbed: false
       enableYouTubeEmbed: true
       enableVideoEmbed: true
-      enableCheckbox: true
+      enableCheckbox: false
     order: 30
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
@@ -108,7 +108,7 @@ plugins:
     enabled: false
     order: 92
   - source: github:quartz-community/fonts
-    enabled: true
+    enabled: false
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
@@ -140,7 +140,7 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: true
+    enabled: false
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
@@ -261,7 +261,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
