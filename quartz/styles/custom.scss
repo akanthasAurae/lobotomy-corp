@@ -9,9 +9,7 @@ h1, h2, h3, h4, h5, h6 {
         color: var(--light);
     }
 }
-p, span, button, a, b, i, em, strong, thead, table, td, th {
-    font-family: 'Gill Sans';
-}
+
 code {
     font-family: 'JetBrains Mono';
     background-color: color-mix(in oklab, currentcolor 10%, transparent 100%);
@@ -258,6 +256,16 @@ a.internal {
     &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i] {
         --color: var(--team-central);
     } 
+}
+a {
+    &[href$="control-team" i], 
+    &[href$="control-department" i], &[href$="control-dept" i],
+    &[href$="information-team" i], &[href$="info-team" i],
+    &[href$="information-department" i], &[href$="info-department" i],
+    &[href$="information-dept" i], &[href$="info-dept" i],
+    &[href$="training-team" i],
+    &[href$="training-department" i], &[href$="training-dept" i],
+
 }
 
 
@@ -858,6 +866,7 @@ a.internal {
     --icon: url('/lobotomy-corp/assets/icons/teamwelf.png');   
 }
 .team-disc, [data-callout="disc"] {
+    --color: var(--dead);
     --icon-local: url('../assets/icons/teamdisc.png');
     --icon: url('/lobotomy-corp/assets/icons/teamdisc.png');   
 }
