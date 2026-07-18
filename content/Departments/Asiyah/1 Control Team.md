@@ -10,7 +10,7 @@ title: "Control Team"
 > > The Control Team monitors the employees and Abnormalities and plans out the best course of action. They give immediate orders to other employees while watching the CCTV feeds. They tend to be quite bossy and assertive, making them unpopular with other teams.
 
 > [!control] Continuous Service Benefits:
-> Increase Movement Speed for the Department’s Agents.
+> Increase <span class="icon spd">Movement Speed</span> for the Department’s Agents.
 > Lv 1: +3 (1\~2 Days of Service)
 > Lv 2: +5 (3\~6 Days of Service)
 > Lv 3: +7 (7+ Days of Service)
@@ -48,7 +48,7 @@ title: "Control Team"
 <h2 class="team-control">Core Suppression Rewards</h2>
 
 > [!control|0.5] 1. The Will to Stand up Straight (Unknown)
-> Ah… So I couldn’t do it…
-> <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
-> <code>- All employees gain Min & Max Speed +1</code>
-> <code>- All employees deal 5% damage for every SPD difference against Abnormalities</code>
+> <i class="no-icon control-team">Ah… So I couldn’t do it…</i>
+> <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
+> <code>- All employees gain <span class="icon spd">Min & Max Speed +1</span></code>
+> <code>- All employees deal 5% damage for every <span class="icon spd">SPD</span> difference against Abnormalities</code>

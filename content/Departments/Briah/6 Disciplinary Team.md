@@ -44,15 +44,15 @@ title: "Disciplinary Team"
 > [!disc|0.5] 2. Survival Instinct (Unknown)
 > WAW-level Abnormalities cannot be defeated through simple training alone. Employees who survive repeated encounters with unpredictable threats begin to develop an instinctive understanding of danger and learn how to react before it overwhelms them.
 > <code>- <span class="icon overwhelmi">Fear Level</span> is reduced by 1 against all <span class="icon abno">Abnormalities</span></code>
-> <code>- When winning a Clash, gain <span class="no-icon warn1">"Survival Instinct </span>for 2 turns.</code>
-> <code> - This unit has a 10% chance to evade an incoming attack (can only evade up to 60 points of damage before resistances, not higher. For DoT effects, you can dodge multiple attacks that deal up to 20 damage total before resistances, then you have to roll an evade check again) - The chance increases by 0.5% for every point in <span class="no-icon pale">Movement Speed</span> (max 50%)</code>
+> <code>- When winning a Clash, gain <span class="no-icon warn1">"Survival Instinct" </span>for 2 turns.</code>
+> <code> - This unit has a 10% chance to evade an incoming attack (can only evade up to 60 points of damage before resistances, not higher. For DoT effects, you can dodge multiple attacks that deal up to 20 damage total before resistances, then you have to roll an evade check again) - The chance increases by 0.5% for every point in <span class="icon spd">Movement Speed</span> (max 50%)</code>
 
 > [!disc|0.5] 3. E.G.O Overclock (Unknown)
 > ALEPH-level suppression requires employees to understand their E.G.O beyond ordinary usage. Through analysis of exceptional cases, such as the combat methods utilized by former elite agents, a new method of E.G.O manipulation has been developed. However, forcing synchronization between employee and E.G.O carries significant mental strain and can only be performed by those with the experience and discipline to endure it.
 > <code>- While <span class="icon warn3">Overclocked</span>:</code>
 > <code>- <span class="icon weap">E.G.O Weapon</span> abilities are enhanced (effects vary on E.G.O)</code>
 > <code>- <span class="icon suit">E.G.O Suit </span>resistances improved (effects vary on E.G.O)</code>
-> <code> Requires authorization from a <span class="icon gifti">Team Captain</span> and consumes 10% of the Facility's Energy </code>
+> <code> - Requires authorization from a <span class="icon gifti">Team Captain</span> and consumes 10% of the Facility's Energy </code>
 > <code> - <span class="icon warn3">Overclocked</span> ends by choice or when employee's <span class="icon sp">SP</span> reaches a critical level (E.G.O visuals may change depending on writer)</code>
 
 > [!disc|0.5] 4. Against the End (Unknown)
