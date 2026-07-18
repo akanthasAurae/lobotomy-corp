@@ -5,7 +5,7 @@
 // oh i'm gonna put it in alright
 h1, h2, h3, h4, h5, h6 {
     &::selection {
-        font-family: 'Carrois Gothic SC';
+        font-family: 'Norwester';
         color: var(--light);
     }
 }
@@ -125,7 +125,7 @@ code {
 
 
 /* rules for stuff w/o icons */
-.no-icon, .stat, .work, .risk, .icon, .info {
+.no-icon, .stat, .work, .risk, .icon, .infoi {
     font-weight: bold;
     color: var(--color);
     --color: unset;
@@ -152,7 +152,7 @@ code {
 }
 
 /* set up some rules for stuff that'll have icons */
-.stat, .work, .risk, .icon, .info, h1[class^="team"] {
+.stat, .work, .risk, .icon, .infoi, h1[class^="team"] {
     --size-h: 1.55em;
     --size-w: 1.55em;
     &::before {
@@ -217,7 +217,7 @@ h1, h2, h3 {
     padding-right: calc(var(--padding)*8);
     & > a {
         color: var(--light);
-        font-family: 'Carrois Gothic SC';
+        font-family: 'Norwester';
     }
     &.has-subtitle {
         margin-bottom: 0px;
@@ -233,6 +233,33 @@ code, a {
 a:hover {
     color: var(--bullet);
 }
+a.internal {
+    &[href$="malkuth" i],
+    &[href$="control-team" i], 
+    &[href$="control-department" i], &[href$="control-dept" i] {
+        --color: var(--team-control);
+    }
+    &[href$="yesod" i],
+    &[href$="information-team" i], &[href$="info-team" i],
+    &[href$="information-department" i], &[href$="info-department" i],
+    &[href$="information-dept" i], &[href$="info-dept" i] {
+        --color: var(--team-info);
+    }
+    &[href$="hod" i],
+    &[href$="training-team" i],
+    &[href$="training-department" i], &[href$="training-dept" i] {
+        --color: var(--team-train);
+    }  
+    &[href$="tiphereth" i], &[href$="tiphereth-a" i], &[href$="tiphereth-b" i]
+    &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
+    &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
+    &[href$="command-department" i], &[href$="central-department" i], &[href$="central-command-department" i],
+    &[href$="command-dept" i], &[href$="central-dept" i], &[href$="central-command-dept" i],
+    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i] {
+        --color: var(--team-central);
+    } 
+}
+
 
     /*
         callouts
@@ -281,7 +308,7 @@ a:hover {
             div.callout-title-inner > p {
                 padding-left: calc(var(--size-em) * 3);
                 padding-right: calc(var(--size-em) * 3);
-                font-family: 'Carrois Gothic SC';
+                font-family: 'Norwester';
                 color: var(--light);
                 background-color: var(--color, var(--light));
                 mask-image: linear-gradient(135deg, transparent 15%, black 15%), linear-gradient(45deg, black 85%, transparent 85%);
