@@ -44,3 +44,10 @@ cssclasses: no-article-title
 > Standardized combat procedures developed through <span class="icon dusk normal">Dusk Ordeal</span> analysis allow employees to respond more effectively during facility-wide emergencies.
 > <code>- During <span class="no-icon normal">Ordeals</span>, all employees deal +10% damage and take -10% damage</code>
 
+<h2 class="team-control">Core Suppression Rewards</h2>
+
+> [!control|0.5] 1. The Will to Stand up Straight (Unknown)
+> Ah… So I couldn’t do it…
+> <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
+> <code>- All employees gain Min & Max Speed +1</code>
+> <code>- All employees deal 5% damage for every SPD difference against Abnormalities</code>
