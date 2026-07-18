@@ -1,5 +1,6 @@
 ---
 cssclasses: no-article-title
+title: "Training Team"
 ---
 
 <h1 class="team-train has-subtitle">Training Team</h2>
@@ -28,7 +29,7 @@ cssclasses: no-article-title
 #### 4. Practical Training:
 - [ ] Complete the day with 5 or more Level 5 employees deployed
 
-#### 4. Suppress the Core of Hod:
+#### 5. Suppress the Core of Hod:
 - [ ] Requires <span class="no-icon team-control">Malkuth</span>, <span class="no-icon team-info">Yesod</span> and <span class="no-icon team-cmd">Tiphereth</span>'s missions completed
 
 <h2 class="team-train">Training Team Research</h2>
