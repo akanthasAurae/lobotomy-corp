@@ -31,7 +31,7 @@ cssclasses: no-article-title
 #### 4. Suppress the Core of Yesod:
 - [ ] Requires <span class="no-icon team-control">Malkuth</span>, <span class="no-icon team-safety">Netzach</span> and <span class="no-icon team-cmd">Tiphereth</span>'s missions completed
 
-<h2 class="team-info">Information Research</h2>
+<h2 class="team-info">Information Team Research</h2>
 
 > [!info|0.5] 1. Instinct Calibration (Unknown)
 > Repeated Instinct Work has improved employees' understanding of an Abnormality's basic needs, allowing them to identify ideal working conditions more quickly.
@@ -44,6 +44,10 @@ cssclasses: no-article-title
 > [!info|0.5] 3. Social Observation (Unknown)
 > Research into Attachment Work has revealed consistent behavioural patterns among socially responsive Abnormalities, allowing employees to communicate with greater confidence.
 > <code>- <span class="icon atta">Attachment</span> <span class="icon wrkscc">Work Success Rate</span> is increased by 5% for all employees</code>
+
+> [!info|0.5] 4. Operational Excellence (Unknown)
+> Consistently maintaining excellent work standards has led to improved procedures throughout the facility, reducing mistakes during routine operations.
+> <code>- All Work Types gain +3% <span class="icon wrkscc">Work Success Rate</span></code>
 
 <h2 class="team-info">Core Suppression Rewards</h2>
 
