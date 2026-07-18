@@ -53,7 +53,7 @@ title: "Training Team"
 <h2 class="team-train">Core Suppression Rewards</h2>
 
 > [!train|0.5] 1. The Hope to be a Better Person (Unknown)
-> I guess I just never was a good person from the start…
+> <i class="no-icon team-train">I guess I just never was a good person from the start…</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
 > <code>- All newly contracted employees will have their stats at level 4.</code>
 > <code>- Any employees below level 4 gain a +200% EXP bonus.</code>

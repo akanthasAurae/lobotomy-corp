@@ -35,12 +35,12 @@ title: "Central Command Team"
 <h2 class="team-cmd">Central Command Team Research</h2>
 
 > [!cmd|0.5] 1. Physical Intervention Shield (Unknown)
-> An injector that administers a specialized compound which forms a protective barrier around the body, reducing RED type damage for a limited time. This reinforcement is only effective against physical harm and provides no protection against other forms of damage.
+> An injector that administers a specialized compound which forms a protective barrier around the body, reducing <span class="icon red">RED</span> type damage for a limited time. This reinforcement is only effective against physical harm and provides no protection against other forms of damage.
 > <code>- When injected, all incoming <span class="icon shieldred">RED</span> damage is reduced by 80% for 20s (2 turns)</code>
 > <code>- An employee can only carry four injectors</code>
 
 > [!cmd|0.5] 2. Trauma Shield (Unknown)
-> An injector that temporarily alters the receiver's perception and stabilizes their mind, reducing the impact of WHITE type damage. The compound protects against external mental and spiritual influences by slowing their effects before they can take hold.
+> An injector that temporarily alters the receiver's perception and stabilizes their mind, reducing the impact of <span class="icon white">WHITE</span> type damage. The compound protects against external mental and spiritual influences by slowing their effects before they can take hold.
 > <code>- When injected, all incoming <span class="icon shieldwhite">WHITE</span> damage is reduced by 80% for 20s (2 turns)</code>
 > <code>- An employee can only carry four injectors</code>
 
@@ -57,7 +57,7 @@ title: "Central Command Team"
 <h2 class="team-cmd">Core Suppression Rewards</h2>
 
 > [!cmd|0.5] 1. The Expectation for the Meaning of Existence (Unknown)
-> Was all of this really worth it?
-> <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
+> <i class="no-icon team-cmd">Was all of this really worth it?</i>
+> <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- Agents can carry one extra Injector on their belt (max 5)</code>
 > <code>- <span class="icon shieldpale">PALE Shield</span> Injector is unlocked</code>
