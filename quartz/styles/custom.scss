@@ -256,6 +256,7 @@ a.internal {
     &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i] {
         --color: var(--team-central);
     } 
+    &[]
 }
 a {
     &[href$="control-team" i], 
@@ -265,7 +266,16 @@ a {
     &[href$="information-dept" i], &[href$="info-dept" i],
     &[href$="training-team" i],
     &[href$="training-department" i], &[href$="training-dept" i],
+    &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
+    &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
+    &[href$="command-department" i], &[href$="central-department" i], &[href$="central-command-department" i],
+    &[href$="command-dept" i], &[href$="central-dept" i], &[href$="central-command-dept" i],
+    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i]
 
+
+    {
+
+    }
 }
 
 
