@@ -395,6 +395,40 @@ a.internal {
     --color: var(--o-green);
 }
 
+.dawn {
+    &.ordealamber {
+        --color: var(--o-amber);
+        --icon-local: url('../assets/icons/iconorddawna.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawna.png');  
+    }
+    &.ordealgreen {
+        --color: var(--o-green);
+        --icon-local: url('../assets/icons/iconorddawng.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawng.png');  
+    }
+    &.ordealindigo {
+        --color: var(--o-indigo);
+        --icon-local: url('../assets/icons/iconorddawni.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawni.png'); 
+    }
+    &.ordealcrimson {
+        --color: var(--o-crimson);
+        --icon-local: url('../assets/icons/iconorddawnc.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawnc.png'); 
+    }
+    &.ordealviolet {
+        --color: var(--o-violet);
+        --icon-local: url('../assets/icons/iconorddawnv.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawnv.png'); 
+    }
+    &.ordealwhite {
+        --color: var(--o-white);
+        --icon-local: url('../assets/icons/iconorddawni.png');
+        --icon: url('/lobotomy-corp/assets/icons/iconorddawni.png'); 
+    }
+}
+.noon
+
     /*
         stats
     */
@@ -404,6 +438,14 @@ a.internal {
 .infoi, .suiti, .weapi, .gifti, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6 {
     --color: var(--info);
 }
+.sp {
+    --icon-local: url('../assets/icons/statsp.png');
+    --icon: url('/lobotomy-corp/assets/icons/statsp.png');
+}
+.spregen {
+    --icon-local: url('../assets/icons/statspregen.png');
+    --icon: url('/lobotomy-corp/assets/icons/statspregen.png');
+}
 .hp {
     --color: var(--hp);
     --icon-local: url('../assets/icons/stathp.png');
@@ -412,7 +454,7 @@ a.internal {
 .hpregen {
     --color: var(--hp-regen);
     --icon-local: url('../assets/icons/stathpregen.png');
-    --icon: url('//stathpregen.png');  
+    --icon: url('/lobotomy-corp/assets/icons/stathpregen.png');  
 }
 
 .atk {
