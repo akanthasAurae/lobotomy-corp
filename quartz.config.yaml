@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: akanthasAurae.github.io/lobotomy-corp/
+  baseUrl: akanthasAurae.github.io/lobotomy-corp
   ignorePatterns:
     - private
     - templates

@@ -5,18 +5,18 @@
 // oh i'm gonna put it in alright
 h1, h2, h3, h4, h5, h6 {
     &::selection {
-        font-family: 'carrois gothic sc';
+        font-family: 'Carrois Gothic SC';
         color: var(--light);
     }
 }
 p, span, button, a, b, i, em, strong, thead, table, td, th {
-    font-family: 'gill sans';
+    font-family: 'Gill Sans';
 }
 code {
-    font-family: 'Jetbrains mono';
+    font-family: 'JetBrains Mono';
     background-color: color-mix(in oklab, currentcolor 10%, transparent 100%);
     & > p, span, a, b, i, em, strong {
-        font-family: 'Jetbrains mono';
+        font-family: 'JetBrains Mono';
     }
 }
 
@@ -167,7 +167,7 @@ code {
         background-position-y: center;
         background-position-x: center;
         background-size: contain;
-        background-image: var(--icon-local) var(--icon);
+        background-image: var(--icon-local), var(--icon);
         background-repeat: no-repeat;
         z-index: 1;
         filter: none;
@@ -217,7 +217,7 @@ h1, h2, h3 {
     padding-right: calc(var(--padding)*8);
     & > a {
         color: var(--light);
-        font-family: 'carrois gothic sc';
+        font-family: 'Carrois Gothic SC';
     }
     &.has-subtitle {
         margin-bottom: 0px;
@@ -281,7 +281,7 @@ a:hover {
             div.callout-title-inner > p {
                 padding-left: calc(var(--size-em) * 3);
                 padding-right: calc(var(--size-em) * 3);
-                font-family: 'carrois gothic sc';
+                font-family: 'Carrois Gothic SC';
                 color: var(--light);
                 background-color: var(--color, var(--light));
                 mask-image: linear-gradient(135deg, transparent 15%, black 15%), linear-gradient(45deg, black 85%, transparent 85%);

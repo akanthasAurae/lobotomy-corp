@@ -188,6 +188,28 @@
   font-style: italic;
   font-display: swap;
 }
+        /* Norwester */
+@font-face {
+  font-family: 'Norwester';
+  src: url('../static/fonts/norwester.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Norwester';
+  src: url('../static/fonts/norwester.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Norwester';
+  src: url('../static/fonts/norwester.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
                 /* For local hosting */
         /* Carrois Gothic SC */
@@ -378,5 +400,27 @@
   src: url('../lobotomy-corp/static/fonts/JetBrainsMono-ExtraBoldItalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
+}
+        /* Norwester */
+@font-face {
+  font-family: 'Norwester';
+  src: url('../lobotomy-corp/static/fonts/norwester.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Norwester';
+  src: url('../lobotomy-corp/static/fonts/norwester.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Norwester';
+  src: url('../lobotomy-corp/static/fonts/norwester.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }

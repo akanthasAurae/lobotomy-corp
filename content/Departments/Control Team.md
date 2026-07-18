@@ -17,13 +17,13 @@ cssclasses: no-article-title
 <h2 class="team-control">Control Team Missions</h2>
 
 #### 1. You Can Do This!:
-- [x] Complete 3 work processes with the Abnormalities (Complete)
+- [x] Complete 3 work processes with the Abnormalities
 
 #### 2. Controlling Meltdowns:
-- [ ] Complete 8 work processes in Containment Units under <span class="icon meltdown">Qliphoth Meltdown</span> (Incomplete)
+- [ ] Complete 8 work processes in Containment Units under <span class="icon meltdown">Qliphoth Meltdown</span>
 
 #### 3. When Dusk Falls:
-- [ ] Complete a <span class="icon dusk normal">Dusk Ordeal</span> (Incomplete)
+- [ ] Complete a <span class="icon dusk normal">Dusk Ordeal</span>
 
 #### 4. Suppress the Core of Malkuth:
 - [ ] Requires <span class="no-icon team-safety">Netzach</span> and <span class="no-icon team-cmd">Tiphereth</span>'s missions completed
