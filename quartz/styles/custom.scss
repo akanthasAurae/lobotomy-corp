@@ -226,12 +226,12 @@ h4, h5, h6, b, i, em, strong, thead, th, tbody, table, button, span, p {
     color: var(--color);
 }
 code, a {
-    color: var(--pe);
+    color: var(--color, var(--pe));
 }
 a:hover {
     color: var(--bullet);
 }
-a.internal {
+a, h1:has(a), h2:has(a), h3:has(a) {
     &[href$="malkuth" i],
     &[href$="control-team" i], 
     &[href$="control-department" i], &[href$="control-dept" i] {
@@ -248,6 +248,11 @@ a.internal {
     &[href$="training-department" i], &[href$="training-dept" i] {
         --color: var(--team-train);
     }  
+    &[href$="netzach" i],
+    &[href$="safety-team" i], &[href$="safety-department" i], &[href$="safety-dept" i] {
+        --color: var(--team-safety);
+    }
+
     &[href$="tiphereth" i], &[href$="tiphereth-a" i], &[href$="tiphereth-b" i]
     &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
     &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
@@ -256,6 +261,34 @@ a.internal {
     &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i] {
         --color: var(--team-central);
     } 
+    &[href$="chesed" i],
+    &[href$="welfare-team" i], &[href$="welfare-department" i], &[href$="welfare-dept" i] {
+        --color: var(--team-welfare);
+    }
+    &[href$="gebura" i],
+    &[href$="disciplinary-team" i], &[href$="disciplinary-department" i], &[href$="disciplinary-dept" i],
+    &[href$="disc-team" i], &[href$="disc-department" i], &[href$="disc-dept" i],
+    &[href$="discip-team" i], &[href$="discip-department" i], &[href$="discip-dept" i] {
+        --color: var(--team-disc);
+    }
+    &[href$="binah" i],
+    &[href$="extraction-team" i], &[href$="extraction-department" i], &[href$="extraction-dept" i],
+    &[href$="extract-team" i], &[href$="extract-department" i], &[href$="extract-dept" i],
+    &[href$="extr-team" i], &[href$="extr-department" i], &[href$="extr-dept" i] {
+        --color: var(--team-extr);
+    }
+    &[href$="hokma" i],
+    &[href$="records-team" i], &[href$="records-department" i], &[href$="records-dept" i],
+    &[href$="record-team" i], &[href$="record-department" i], &[href$="record-dept" i],
+    &[href$="rec-team" i], &[href$="rec-department" i], &[href$="rec-dept" i] {
+        --color: var(--team-record);
+    }
+    &[href$="ayin" i],
+    &[href$="architecture-team" i], &[href$="architecture-department" i], &[href$="architecture-dept" i],
+    &[href$="architect-team" i], &[href$="architect-department" i], &[href$="architect-dept" i],
+    &[href$="arch-team" i], &[href$="arch-department" i], &[href$="arch-dept" i] {
+        --color: var(--team-arch);
+    }
 }
 a {
     &[href$="control-team" i], 
@@ -265,15 +298,29 @@ a {
     &[href$="information-dept" i], &[href$="info-dept" i],
     &[href$="training-team" i],
     &[href$="training-department" i], &[href$="training-dept" i],
+    &[href$="safety-team" i], &[href$="safety-department" i], &[href$="safety-dept" i],
     &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
     &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
     &[href$="command-department" i], &[href$="central-department" i], &[href$="central-command-department" i],
     &[href$="command-dept" i], &[href$="central-dept" i], &[href$="central-command-dept" i],
-    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i]
-
-
+    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i],
+    &[href$="welfare-team" i], &[href$="welfare-department" i], &[href$="welfare-dept" i],
+    &[href$="disciplinary-team" i], &[href$="disciplinary-department" i], &[href$="disciplinary-dept" i],
+    &[href$="disc-team" i], &[href$="disc-department" i], &[href$="disc-dept" i],
+    &[href$="discip-team" i], &[href$="discip-department" i], &[href$="discip-dept" i],
+    &[href$="extraction-team" i], &[href$="extraction-department" i], &[href$="extraction-dept" i],
+    &[href$="extract-team" i], &[href$="extract-department" i], &[href$="extract-dept" i],
+    &[href$="extr-team" i], &[href$="extr-department" i], &[href$="extr-dept" i],
+    &[href$="records-team" i], &[href$="records-department" i], &[href$="records-dept" i],
+    &[href$="record-team" i], &[href$="record-department" i], &[href$="record-dept" i],
+    &[href$="rec-team" i], &[href$="rec-department" i], &[href$="rec-dept" i],
+    &[href$="architecture-team" i], &[href$="architecture-department" i], &[href$="architecture-dept" i],
+    &[href$="architect-team" i], &[href$="architect-department" i], &[href$="architect-dept" i],
+    &[href$="arch-team" i], &[href$="arch-department" i], &[href$="arch-dept" i]
     {
-
+        &::first-letter {
+            display: none;
+        }
     }
 }
 
@@ -578,17 +625,14 @@ a {
     --icon: url('/lobotomy-corp/assets/icons/icongift.png');  
 }
 .suiti   {
-    --color: var(--suit);
     --icon-local: url('../assets/icons/equipsuit.png');
     --icon: url('/lobotomy-corp/assets/icons/equipsuit.png');  
 }
 .weapi {
-    --color: var(--weap);
     --icon-local: url('../assets/icons/equipweap.png');
     --icon: url('/lobotomy-corp/assets/icons/equipweap.png');  
 }
 .gifti {
-    --color: var(--gift);
     --icon-local: url('../assets/icons/equipgift.png');
     --icon: url('/lobotomy-corp/assets/icons/equipgift.png');  
 }
