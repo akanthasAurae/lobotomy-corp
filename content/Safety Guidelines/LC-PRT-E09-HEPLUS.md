@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Safety Team"
+title: "Emergency Phone Protocol"
 ---
 
 <h1 class="team-safety has-subtitle">LOBOTOMY CORPORATION — INTERNAL OPERATIONAL DIRECTIVE</h2>
