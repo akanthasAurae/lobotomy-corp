@@ -57,7 +57,7 @@ title: "Welfare Team"
 <h2 class="team-welfare">Core Suppression Rewards</h2>
 
 > [!welfare|0.5] 1. Those who are Faithful and Trustworthy (Unknown)
-> <i class="no-icon team-welfare">Is my world… finally crumbling?</i>
+> <i class="no-icon team-welfare">- Is my world… finally crumbling?</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- If an employee were to <span class="icon panic">panic</span>, there's a 10% chance that they will <span class="icon spregen">recover</span> 25% of their max <span class="icon sp">SP</span> instead </code>
 > <code>- The chance increases by 0.5% for every point in <span class="icon prud">Prudence</span></code>

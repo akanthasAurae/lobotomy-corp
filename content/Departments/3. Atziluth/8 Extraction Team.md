@@ -3,7 +3,7 @@ cssclasses: no-article-title
 title: "Extraction Team"
 ---
 
-<h1 class="team-extract has-subtitle">Welfare Team</h2>
+<h1 class="team-extract has-subtitle">Extraction Team</h2>
 
 > [!extract|subtitle]
 > > [!content]
@@ -15,49 +15,66 @@ title: "Extraction Team"
 > Lv 2: +6% defense (3\~6 Days of Service)
 > Lv 3: +10% defense (7+ Days of Service)
 
-<h2 class="team-extract">Welfare Team Missions</h2>
+<h2 class="team-extract">Extraction Team Missions</h2>
 
-#### 1. For the Aftermath 1:
-- [ ] Complete 5 <span class="icon pos">Good</span> work results consecutively
+#### 1. Collecting Extracted Specimens:
+- [ ] <span class="no-icon team-extract">Extract</span> 5 or more E.G.O of grade <span class="icon he">HE</span> or higher.
 
-#### 2. For the Aftermath 2:
-- [ ] Produce 25% of the Facility's total <span class="icon pe">Energy</span> before <span class="icon qliphoth">Qliphoth Level 3</span>
+#### 2. The Ego’s Accessories:
+- [ ] Complete the day with at least one employee who has 4 or more <span class="icon gift">E.G.O Gifts.</span>
 
-#### 3. For the Aftermath 3:
-- [ ] Produce 50% of the Facility's total <span class="icon pe">Energy</span> before <span class="icon qliphoth">Qliphoth Level 5</span>
+#### 3. The Ego’s Shells:
+- [ ] Complete the day with 8 or more <span class="icon aleph">ALEPH E.G.O</span> in possession.
 
-#### 4. For the Aftermath 4:
-- [ ] Complete the day without any breaches
+#### 4. Abnormality Dissolution:
+- [ ] Complete the day with every <span class="icon abno">Abnormality</span> currently within the facility at the maximum observation level.
 
-#### 5. Suppress the Core of Chesed:
-- [ ] Requires <span class="no-icon asiyah">Upper Layer</span> and <span class="no-icon team-disc">Gebura</span> missions completed
+#### 5. Suppress the Core of Binah:
+<i class="no-icon team-extract">"An Arbiter awakens."</i>
+- [ ] Requires <span class="no-icon briah">Middle Layer</span> missions completed
 
-<h2 class="team-extract">Disciplinary Team Research</h2>
+<h2 class="team-extract">Extraction Team Research</h2>
 
-> [!extract|0.5] 1. HP-N Injectors (Unknown)
-> Injectors with the capability to heal physical damage. These injectors, manufactured thanks to our Nano Technology Agreement with K Corporation, can speed up the body’s recovery.
-> <code>- When injected, the employee <span class="icon hpregen">heals</span> 20% of their max. <span class="icon hp">HP</span></code>
-> <code> - An employee can only carry four injectors</code>
+> [!extract|0.5] 1. E.G.O Alteration (Unknown)
+> Minor structural changes can be made to an E.G.O without affecting its properties, allowing it to better suit its wielder.
+> <code>- Employees may alter the appearance and ergonomics of their E.G.O, changing attack speed and range</code>
+> <code> - Alterations cannot change an E.G.O's abilities or damage types</code>
+> <code> - The average damage should be the same as the original</code>
 
-> [!extract|0.5] 2. SP-E Injectors (Unknown)
-> Injectors with the capability to heal mental damage. These are injectors that apply diluted Enkephalin to an Agent for a short while. The Enkephalin used is carefully refined, and will heal the target’s mind without risk of addiction.
-> <code>- When injected, the employee <span class="icon spregen">heals</span> 20% of their max. <span class="icon sp">SP</span></code>
-> <code> - An employee can only carry four injectors</code>
+> [!extract|0.5] 2. E.G.O Attunement (Unknown)
+> Prolonged use gradually strengthens the bond between an employee and their E.G.O, making it easier to control.
+> <code>- Employees may become **Attuned** to a chosen E.G.O after extensive use (7+ days)</code>
+> <code> - **Attuned** E.G.O inflicts 25% reduced SP strain and is easier to wield</code>
 
-> [!extract|0.5] 3. HP & SP Injector Refining (Unknown)
-> The recovery capabilities of HP-N and SP-E injectors will be increased. Recovery will become more effective through research into improving the refinement purity of our recovery bullets.
-> <code>- Injectors <span class="icon regen">heal</span> +100% more <span class="icon hp">HP</span> & <span class="icon sp">SP</span></code>
-> <code>- When used, they apply a <span class="icon regen">regenerative</span> effect for 30s </code>
-> <code>- Every 5s <span class="icon regen">heal</span> 2.5% of max. <span class="icon hp">HP</span> or <span class="icon sp">SP</span> respectively (in battle, <span class="icon regen">heal</span> 5% of max. <span class="icon hp">HP</span> or <span class="icon sp">SP</span> every turn start for 3 turns)</code>
+> [!extract|0.5] 3. E.G.O Restoration (Unknown)
+> Through continued research into extracted E.G.O, damaged equipment can now be restored without requiring complete re-extraction. E.G.O won't leave long lasting effects from corrosion.
+> <code>- Damaged or partially corroded E.G.O can be repaired between deployments.</code>
+> <code> - Minor defects caused by prolonged use may be removed by the Extraction Team</code>
+> <code> - <span class="icon warn3">E.G.O Corrosion</span> is no longer lethal, one may come back from it to rehabilitate with extended therapy</code>
 
-> [!extract|0.5] 4. Improved Working Conditions (Unknown)
-> Improvements to employee welfare have resulted in higher morale and better working conditions. A well-supported employee is naturally more resilient in the face of danger.
-> <code>- The <span class="icon hp">HP</span> and <span class="icon sp">SP</span> of all employees is permanently increased by 15% </code>
+> [!extract|0.5] 4. E.G.O Refinement (Unknown)
+> Careful refinement of extracted E.G.O has improved its stability without altering its original nature.
+> <code>- E.G.O Weapons and E.G.O Suits may receive one <span class="icon gift">Refinement</span> each.</code>
+> <code>- A <span class="icon gift">Refinement</span> is a minor yet significant improvement that strengthens E.G.O</code>
+>
+> <code>- <span class="icon weap">E.G.O Weapons:</span></code>
+> <code>• <span class="icon atkspd">Attack Speed</span> increase by 1 level</code>
+> <code>• +30% damage</code>
+> <code>• -15% <span class="icon sp">SP strain</span></code>
+> <code>• <span class="no-icon weap">Min & Max Attack Power</span> +2</code>
+> 
+> <code>- <span class="icon suit">E.G.O Suits:</span></code>
+> <code>• <span class="icon red">RED</span>, <span class="icon white">WHITE</span> and <span class="icon black">BLACK</span> resistances can be increased by 0.2 (cannot be immune)</code>
+> <code>• <span class="icon pale">PALE</span> resistances can be increased by 0.5</code>
+> <code>• If <span class="no-icon suit">Suit</span> has a Risk Level lower than <span class="icon he">HE</span>, then <span class="icon rwb">R/W/B</span> damage types gain an additional +0.2 resistance and <span class="icon pale">PALE</span> damage gains an additional 0.5 resistance</code>
+> <code>• E.G.O may gain an increase in Risk Level</code>
 
 <h2 class="team-extract">Core Suppression Rewards</h2>
 
-> [!extract|0.5] 1. Those who are Faithful and Trustworthy (Unknown)
-> <i class="no-icon team-extract">Is my world… finally crumbling?</i>
+> [!extract|0.5] 1. The Eye Facing the Fear; Breaking the Cycle (Unknown)
+> <i class="no-icon team-extract">- You've proven yourself. I shall witness you with my eyes.</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
-> <code>- If an employee were to <span class="icon panic">panic</span>, there's a 10% chance that they will <span class="icon spregen">recover</span> 25% of their max <span class="icon sp">SP</span> instead </code>
-> <code>- The chance increases by 0.5% for every point in <span class="icon prud">Prudence</span></code>
+> <code>- When <span class="icon warn3">Overclocking</span>, the wielder can instead choose to perform a powerful <span class="icon warn2">E.G.O Skill</span>, which takes much less  <span class="icon sp">SP</span> strain, however <span class="icon warn3">Overclock</span> will then end after that attack.</code>
+> <code>- If the<span class="icon warn2">E.G.O Skill</span> is used while the wielder has less than 40% <span class="icon sp">SP</span>, <span class="icon warn3">Overclock</span> will convert into <span class="icon warn3">E.G.O Corrosion</span> for that Skill</code>
+> <code>- During <span class="icon warn3">E.G.O Corrosion</span>, the <span class="icon warn2">E.G.O Skill</span> will become even more powerful and indiscriminate</code>
+> <code>- After usage, the wielder may <span class="icon panic">Panic</span> or properly <span class="icon warn3">Corrode</span> at a 50% chance</code>

@@ -53,7 +53,7 @@ title: "Information Team"
 <h2 class="team-info">Core Suppression Rewards</h2>
 
 > [!info|0.5] 1. The Rationality to Maintain Discretion (Unknown)
-> <i class="no-icon team-info">So I was the one who couldn’t see a single step ahead…</i>
+> <i class="no-icon team-info">- So I was the one who couldn’t see a single step ahead…</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- Gain +3% <span class="icon wrkscc">Work Success Rate</span> every time an employee works with the same abnormality (max 15%)</code>
 > <code>- +30% damage against resistances that are <span class="no-icon weak">Weak</span> or <span class="no-icon vulnerable">Vulnerable</span></code>

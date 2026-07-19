@@ -59,7 +59,7 @@ title: "Safety Team"
 <h2 class="team-safety">Core Suppression Rewards</h2>
 
 > [!safety|0.5] 1. The Fearlessness to keep on Living (Unknown)
-> <i class="no-icon team-safety">I stopped breathing, but if life calls out to me yet again…</i>
+> <i class="no-icon team-safety">- I stopped breathing, but if life calls out to me yet again…</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- The regenerator will <span class="icon regen">heal</span> all employees anywhere in the department. Those in the hallways will be healed with 50% efficiency</code>
 > <code>- All employees can resist 1 <span class="icon overwhelmi">Fear Level </span>higher than usual</code>

@@ -57,7 +57,7 @@ title: "Central Command Team"
 <h2 class="team-cmd">Core Suppression Rewards</h2>
 
 > [!cmd|0.5] 1. The Expectation for the Meaning of Existence (Unknown)
-> <i class="no-icon team-cmd">Was all of this really worth it?</i>
+> <i class="no-icon team-cmd">- Was all of this really worth it?</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- Agents can carry one extra Injector on their belt (max 5)</code>
 > <code>- <span class="icon shieldpale">PALE Shield</span> Injector is unlocked</code>

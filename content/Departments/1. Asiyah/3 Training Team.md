@@ -10,7 +10,7 @@ title: "Training Team"
 > > The Training team is in charge of composing and regulating company policies and various management procedures. They also run general-purpose training programs to help employees adapt well to their new departments.
 
 > [!train] Continuous Service Benefits:
-> Increases the Growth Rate of the Department’s Agents.
+> Increases the <span class="icon growrate">Growth Rate</span> of the Department’s Agents.
 > Lv 1: +5% (1\~2 Days of Service)
 > Lv 2: +10% (3\~6 Days of Service)
 > Lv 3: +15% (7+ Days of Service)
@@ -53,7 +53,7 @@ title: "Training Team"
 <h2 class="team-train">Core Suppression Rewards</h2>
 
 > [!train|0.5] 1. The Hope to be a Better Person (Unknown)
-> <i class="no-icon team-train">I guess I just never was a good person from the start…</i>
+> <i class="no-icon team-train">- I guess I just never was a good person from the start…</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
 > <code>- All newly contracted employees will have their stats at level 4.</code>
 > <code>- Any employees below level 4 gain a +200% EXP bonus.</code>

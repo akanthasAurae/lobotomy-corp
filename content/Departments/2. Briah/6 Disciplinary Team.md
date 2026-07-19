@@ -37,15 +37,15 @@ title: "Disciplinary Team"
 
 > [!disc|0.5] 1. Suppression Fundamentals (Unknown)
 > Through repeated suppression operations, employees have developed standardized combat procedures for dealing with hostile Abnormalities.
-> <code>- Clashing with E.G.O Weapons that have slow/very slow attack speed become <span class="icon warn2">Unbreakable</span> (once every 3 turns)</code>
-> <code>- <span class="icon warn2">Unbreakable</span> attacks cannot be cancelled when losing a clash and deal -50% damage</code>
-> <code> - When winning a Clash with an <span class="icon warn2">unbreakable</span> attack, deal +50% damage and stagger damage</code>
+> <code>- <span class="icon clash">Clashing</span> with E.G.O Weapons that have slow/very slow attack speed become <span class="icon warn2">Unbreakable</span> (once every 3 turns)</code>
+> <code>- <span class="icon warn2">Unbreakable</span> attacks cannot be cancelled when losing a <span class="icon clash">clash</span> and deal -50% damage</code>
+> <code> - When winning a <span class="icon clash">Clash</span> with an <span class="icon warn2">unbreakable</span> attack, deal +50% damage and stagger damage</code>
 
 > [!disc|0.5] 2. Survival Instinct (Unknown)
 > WAW-level Abnormalities cannot be defeated through simple training alone. Employees who survive repeated encounters with unpredictable threats begin to develop an instinctive understanding of danger and learn how to react before it overwhelms them.
 > <code>- <span class="icon overwhelmi">Fear Level</span> is reduced by 1 against all <span class="icon abno">Abnormalities</span></code>
 > <code>- When winning a Clash, gain <span class="no-icon warn1">"Survival Instinct" </span>for 2 turns.</code>
-> <code> - This unit has a 10% chance to evade an incoming attack (can only evade up to 60 points of damage before resistances, not higher. For DoT effects, you can dodge multiple attacks that deal up to 20 damage total before resistances, then you have to roll an evade check again) - The chance increases by 0.5% for every point in <span class="icon spd">Movement Speed</span> (max 50%)</code>
+> <code> - This unit has a 10% chance to evade an incoming attack (can only evade up to 60 points of damage before resistances, not higher. For DoT effects, you can dodge multiple attacks that deal up to 20 damage total before resistances, then you have to roll an evade check again) - The chance increases by 0.5% for every point in <span class="icon spd">Movement Speed</span> (max 60%)</code>
 
 > [!disc|0.5] 3. E.G.O Overclock (Unknown)
 > ALEPH-level suppression requires employees to understand their E.G.O beyond ordinary usage. Through analysis of exceptional cases, such as the combat methods utilized by former elite agents, a new method of E.G.O manipulation has been developed. However, forcing synchronization between employee and E.G.O carries significant mental strain and can only be performed by those with the experience and discipline to endure it.
@@ -63,7 +63,7 @@ title: "Disciplinary Team"
 <h2 class="team-disc">Core Suppression Rewards</h2>
 
 > [!disc|0.5] 1. The Courage to Protect (Unknown)
-> <i class="no-icon weap">Ah… I'm breaking… I won't drop my sword, even if I turn to dust…</i>
+> <i class="no-icon weap">- Ah… I'm breaking… I won't drop my sword, even if I turn to dust…</i>
 > <code>- The department in which the Suppression took place will no longer be influenced by Qliphoth Meltdowns</code>
 > <code>- The maximum number of E.G.O that can be acquired from each <span class="icon abno">Abnormality</span> is increased by 1, up to a maximum of 5.</code>
 > <code>- Lv. 5 employees can dual wield <span class="icon waw">WAW</span> equipment</code>
