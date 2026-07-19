@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Central Command Team"
+title: 5. Central Command Team
 ---
 
 <h1 class="team-cmd has-subtitle">Central Command Team</h2>

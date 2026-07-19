@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Safety Team"
+title: 4. Safety Team
 ---
 
 <h1 class="team-safety has-subtitle">Safety Team</h2>

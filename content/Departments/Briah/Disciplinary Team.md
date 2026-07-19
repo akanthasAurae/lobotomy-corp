@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Disciplinary Team"
+title: 6. Disciplinary Team
 ---
 
 <h1 class="team-disc has-subtitle">Disciplinary Team</h2>

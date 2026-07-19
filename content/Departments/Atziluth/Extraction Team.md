@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Extraction Team"
+title: 8. Extraction Team
 ---
 
 <h1 class="team-extract has-subtitle">Extraction Team</h2>

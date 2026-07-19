@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Record Team"
+title: 9. Record Team
 ---
 
 <h1 class="team-record has-subtitle">Record Team</h2>

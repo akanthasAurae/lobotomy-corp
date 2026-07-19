@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Welfare Team"
+title: 7. Welfare Team
 ---
 
 <h1 class="team-welfare has-subtitle">Welfare Team</h2>

@@ -102,6 +102,99 @@
     --l-asiyah: #ffff00;
     --l-briah: var(--res-r);
     --l-atziluth: #c0c0c0;
+
+    --size-h: 1.55em;
+    --size-w: 1.55em;
+}
+
+html{
+    &[saved-theme="dark"] {
+        img#lightLogo {
+            display: block;
+        }
+        img#darkLogo {
+            display: none;
+        }
+    }
+    &[saved-theme="light"] {
+        img#lightLogo {
+            display: none;
+        }
+        img#darkLogo {
+            display: block;
+        }
+    }
+}
+
+/* Modern browsers — Chrome 121+, Edge 121+, Firefox, Safari 18.2+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark) color-mix(in oklab, transparent 100%, var(--tertiary) 10%);
+}
+
+/* Legacy WebKit — older Chrome/Edge/Safari, radius, borders & shadows */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 10%);
+  border-radius: 0px;
+  padding: 1px;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 20%);
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 30%);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 30%);
+  border-radius: 0px;
+  min-height: 10px;
+  box-shadow: 0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 40%);;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: color-mix(in oklab, transparent 100%, var(--tertiary) 60%);;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.page > #quartz-body .right.sidebar {
+    --border: 2rem;
+    padding-left: var(--border);
+    padding-right: var(--border);
+    margin-right: var(--border);
+    margin-bottom: var(--border);
+    margin-top: var(--border);
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow-y: auto;
+    overflow-x: clip;
+    max-height: calc(100vh - calc(var(--border) * 2));
+
+    .toc {
+        overflow: visible;
+        & > .toc-header.collapsed {
+            overflow: visible;
+        }
+        & button.toc-header h3 ~ svg {
+            display: none;
+        }
+    }
 }
 
 
@@ -134,8 +227,6 @@
 
 /* set up some rules for stuff that'll have icons */
 .stat, .work, .risk, .icon, .infoi, h1[class^="team"] {
-    --size-h: 1.55em;
-    --size-w: 1.55em;
     &::before {
         content: '';
         position: relative;
@@ -201,9 +292,17 @@ code {
     }
 }
 
-.page-header:has(~ article.no-article-title) h1.article-title {
-    display: none;
-} 
+.page-header {
+    &:has(~ article.no-article-title) h1.article-title {
+        display: none;
+    }
+    .breadcrumb-container {
+        & > .breadcrumb-element:nth-last-child(2) > p,
+        & > .breadcrumb-element:last-child {
+            display: none;
+        } 
+    }
+}
 h1, h2, h3 {
     color: var(--light);
     background-color: var(--color, var(--darkgray));
@@ -218,7 +317,7 @@ h1, h2, h3 {
     padding-top: calc(var(--padding)/2);
     padding-bottom: calc(var(--padding)/2);
     & > a {
-        color: var(--light);
+        color: var(--color, var(--light));
         font-family: 'Norwester';
     }
     &.has-subtitle {
@@ -232,72 +331,118 @@ h4, h5, h6, b, i, em, strong, thead, th, tbody, table, button, span, p {
 code, a {
     color: var(--color, var(--pe));
 }
-a:hover {
-    color: var(--bullet);
-}
-.explorer-content ul li > a {
-    color: var(--color, var(--dark));
-    &.active {
-        color: var(--color, var(--secondary));
-    }
-}
-a, h1:has(a), h2:has(a), h3:has(a) {
-    &[href$="asiyah" i], &[href$="asiyah/index" i] {
 
-    }
-    &[href$="briah" i], &[href$="briah/index" i] {
-        
-    }
 
+.explorer {
+    &.collapsed {
+        padding-bottom: 0.5em;
+    }
+    .explorer-content {
+        & ul li > a {
+            color: var(--color, var(--dark));
+            opacity: 0.5;
+            &.active {
+                color: var(--color, var(--darkgray));
+                opacity: 1;
+            }
+        }
+        & .folder-outer > ul {
+            border-color: var(--highlight);
+            a {
+                &::first-letter {
+                    color: transparent;
+                    letter-spacing: -110%;
+                }
+            }
+        }
+        & .folder-container div > a {
+            color: var(--color, var(--gray));
+        }
+    }
+}
+
+a {
     &[href$="malkuth" i],
+    &[href$="malkuth/" i],
     &[href$="control-team" i], 
-    &[href$="control-department" i], &[href$="control-dept" i] {
+    &[href$="control-team/" i], 
+    &[href$="control-department" i], &[href$="control-dept" i], 
+    &[href$="control-department/" i], &[href$="control-dept/" i] {
         --color: var(--team-control);
     }
     &[href$="yesod" i],
+    &[href$="yesod/" i],
     &[href$="information-team" i], &[href$="info-team" i],
+    &[href$="information-team/" i], &[href$="info-team/" i],
     &[href$="information-department" i], &[href$="info-department" i],
-    &[href$="information-dept" i], &[href$="info-dept" i] {
+    &[href$="information-department/" i], &[href$="info-department/" i],
+    &[href$="information-dept" i], &[href$="info-dept" i],
+    &[href$="information-dept/" i], &[href$="info-dept/" i] {
         --color: var(--team-info);
     }
     &[href$="hod" i],
+    &[href$="hod/" i],
     &[href$="training-team" i],
-    &[href$="training-department" i], &[href$="training-dept" i] {
+    &[href$="training-team/" i],
+    &[href$="training-department" i], &[href$="training-dept" i],
+    &[href$="training-department/" i], &[href$="training-dept/" i] {
         --color: var(--team-train);
     }  
     &[href$="netzach" i],
-    &[href$="safety-team" i], &[href$="safety-department" i], &[href$="safety-dept" i] {
+    &[href$="netzach" i],
+    &[href$="safety-team" i], &[href$="safety-department" i], &[href$="safety-dept" i],
+    &[href$="safety-team/" i], &[href$="safety-department/" i], &[href$="safety-dept/" i] {
         --color: var(--team-safety);
     }
 
     &[href$="tiphereth" i], &[href$="tiphereth-a" i], &[href$="tiphereth-b" i]
+    &[href$="tiphereth/" i], &[href$="tiphereth-a/" i], &[href$="tiphereth-b/" i]
     &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
+    &[href$="command-team/" i], &[href$="central-team/" i], &[href$="central-command-team/" i],
     &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
+    &[href$="cmmd-team/" i], &[href$="central-cmmd-team/" i],
     &[href$="command-department" i], &[href$="central-department" i], &[href$="central-command-department" i],
+    &[href$="command-department/" i], &[href$="central-department/" i], &[href$="central-command-department/" i],
     &[href$="command-dept" i], &[href$="central-dept" i], &[href$="central-command-dept" i],
-    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i] {
+    &[href$="command-dept/" i], &[href$="central-dept/" i], &[href$="central-command-dept/" i],
+    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i],
+    &[href$="cmmd-dept/" i], &[href$="central-cmmd-dept/" i] {
         --color: var(--team-central);
     } 
     &[href$="chesed" i],
-    &[href$="welfare-team" i], &[href$="welfare-department" i], &[href$="welfare-dept" i] {
+    &[href$="chesed/" i],
+    &[href$="welfare-team" i], &[href$="welfare-department" i], &[href$="welfare-dept" i],
+    &[href$="welfare-team/" i], &[href$="welfare-department/" i], &[href$="welfare-dept/" i] {
         --color: var(--team-welfare);
     }
     &[href$="gebura" i],
+    &[href$="gebura/" i],
     &[href$="disciplinary-team" i], &[href$="disciplinary-department" i], &[href$="disciplinary-dept" i],
+    &[href$="disciplinary-team/" i], &[href$="disciplinary-department/" i], &[href$="disciplinary-dept/" i],
     &[href$="disc-team" i], &[href$="disc-department" i], &[href$="disc-dept" i],
-    &[href$="discip-team" i], &[href$="discip-department" i], &[href$="discip-dept" i] {
+    &[href$="disc-team/" i], &[href$="disc-department/" i], &[href$="disc-dept/" i],
+    &[href$="discip-team" i], &[href$="discip-department" i], &[href$="discip-dept" i],
+    &[href$="discip-team/" i], &[href$="discip-department/" i], &[href$="discip-dept/" i] {
         --color: var(--team-disc);
     }
     &[href$="binah" i],
+    &[href$="binah/" i],
     &[href$="extraction-team" i], &[href$="extraction-department" i], &[href$="extraction-dept" i],
+    &[href$="extraction-team/" i], &[href$="extraction-department/" i], &[href$="extraction-dept/" i],
     &[href$="extract-team" i], &[href$="extract-department" i], &[href$="extract-dept" i],
-    &[href$="extr-team" i], &[href$="extr-department" i], &[href$="extr-dept" i] {
+    &[href$="extract-team/" i], &[href$="extract-department/" i], &[href$="extract-dept/" i],
+    &[href$="extr-team" i], &[href$="extr-department" i], &[href$="extr-dept" i],
+    &[href$="extr-team/" i], &[href$="extr-department/" i], &[href$="extr-dept/" i] {
         --color: var(--team-extr);
     }
     &[href$="hokma" i],
+    &[href$="hokma/" i],
     &[href$="records-team" i], &[href$="records-department" i], &[href$="records-dept" i],
+    &[href$="records-team/" i], &[href$="records-department/" i], &[href$="records-dept/" i],
     &[href$="record-team" i], &[href$="record-department" i], &[href$="record-dept" i],
-    &[href$="rec-team" i], &[href$="rec-department" i], &[href$="rec-dept" i] {
+    &[href$="record-team/" i], &[href$="record-department/" i], &[href$="record-dept/" i],
+    &[href$="rec-team" i], &[href$="rec-department" i], &[href$="rec-dept" i],
+    &[href$="rec-team/" i], &[href$="rec-department/" i], &[href$="rec-dept/" i] {
         --color: var(--team-record);
     }
     &[href$="ayin" i],
@@ -306,38 +451,207 @@ a, h1:has(a), h2:has(a), h3:has(a) {
     &[href$="arch-team" i], &[href$="arch-department" i], &[href$="arch-dept" i] {
         --color: var(--team-arch);
     }
-}
-a {
-    &[href$="control-team" i], 
-    &[href$="control-department" i], &[href$="control-dept" i],
-    &[href$="information-team" i], &[href$="info-team" i],
-    &[href$="information-department" i], &[href$="info-department" i],
-    &[href$="information-dept" i], &[href$="info-dept" i],
-    &[href$="training-team" i],
-    &[href$="training-department" i], &[href$="training-dept" i],
-    &[href$="safety-team" i], &[href$="safety-department" i], &[href$="safety-dept" i],
-    &[href$="command-team" i], &[href$="central-team" i], &[href$="central-command-team" i],
-    &[href$="cmmd-team" i], &[href$="central-cmmd-team" i],
-    &[href$="command-department" i], &[href$="central-department" i], &[href$="central-command-department" i],
-    &[href$="command-dept" i], &[href$="central-dept" i], &[href$="central-command-dept" i],
-    &[href$="cmmd-dept" i], &[href$="central-cmmd-dept" i],
-    &[href$="welfare-team" i], &[href$="welfare-department" i], &[href$="welfare-dept" i],
-    &[href$="disciplinary-team" i], &[href$="disciplinary-department" i], &[href$="disciplinary-dept" i],
-    &[href$="disc-team" i], &[href$="disc-department" i], &[href$="disc-dept" i],
-    &[href$="discip-team" i], &[href$="discip-department" i], &[href$="discip-dept" i],
-    &[href$="extraction-team" i], &[href$="extraction-department" i], &[href$="extraction-dept" i],
-    &[href$="extract-team" i], &[href$="extract-department" i], &[href$="extract-dept" i],
-    &[href$="extr-team" i], &[href$="extr-department" i], &[href$="extr-dept" i],
-    &[href$="records-team" i], &[href$="records-department" i], &[href$="records-dept" i],
-    &[href$="record-team" i], &[href$="record-department" i], &[href$="record-dept" i],
-    &[href$="rec-team" i], &[href$="rec-department" i], &[href$="rec-dept" i],
-    &[href$="architecture-team" i], &[href$="architecture-department" i], &[href$="architecture-dept" i],
-    &[href$="architect-team" i], &[href$="architect-department" i], &[href$="architect-dept" i],
-    &[href$="arch-team" i], &[href$="arch-department" i], &[href$="arch-dept" i]
-    {
-        &::first-letter {
-            display: none;
+
+    &[href$="upper-layer" i], &[href$="upper-layer-asiyah" i], &[href$="asiyah-layer" i], &[href$="asiyah" i],
+    &[href$="upper-layer/" i], &[href$="upper-layer-asiyah/" i], &[href$="asiyah-layer/" i], &[href$="asiyah/" i] {
+        --color: var(--l-asiyah);
+    }
+    &[href$="middle-layer" i], &[href$="middle-layer-briah" i], &[href$="briah-layer" i], &[href$="briah" i],
+    &[href$="middle-layer/" i], &[href$="middle-layer-briah/" i], &[href$="briah-layer/" i], &[href$="briah/" i] {
+        --color: var(--l-briah);
+    }
+    &[href$="lower-layer" i], &[href$="lower-layer-atziluth" i], &[href$="atziluth-layer" i], &[href$="atziluth" i],
+    &[href$="lower-layer/" i], &[href$="lower-layer-atziluth/" i], &[href$="atziluth-layer/" i], &[href$="atziluth/" i] {
+        --color: var(--l-atziluth);
+    }
+
+    &[href$="team" i], &[href$="department" i], &[href$="team/" i], &[href$="department/" i],
+    &[href$="upper-layer" i], &[href$="upper-layer-asiyah" i], &[href$="asiyah-layer" i], &[href$="asiyah" i],
+    &[href$="upper-layer/" i], &[href$="upper-layer-asiyah/" i], &[href$="asiyah-layer/" i], &[href$="asiyah/" i],
+    &[href$="middle-layer" i], &[href$="middle-layer-briah" i], &[href$="briah-layer" i], &[href$="briah" i],
+    &[href$="middle-layer/" i], &[href$="middle-layer-briah/" i], &[href$="briah-layer/" i], &[href$="briah/" i],
+    &[href$="lower-layer" i], &[href$="lower-layer-atziluth" i], &[href$="atziluth-layer" i], &[href$="atziluth" i],
+    &[href$="lower-layer/" i], &[href$="lower-layer-atziluth/" i], &[href$="atziluth-layer/" i], &[href$="atziluth/" i] {
+        display: inline-block;
+        &:not(.tag-link)::first-letter {
+            letter-spacing: -100%;
+            margin-left: -0.2em;
+            color: transparent;
         }
+        &.tag-link {
+            --highlight: color-mix(in oklab, var(--color) 10%, transparent 100%);
+            &:hover {
+                color: color-mix(in oklab, var(--color) 100%, var(--darkgray) 50%);
+            }
+        }
+    }
+}
+h1, h2, h3 {
+    &:has(
+        a[href$="malkuth" i], a[href$="malkuth/" i],
+        a[href$="control-team" i],  a[href$="control-team/" i], 
+        a[href$="control-department" i], a[href$="control-department/" i], 
+        a[href$="control-dept" i], a[href$="control-dept/" i]
+    ) {
+        --color: var(--team-control);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has( 
+        a[href$="yesod" i],
+        a[href$="yesod/" i],
+        a[href$="information-team" i], a[href$="info-team" i],
+        a[href$="information-team/" i], a[href$="info-team/" i],
+        a[href$="information-department" i], a[href$="info-department" i],
+        a[href$="information-department/" i], a[href$="info-department/" i],
+        a[href$="information-dept" i], a[href$="info-dept" i],
+        a[href$="information-dept/" i], a[href$="info-dept/" i]
+    ) {
+        --color: var(--team-info);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="hod" i],
+        a[href$="hod/" i],
+        a[href$="training-team" i],
+        a[href$="training-team/" i],
+        a[href$="training-department" i], a[href$="training-dept" i],
+        a[href$="training-department/" i], a[href$="training-dept/" i]
+    ) {
+        --color: var(--team-train);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="netzach" i],
+        a[href$="netzach" i],
+        a[href$="safety-team" i], a[href$="safety-department" i], a[href$="safety-dept" i],
+        a[href$="safety-team/" i], a[href$="safety-department/" i], a[href$="safety-dept/" i]
+    ) {
+        --color: var(--team-safety);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="tiphereth" i], a[href$="tiphereth-a" i], a[href$="tiphereth-b" i]
+        a[href$="tiphereth/" i], a[href$="tiphereth-a/" i], a[href$="tiphereth-b/" i]
+        a[href$="command-team" i], a[href$="central-team" i], a[href$="central-command-team" i],
+        a[href$="command-team/" i], a[href$="central-team/" i], a[href$="central-command-team/" i],
+        a[href$="cmmd-team" i], a[href$="central-cmmd-team" i],
+        a[href$="cmmd-team/" i], a[href$="central-cmmd-team/" i],
+        a[href$="command-department" i], a[href$="central-department" i], a[href$="central-command-department" i],
+        a[href$="command-department/" i], a[href$="central-department/" i], a[href$="central-command-department/" i],
+        a[href$="command-dept" i], a[href$="central-dept" i], a[href$="central-command-dept" i],
+        a[href$="command-dept/" i], a[href$="central-dept/" i], a[href$="central-command-dept/" i],
+        a[href$="cmmd-dept" i], a[href$="central-cmmd-dept" i],
+        a[href$="cmmd-dept/" i], a[href$="central-cmmd-dept/" i]
+    ) {
+        --color: var(--team-central);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="chesed" i],
+        a[href$="chesed/" i],
+        a[href$="welfare-team" i], a[href$="welfare-department" i], a[href$="welfare-dept" i],
+        a[href$="welfare-team/" i], a[href$="welfare-department/" i], a[href$="welfare-dept/" i]
+    ) {
+        --color: var(--team-welfare);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="gebura" i],
+        a[href$="gebura/" i],
+        a[href$="disciplinary-team" i], a[href$="disciplinary-department" i], a[href$="disciplinary-dept" i],
+        a[href$="disciplinary-team/" i], a[href$="disciplinary-department/" i], a[href$="disciplinary-dept/" i],
+        a[href$="disc-team" i], a[href$="disc-department" i], a[href$="disc-dept" i],
+        a[href$="disc-team/" i], a[href$="disc-department/" i], a[href$="disc-dept/" i],
+        a[href$="discip-team" i], a[href$="discip-department" i], a[href$="discip-dept" i],
+        a[href$="discip-team/" i], a[href$="discip-department/" i], a[href$="discip-dept/" i]
+    ) {
+        --color: var(--team-disc);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="binah" i],
+        a[href$="binah/" i],
+        a[href$="extraction-team" i], a[href$="extraction-department" i], a[href$="extraction-dept" i],
+        a[href$="extraction-team/" i], a[href$="extraction-department/" i], a[href$="extraction-dept/" i],
+        a[href$="extract-team" i], a[href$="extract-department" i], a[href$="extract-dept" i],
+        a[href$="extract-team/" i], a[href$="extract-department/" i], a[href$="extract-dept/" i],
+        a[href$="extr-team" i], a[href$="extr-department" i], a[href$="extr-dept" i],
+        a[href$="extr-team/" i], a[href$="extr-department/" i], a[href$="extr-dept/" i]
+    ) {
+        --color: var(--team-extr);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="hokma" i],
+        a[href$="hokma/" i],
+        a[href$="records-team" i], a[href$="records-department" i], a[href$="records-dept" i],
+        a[href$="records-team/" i], a[href$="records-department/" i], a[href$="records-dept/" i],
+        a[href$="record-team" i], a[href$="record-department" i], a[href$="record-dept" i],
+        a[href$="record-team/" i], a[href$="record-department/" i], a[href$="record-dept/" i],
+        a[href$="rec-team" i], a[href$="rec-department" i], a[href$="rec-dept" i],
+        a[href$="rec-team/" i], a[href$="rec-department/" i], a[href$="rec-dept/" i]
+    ) {
+        --color: var(--team-record);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="ayin" i],
+        a[href$="architecture-team" i], a[href$="architecture-department" i], a[href$="architecture-dept" i],
+        a[href$="architect-team" i], a[href$="architect-department" i], a[href$="architect-dept" i],
+        a[href$="arch-team" i], a[href$="arch-department" i], a[href$="arch-dept" i]
+    ) {
+        --color: var(--team-arch);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="upper-layer" i], a[href$="upper-layer-asiyah" i], a[href$="asiyah-layer" i], a[href$="asiyah" i],
+        a[href$="upper-layer/" i], a[href$="upper-layer-asiyah/" i], a[href$="asiyah-layer/" i], a[href$="asiyah/" i]
+    ) {
+        --color: var(--l-asiyah);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="middle-layer" i], a[href$="middle-layer-briah" i], a[href$="briah-layer" i], a[href$="briah" i],
+        a[href$="middle-layer/" i], a[href$="middle-layer-briah/" i], a[href$="briah-layer/" i], a[href$="briah/" i]
+    ) {
+        --color: var(--l-briah);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    &:has(
+        a[href$="lower-layer" i], a[href$="lower-layer-atziluth" i], a[href$="atziluth-layer" i], a[href$="atziluth" i],
+        a[href$="lower-layer/" i], a[href$="lower-layer-atziluth/" i], a[href$="atziluth-layer/" i], a[href$="atziluth/" i]
+    ) {
+        --color: var(--l-atziluth);
+        & > a {
+            --color: var(--light);
+        }
+    }
+    > a:hover {
+        color: color-mix(in oklab, var(--color, var(--light)) 100%, transparent 50%);
     }
 }
 
@@ -363,6 +677,7 @@ a {
         background-color: var(--color, var(--light)) /*color-mix(in oklab, var(--light) 100%, transparent 80%)*/;
         padding: 0.1rem;
         padding-top: 0.15rem;
+        
         & > div.callout-content {
             --color: var(--darkgray);
             & > .content {
@@ -373,14 +688,24 @@ a {
                 --color: var(--darkgray);
             }
         }
-        & div.callout-title {
+        & > div.callout-title {
             display: none;
-            & ~ callout-content {
-                padding-top: 0rem;
+            & ~ .callout-content {
+                .callout-title {
+                    & .callout-icon {
+                        display: none;
+                    }
+                    & .callout-title-inner {
+                        font-weight: 400;
+                        & br:first-child {
+                            display: none;
+                        }
+                    }
+                }
             }      
         }
     }
-    &:not([data-callout-metadata="subtitle"],[data-callout-metadata="span"]) {
+    &:not([data-callout-metadata="subtitle"],[data-callout-metadata="span"],[data-callout-metadata="content"], .subtitle, .span, .content) {
         div.callout-title {
             padding-bottom: 0px;
             div.callout-icon {

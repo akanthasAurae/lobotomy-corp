@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Control Team"
+title: 1. Control Team
 ---
 
 <h1 class="team-control has-subtitle">Control Team</h2>

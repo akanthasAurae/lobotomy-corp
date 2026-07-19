@@ -1,6 +1,6 @@
 ---
 cssclasses: no-article-title
-title: "Training Team"
+title: 3. Training Team
 ---
 
 <h1 class="team-train has-subtitle">Training Team</h2>
