@@ -235,7 +235,20 @@ code, a {
 a:hover {
     color: var(--bullet);
 }
+.explorer-content ul li > a {
+    color: var(--color, var(--dark));
+    &.active {
+        color: var(--color, var(--secondary));
+    }
+}
 a, h1:has(a), h2:has(a), h3:has(a) {
+    &[href$="asiyah" i], &[href$="asiyah/index" i] {
+
+    }
+    &[href$="briah" i], &[href$="briah/index" i] {
+        
+    }
+
     &[href$="malkuth" i],
     &[href$="control-team" i], 
     &[href$="control-department" i], &[href$="control-dept" i] {
@@ -642,6 +655,16 @@ a {
     --color: var(--hp-regen);
     --icon-local: url('../assets/icons/stathpregen.png');
     --icon: url('/lobotomy-corp/assets/icons/stathpregen.png');  
+}
+.hploss, .sploss {
+    --color: var(--deny);
+}
+.hploss {
+    
+}
+
+.sploss {
+
 }
 
 .atk {
@@ -1217,6 +1240,8 @@ a {
     /*
         thicker shadow, no text-shadow
     */
+        // NOTE TO FUTURE DUMBASS
+            // PLEASE MAKE THIS A CLASS YOU BUFFOON
 .rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp,
 .regen, .execute, .hp, .hpregen, .sp, .spregen, .def, .atkspd, 
 .shieldblack, .shieldpale, .shieldwhite, .shieldred, 
