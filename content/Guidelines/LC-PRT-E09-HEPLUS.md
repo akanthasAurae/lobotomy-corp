@@ -7,7 +7,7 @@ title: "Emergency Phone Protocol"
 
 > [!safety|subtitle]
 > > [!content]
-> > Document ID: #LC-PRT-E09-HEPLUS #SAFETY-DEPARTMENT #SAFETY-GUIDELINES
+> > Document ID: #LC-PRT-E09-HEPLUS #SAFETY-DEPARTMENT #SAFETY-GUIDELINES #CONTROL-DEPARTMENT #CENTRAL-COMMAND-DEPARTMENT
 > > Revision: 2.3
 
 > [!safety] EMERGENCY PHONE PROTOCOL & PURPOSE

@@ -8,6 +8,7 @@ title: "Record Team"
 > [!record|subtitle]
 > > [!content]
 > > The department in which everything that occurs in the company is recorded. There are endless pages to be filled, but the last is always empty. The contracting and promotion of employees is decided by their records and assessments, so the employees always try to get on the good side of those who work in the Record Team; no one knows when Record Deletion will take place.
+> > Document ID:  #RECORD-DEPARTMENT 
 
 > [!record] Continuous Service Benefits:
 > Increases all Virtues for the Department’s Agents.

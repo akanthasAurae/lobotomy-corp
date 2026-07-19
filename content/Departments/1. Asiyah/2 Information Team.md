@@ -8,6 +8,7 @@ title: "Information Team"
 > [!info|subtitle]
 > > [!content]
 > > The Information Team analyzes the Abnormalities, profiles them, and devises solutions to issues the Abnormalities may cause based on the data. They are in charge of collecting, analyzing, and archiving observation data and interview logs provided by the Welfare Team. The vast library of data is the basis for finding “solutions” to various problems encountered in the energy harvesting process; they often conduct experiments to determine the consistency and safety of the solution. All of the invaluable information could be gathered thanks to long-term observations and numerous sacrifices made by the team, not armchair theorizing as some suspect… is what they asked us to write here.
+> > Document ID:  #INFORMATION-DEPARTMENT
 
 > [!info] Continuous Service Benefits:
 > Increases <span class="icon temp">Temperance</span> for the Department’s Agents.

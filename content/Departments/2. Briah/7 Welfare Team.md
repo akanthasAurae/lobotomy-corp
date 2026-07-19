@@ -8,6 +8,7 @@ title: "Welfare Team"
 > [!welfare|subtitle]
 > > [!content]
 > > With the goal of preventing epidemics and secondary infection caused by Abnormalities, the Welfare Team puts preventative measures into action and works on programs that benefit the physical fitness and mental health of employees. In-house welfare is one of the highest values Lobotomy Corporation pursues; for the protection of our valuable resources… ah, no, I mean the lives of our employees.
+> > Document ID:  #WELFARE-DEPARTMENT 
 
 > [!welfare] Continuous Service Benefits:
 > Increases the defensive capabilities of the E.G.O belonging to the Department's Agents.

@@ -8,6 +8,7 @@ title: "Extraction Team"
 > [!extract|subtitle]
 > > [!content]
 > > This department handles all physical material needed to maintain the company. They play a big role in the upkeep of everything by restoring collapsed facilities and extracting E.G.O. The arrangement, restoration, and extraction of Abnormalities are some of the duties that lie with this department as well. As such, its employees are always facing something from the Well, and moreover have an empty borehole within their hearts.
+> > Document ID:  #EXTRACTION-DEPARTMENT 
 
 > [!extract] Continuous Service Benefits:
 > Increases the offensive and defensive capabilities of the E.G.O belonging to the Department’s Agents.

@@ -8,6 +8,7 @@ title: "Central Command Team"
 > [!cmd|subtitle]
 > > [!content]
 > > The Central Command Team represents the Middle Layer of the facility. The upper and lower halves of Central Command take the role of the foundation for the facility, which allows expansion upwards and downwards. The department also functions as a bridge between the Upper and Lower Layers, making it a valuable strategic location.
+> > Document ID:  #CENTRAL-COMMAND-DEPARTMENT #LC-PRT-E09-HEPLUS 
 
 > [!cmd] Continuous Service Benefits:
 > Increases all Virtues for the Department’s Agents.

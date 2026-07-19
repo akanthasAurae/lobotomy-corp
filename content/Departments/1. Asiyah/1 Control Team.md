@@ -8,6 +8,7 @@ title: "Control Team"
 > [!control|subtitle]
 > > [!content]
 > > The Control Team monitors the employees and Abnormalities and plans out the best course of action. They give immediate orders to other employees while watching the CCTV feeds. They tend to be quite bossy and assertive, making them unpopular with other teams.
+> > Document ID:  #CONTROL-DEPARTMENT #LC-PRT-E09-HEPLUS  
 
 > [!control] Continuous Service Benefits:
 > Increase <span class="icon spd">Movement Speed</span> for the Department’s Agents.

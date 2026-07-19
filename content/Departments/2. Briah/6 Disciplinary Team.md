@@ -8,6 +8,7 @@ title: "Disciplinary Team"
 > [!disc|subtitle]
 > > [!content]
 > > The most hardcore of all departments, the Disciplinary Team creates regulations and punishments with a variety of intents, be it for when an employee violates material rules, when one leaves their obligations unfulfilled or neglects their job, if the company were to be damaged enormously, and so on. The Disciplinary Team is the best at handling and sanctioning any situation, no matter if it is with an Abnormality or one of our own employees.
+> > Document ID:  #DISCIPLINARY-DEPARTMENT 
 
 > [!disc] Continuous Service Benefits:
 > Increases the offensive capabilities of the E.G.O belonging to the Department's Agents.

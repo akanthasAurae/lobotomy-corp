@@ -8,6 +8,7 @@ title: "Training Team"
 > [!train|subtitle]
 > > [!content]
 > > The Training team is in charge of composing and regulating company policies and various management procedures. They also run general-purpose training programs to help employees adapt well to their new departments.
+> > Document ID:  #TRAINING-DEPARTMENT 
 
 > [!train] Continuous Service Benefits:
 > Increases the <span class="icon growrate">Growth Rate</span> of the Department’s Agents.

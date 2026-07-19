@@ -8,6 +8,7 @@ title: "Safety Team"
 > [!safety|subtitle]
 > > [!content]
 > > The Safety Team gives safety training to new employees and develops action plans for all kinds of potential emergencies that can occur in the company. They establish strategies for situations such as escaping Abnormalities, panicking employees and security breaches, as well as setting up safety guidelines for others to follow. They are notably meticulous and punctual.
+> > Document ID:  #SAFETY-DEPARTMENT #SAFETY-GUIDELINES 
 
 > [!safety] Continuous Service Benefits:
 > Increases the Virtues of <span class="icon fort">Fortitude</span> and <span class="icon prud">Prudence</span> for the Department’s Agents.
