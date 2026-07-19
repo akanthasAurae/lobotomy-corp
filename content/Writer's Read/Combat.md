@@ -85,7 +85,63 @@ As for the writers, the winner will write the <span class="icon clash">clash</sp
 > <span class="no-icon weak">Slow:</span> 30 <span class="icon just">Justice</span> (+1), 70 <span class="icon just">Justice</span> (+2), 120 <span class="icon just">Justice</span> (+3) 
 > <span class="no-icon vulnerable">Very Slow:</span> 40 <span class="icon just">Justice</span> (+1), 120 <span class="icon just">Justice</span> (+2)
 
-With that out of the way, <span class="icon clash">Clashing</span> requires at least two unused <span class="icon warn1">actions</span> and requires the <span class="icon abno">abnormality</span> to have at least one <span class="icon warn1">action</span>. 
+With that out of the way, <span class="icon clash">Clashing</span> requires at least two unused <span class="icon warn1">actions</span> and requires the <span class="icon abno">abnormality</span> to have at least one <span class="icon warn1">action</span>.
 
-<h2 class="team-disc">E.G.O Abilities</h2>
  Every <span class="icon weap">E.G.O Weapon</span> has a designated skill with its own damage value, mostly being the default skill. Some however have the ability to gain different skills with different values and effects, these are gained via <span class="icon gift">E.G.O Mastery</span> which is gained the longer an agent uses an <span class="icon weap">E.G.O Weapon</span> (7+ days). Each Skill takes different amounts of <span class="icon warn1">Actions</span> and can have their own conditions to activate.
+
+<h2 class="team-disc">Panic & Death Reactions</h2>
+
+> [!disc] Regular Employee Panic Reaction
+> During Combat, all sorts of things can happen which can lead to multiple outcomes that could make everything fall apart.
+> Agents panicking in front of other Agents can influence their Fear Levels which will be shown below:
+> - <span class="no-icon rank1">Lv.1 Employees</span> become <span class="icon terrify">Terrified</span> upon witnessing any employee panic. 
+>    If the panicking employee is Lv.4 or higher, they become <span class="icon hopeless">Hopeless</span> instead. 
+> - <span class="no-icon rank2">Lv.2 Employees</span> become <span class="icon nervous">Nervous</span> upon witnessing any employee panic. 
+>    If the panicking employee is Lv.4 or higher, they become <span class="icon terrify">Terrified</span> instead.
+> - <span class="no-icon rank3">Lv.3 Employees</span> remain <span class="icon calm">Calm</span> upon witnessing panic. 
+>    If the panicking employee is Lv.4 or higher, they become <span class="icon nervous">Nervous</span>. 
+> - <span class="no-icon rank4">Lv.4+ Employees</span> remain <span class="icon calm">Calm </span> when witnessing lower-level employees panic. 
+>    If another <span class="no-icon rank4">Lv.4+ employee</span> panics, they become <span class="icon nervous">Nervous</span>.
+>    > [!disc] Team Captain Panic Reaction
+>    > 
+>    > Witnessing a Team Captain Panic increases the resulting Fear Level by one stage.
+>    > - <span class="icon calm">Calm</span> → <span class="icon nervous">Nervous</span>
+>    > - <span class="icon nervous">Nervous</span> → <span class="icon terrify">Terrified</span> 
+>    > - <span class="icon terrify">Terrified</span> → <span class="icon hopeless">Hopeless</span>
+>    > - <span class="icon hopeless">Hopeless</span> → <span class="icon overwhelm">Overwhelmed</span>
+
+> [!disc] Regular Employee Death Reaction
+> During Combat, all sorts of things can happen which can lead to multiple outcomes that could make everything fall apart.
+> Agents dying in front of other Agents can influence their Fear Levels which will be shown below:
+> - <span class="no-icon rank1">Lv.1 Employees</span> become <span class="icon hopeless">Hopeless</span> upon witnessing any employee die. 
+>    If the dying employee is Lv.4 or higher, they become <span class="icon overwhelm">Overwhelmed</span> instead. 
+> - <span class="no-icon rank2">Lv.2 Employees</span> become <span class="icon terrify">Terrified</span> upon witnessing any employee die. 
+>    If the dying employee is Lv.4 or higher, they become <span class="icon hopeless">Hopeless</span> instead.
+> - <span class="no-icon rank3">Lv.3 Employees</span> become <span class="icon nervous">Nervous</span> upon witnessing any employee die. 
+>    If the dying employee is Lv.4 or higher, they become <span class="icon terrify">Terrified</span>. 
+> - <span class="no-icon rank4">Lv.4+ Employees</span> become <span class="icon nervous">Nervous</span> when witnessing lower-level employees die. 
+>    If another <span class="no-icon rank4">Lv.4+ employee</span> dies, they become <span class="icon terrify">Terrified</span>.
+>    > [!disc] Team Captain Death Reaction
+>    > 
+>    > Witnessing a Team Captain die increases the resulting Fear Level by two stages.
+>    > - <span class="icon calm">Calm</span> → <span class="icon terrify">Terrified</span> 
+>    > - <span class="icon nervous">Nervous</span> → <span class="icon hopeless">Hopeless</span> 
+>    > - <span class="icon terrify">Terrified</span> → <span class="icon overwhelm">Overwhelmed</span>
+>    > - <span class="icon hopeless">Hopeless</span> → <span class="icon overwhelm">Overwhelmed</span>
+>    
+
+
+> [!disc] Fear Level Effects
+>
+> - <span class="icon relaxed">Relaxed</span> - Employees that are relaxed gain a +5% <span class="icon wrkscc">Work Success Rate</span> bonus
+> - <span class="icon calm">Calm</span> - Nothing
+>  - <span class="icon nervous">Nervous</span> - Employees take <span class="icon sp">SP</span> damage equal to 10% of their max. <span class="icon sp">SP</span>
+>  - <span class="icon terrify">Terrified</span> - Employees take <span class="icon sp">SP</span> damage equal to 20% of their max. <span class="icon sp">SP</span>
+>  - <span class="icon hopeless">Hopeless</span> - Employees take <span class="icon sp">SP</span> damage equal to 40% of their max. <span class="icon sp">SP</span> 
+>  - <span class="icon overwhelm">Overwhelmed</span> - Employees take <span class="icon sp">SP</span> damage equal to 60% of their max. <span class="icon sp">SP</span> 
+>  - <span class="icon reverence">Reverence</span> - Employees take <span class="icon sp">SP</span> damage equal to 100% of their max. <span class="icon sp">SP</span>
+>
+> Fear Levels are a value that persists and slowly calms down and they can have different effects whether an Employee is in Combat or in a Work Procedure:
+> <span class="icon terrify">Terrified:</span> <span class="icon wrkscc">Work Success Rate</span> -5%, <span class="icon clash">Clash Power</span> -1, -10% <span class="no-icon weap">damage</span>, -10% <span class="no-icon suit">defense</span>
+> <span class="icon hopeless">Hopeless:</span> <span class="icon wrkscc">Work Success Rate</span> -10%, <span class="icon clash">Clash Power</span> -2, -20% <span class="no-icon weap">damage</span>, -20% <span class="no-icon suit">defense</span>
+> <span class="icon overwhelm">Overwhelmed:</span> <span class="icon wrkscc">Work Success Rate</span> -20%, <span class="icon clash">Clash Power</span> -4, -40% <span class="no-icon weap">damage</span>, -40% <span class="no-icon suit">defense</span>
