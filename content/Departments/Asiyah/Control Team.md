@@ -53,3 +53,6 @@ title: 1. Control Team
 > <code>- The department in which the Suppression took place will no longer be influenced by <span class="icon meltdown">Qliphoth Meltdowns</span></code>
 > <code>- All employees gain <span class="icon spd">Min & Max Speed +1</span></code>
 > <code>- All employees deal 5% damage for every <span class="icon spd">SPD</span> difference against Abnormalities</code>
+
+
+[[F-04-16-04]]
