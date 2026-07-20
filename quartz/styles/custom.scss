@@ -324,6 +324,9 @@ h1, h2, h3 {
         margin-bottom: 0px;
         padding-bottom: 0px;
     }
+    &.faux {
+        background-color: color-mix(in oklab, var(--light) 100%, var(--color, var(--darkgray)) 50%);
+    }
 }
 h4, h5, h6, b, i, em, strong, thead, th, tbody, table, button, span, p {
     color: var(--color);
@@ -712,12 +715,14 @@ h1, h2, h3 {
                 display: none;
             }
             div.callout-title-inner > p {
-                padding-left: calc(var(--size-em) * 3);
-                padding-right: calc(var(--size-em) * 3);
+                padding-left: var(--size-em);
+                padding-right: var(--size-em);
+                margin-left: var(--size-em);
+                margin-right: var(--size-em);
                 font-family: 'Norwester';
                 color: var(--light);
                 background-color: var(--color, var(--light));
-                mask-image: linear-gradient(135deg, transparent 15%, black 15%), linear-gradient(45deg, black 85%, transparent 85%);
+                mask-image: linear-gradient(135deg, transparent calc(var(--size-em) / 1.5), black calc(var(--size-em) / 1.5)), linear-gradient(45deg, black calc(100% - calc(var(--size-em) / 1.5)), transparent calc(100% - calc(var(--size-em) / 1.5)));
                 mask-composite: intersect;
             }
         }
@@ -960,7 +965,7 @@ h1, h2, h3 {
 .sp, .def, .spregen {
     --color: var(--sp);
 }
-.infoi, .suiti, .weapi, .gifti, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .abno {
+.infoi, .suiti, .weapi, .gifti, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .abno, .default {
     --color: var(--info);
 }
 .sp {
