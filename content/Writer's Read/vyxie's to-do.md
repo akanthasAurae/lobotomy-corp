@@ -26,4 +26,4 @@ post-work:
 > [!default] make new uncontrollable and dead icons; maybe reuse execution instead of skullmake new uncontrollable and dead icons; maybe reuse execution instead of skull
 > help
 
-![[read]]
+![[read (again)]]
