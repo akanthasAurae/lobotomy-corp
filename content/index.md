@@ -156,6 +156,7 @@ cheatsheet yeahhhhhhh
 <span class="icon rank4w">rank4w</span>
 <span class="icon rank5w">rank5w</span>
 <span class="icon rank6w">rank6w</span>
+icon rank
 <span class="icon hp">hp</span>
 <span class="icon hpregen">hpregen</span>
 <span class="icon sp">sp</span>
