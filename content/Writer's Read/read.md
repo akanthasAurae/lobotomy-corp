@@ -7,4 +7,8 @@ abnormality should be right
 
 also check the justice attack speed thing it doesnt fit properly in the callout
 
-<h1 class="waw icon faux">Using 'faux' as a class for this effect</h1>
+<h1 class="waw icon faux has-subtitle">Using 'faux' as a class for this effect</h1>
+
+> [!waw|subtitle faux]
+> > [!content]
+> > foo this ball in yo ja

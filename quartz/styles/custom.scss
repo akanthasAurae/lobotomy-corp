@@ -673,13 +673,16 @@ h1, h2, h3 {
             }
         }
     }
-    &[data-callout-metadata="subtitle"] {
+    &[data-callout-metadata~="subtitle"] {
         margin-top: 0px;
         position: relative;
         clip-path: var(--clip);
         background-color: var(--color, var(--light)) /*color-mix(in oklab, var(--light) 100%, transparent 80%)*/;
         padding: 0.1rem;
         padding-top: 0.15rem;
+        &[data-callout-metadata~="faux"] {
+            background-color: color-mix(in oklab, var(--light) 100%, var(--color, var(--darkgray)) 50%);
+        }
         
         & > div.callout-content {
             --color: var(--darkgray);
@@ -708,7 +711,7 @@ h1, h2, h3 {
             }      
         }
     }
-    &:not([data-callout-metadata="subtitle"],[data-callout-metadata="span"],[data-callout-metadata="content"], .subtitle, .span, .content) {
+    &:not([data-callout-metadata~="subtitle"],[data-callout-metadata~="span"],[data-callout-metadata~="content"], [data-callout-metadata~="faux"], .subtitle, .span, .content) {
         div.callout-title {
             padding-bottom: 0px;
             div.callout-icon {
