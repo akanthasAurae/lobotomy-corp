@@ -135,7 +135,7 @@ When its health drops below a certain point, it will enter a second, much more d
 > [!warn3] Brambles that Yearn
 > A wave of thorned vines and roots swims after the group of employees through the floor, cutting and tearing anything in their path like barbed wire. Then the abnormality raises both of its limbs above its head as thorned vines spun and twisted, gathering into a swirling circle of moving spikes. Following that, it hurls that mass which detonates into a burst that shoots the vines outwards, creating even deeper cuts.
 ><code> Atk Weight ⯀⯀⯀⯀⯀⯀</code>
-><code>- 10~18 <span class="icon red">RED</span> damage, repeats twice</code>
+><code>- 10~18 <span class="icon red">RED</span> damage, rolls twice</code>
 ><code>- Consume up to 400 <span class="icon warn3">Nourishment</span> to gain the following effects on the second attack:</code>
 ><code>- <span class="icon hpregen">Heal</span> the Core's <span class="icon hp">HP</span> by <span class="icon warn3">Nourishment</span> consumed</code>
 ><code>- Min & Max <span class="icon weap">Attack Power</span> +1 for every 20 <span class="icon warn3">Nourishment</span> consumed (max 20)</code>

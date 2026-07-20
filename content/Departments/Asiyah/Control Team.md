@@ -55,4 +55,3 @@ title: 1. Control Team
 > <code>- All employees deal 5% damage for every <span class="icon spd">SPD</span> difference against Abnormalities</code>
 
 
-[[F-04-16-04]]
