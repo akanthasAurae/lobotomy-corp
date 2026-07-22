@@ -10,8 +10,8 @@ const Logo: QuartzComponent = () => {
         alignItems: "center",
       }}
     >
-      <img src="/assets/icons/logo1.png" width={150} id="lightLogo" />
-      <img src="/assets/icons/logo4.png" width={150} id="darkLogo" />
+      <div id="lightLogo" class="logo"></div>
+      <div id="darkLogo" class="logo"></div>
 
       <h6
         id="lob-corp"

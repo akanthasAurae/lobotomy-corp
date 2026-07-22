@@ -30,6 +30,11 @@
 
     --info: #ffffb0;
 
+    --warn-4: #00a21b;
+    --warn-5: #00eb26;
+    --warn-6: #b4ff3c;
+    --warn-7: #00cea7;
+
     --bullet: #1effad;
     --b-slow: #f8db2f;
     --b-execute: var(--dead);
@@ -108,20 +113,42 @@
 }
 
 html{
-    &[saved-theme="dark"] {
-        img#lightLogo {
-            display: block;
+    div.logo {
+            min-width: 10em;
+            min-height: 12em;
+            background-image: var(--icon-local, var(--icon));
+            background-position-y: center;
+            background-position-x: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 0.5em;
         }
-        img#darkLogo {
+    &[saved-theme="dark"] {
+        div#lightLogo {
             display: none;
+            
+            --icon-local: url('../assets/icons/lc/logo4.png');
+            --icon: url('/lobotomy-corp/assets/icons/lc/logo4.png');
+        }
+        div#darkLogo {
+            display: block;
+
+            --icon-local: url('../assets/icons/lc/logo1.png');
+            --icon: url('/lobotomy-corp/assets/icons/lc/logo1.png');
         }
     }
     &[saved-theme="light"] {
-        img#lightLogo {
-            display: none;
-        }
-        img#darkLogo {
+        div#lightLogo {
             display: block;
+
+            --icon-local: url('../assets/icons/lc/logo4.png');
+            --icon: url('/lobotomy-corp/assets/icons/lc/logo4.png');
+        }
+        div#darkLogo {
+            display: none;
+
+            --icon-local: url('../assets/icons/lc/logo1.png');
+            --icon: url('/lobotomy-corp/assets/icons/lc/logo1.png');
         }
     }
 }
@@ -182,8 +209,7 @@ html{
     margin-top: var(--border);
     padding-top: 0;
     padding-bottom: 0;
-    overflow-y: auto;
-    overflow-x: clip;
+    overflow: clip;
     max-height: calc(100vh - calc(var(--border) * 2));
 
     .toc {
@@ -193,6 +219,9 @@ html{
         }
         & button.toc-header h3 ~ svg {
             display: none;
+        }
+        & ul.toc-content.overflow {
+            max-height: calc(100% - calc(var(--border) * 3.5));
         }
     }
 }
@@ -249,18 +278,16 @@ html{
     /*
         checkboxes
     */
-li:has(> input[type=checkbox][checked]) {
-    text-decoration: underline;
+ul li:has(> input[type=checkbox]:checked:disabled) {
+    background-color: transparent;
+    border-color: var(--secondary);
+    text-decoration: none;
     color: var(--secondary);
-    & > input {
-        background-color: transparent;
+    &::after {
         border-color: var(--secondary);
-        &::after {
-            border-color: var(--secondary);
-        }
     }
 }
-li:has(> input[type=checkbox]:not([checked])) {
+li > input[type=checkbox]:not([checked]) {
     color: var(--ne);
 }
 
@@ -290,6 +317,9 @@ code {
     & > p, span, a, b, i, em, strong {
         font-family: 'JetBrains Mono';
     }
+}
+span {
+    padding: 0.15em;
 }
 
 .page-header {
@@ -759,16 +789,16 @@ h1, h2, h3 {
     */
 
     /* shared colors */
-.fort, .inst, .red, .shieldred {
+.fort, .inst, .red, .shieldred, .murder {
     --color: var(--red);
 }
-.prud, .insi, .white, .shieldwhite {
+.prud, .insi, .white, .shieldwhite, .suicide {
     --color: var(--white);
 }
-.temp, .atta, .black, .shieldblack {
+.temp, .atta, .black, .shieldblack, .wander {
     --color: var(--black);
 }
-.just, .repr, .pale, .shieldpale {
+.just, .repr, .pale, .shieldpale, .shutdown {
     --color: var(--pale);
 }
 .special, .req, .conf, .sacr, .perf, .prot {
@@ -777,188 +807,206 @@ h1, h2, h3 {
 }
 
 .dead {
-    --icon-local: url('../assets/icons/scope.png');
-    --icon: url('/lobotomy-corp/assets/icons/scope.png');
+    --icon-local: url('../assets/icons/nugs/states/dead.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/dead.png');
 }
 
-.aleph, .dead, .overwhelm, .vulnerable, .team-disc, .execute {
+.aleph, .dead, .overwhelm, .vulnerable, .execute {
     --color: var(--dead);
 }
-.resistant, .briah {
+.vulnerable {
+    --color: var(--res-v);
+    --icon-local: url('../assets/icons/ui/res/vul.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/vul.png');
+}
+.weak {
+    --color: var(--res-w);
+    --icon-local: url('../assets/icons/ui/res/weak.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/weak.png');
+}
+.normal {
+    --color: var(--res-n);
+    --icon-local: url('../assets/icons/ui/res/neu.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/neu.png');
+}
+.endured {
+    --color: var(--res-e);
+    --icon-local: url('../assets/icons/ui/res/en.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/en.png');
+}
+.resistant {
     --color: var(--res-r);
+    --icon-local: url('../assets/icons/ui/res/res.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/res.png');
+}
+.immune {
+    --color: var(--res-i);
+    --icon-local: url('../assets/icons/ui/res/immune.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/immune.png');
+}
+.absorb {
+    --color: var(--res-a);
+    --icon-local: url('../assets/icons/ui/res/absorb.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/res/absorb.png');
 }
 .working, .en-route {
     --color: var(--working);
 }
 .relaxed, .calm {
     --color: var(--relax);
-    --icon-local: url('../assets/icons/panic0.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic0.png');  
+    --icon-local: url('../assets/icons/nugs/states/0.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/0.png');  
 }
-.ordealamber, .weak {
+.ordealamber {
     --color: var(--res-w);
 }
-.dawn, .dusk, .noon, .midnight, .team-arch, .reverence, .normal, .ordealwhite, .denyw, .plus, .plusi, .minus, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, .calmi, .terrifyi, .hopelessi, .overwhelmi {
+.dawn, .dusk, .noon, .midnight, 
+.reverence, 
+.normal, 
+.ordealwhite, 
+.denyw, .plus, .plus2, .minus, 
+.rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, .calmi, .terrifyi, .hopelessi, .overwhelmi,
+.posw, .neuw, .negw {
     --color: var(--reverence);
 }
-.pe, .bullets {
+.pe, .bullets, .bulletsh {
     --color: var(--bullet);
 }
 .ordealwhite {
-    --icon-local: url('../assets/icons/iconabnow.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconabnow.png');
+    --icon-local: url('../assets/icons/abno/ord/w/w.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/w/w.png');
 }
 .ordealamber {
-    --icon-local: url('../assets/icons/iconorda.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconorda.png');
+    --icon-local: url('../assets/icons/abno/ord/a/a.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/a/a.png');
 }
 .ordealcrimson {
     --color: var(--o-crimson);
-    --icon-local: url('../assets/icons/iconordc.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordc.png');
+    --icon-local: url('../assets/icons/abno/ord/c/c.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/c/c.png');
 }
 .ordealindigo {
     --color: var(--o-indigo);
-    --icon-local: url('../assets/icons/iconordi.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordi.png');
+    --icon-local: url('../assets/icons/abno/ord/i/i.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/i/i.png');
 }
 .ordealgreen {
     --color: var(--o-green);
-    --icon-local: url('../assets/icons/iconordg.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordg.png');
+    --icon-local: url('../assets/icons/abno/ord/g/g.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/g/g.png');
 }
 .ordealviolet {
     --color: var(--o-violet);
-    --icon-local: url('../assets/icons/iconordv.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordv.png');
+    --icon-local: url('../assets/icons/abno/ord/v/v.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/v/v.png');
 }
 
 .dawn {
     &.ordealamber {
         --color: var(--o-amber);
-        --icon-local: url('../assets/icons/iconorddawna.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawna.png');  
+        --icon-local: url('../assets/icons/abno/ord/a/dawn.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/a/dawn.png');  
     }
     &.ordealgreen {
         --color: var(--o-green);
-        --icon-local: url('../assets/icons/iconorddawng.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawng.png');  
+        --icon-local: url('../assets/icons/abno/ord/g/dawn.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/g/dawn.png');  
     }
     &.ordealindigo {
         --color: var(--o-indigo);
-        --icon-local: url('../assets/icons/iconorddawni.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawni.png'); 
+        --icon-local: url('../assets/icons/abno/ord/i/dawn.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/i/dawn.png'); 
     }
     &.ordealcrimson {
         --color: var(--o-crimson);
-        --icon-local: url('../assets/icons/iconorddawnc.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawnc.png'); 
+        --icon-local: url('../assets/icons/abno/ord/c/dawn.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/c/dawn.png'); 
     }
     &.ordealviolet {
         --color: var(--o-violet);
-        --icon-local: url('../assets/icons/iconorddawnv.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawnv.png'); 
-    }
-    &.ordealwhite {
-        --color: var(--o-white);
-        --icon-local: url('../assets/icons/iconorddawn.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddawn.png'); 
+        --icon-local: url('../assets/icons/abno/ord/v/dawn.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/v/dawn.png'); 
     }
 }
 .noon {
     &.ordealamber {
         --color: var(--o-amber);
-        --icon-local: url('../assets/icons/iconordnoona.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnoona.png');  
+        --icon-local: url('../assets/icons/abno/ord/a/noon.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/a/noon.png');  
     }
     &.ordealgreen {
         --color: var(--o-green);
-        --icon-local: url('../assets/icons/iconordnoong.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnoong.png');  
+        --icon-local: url('../assets/icons/abno/ord/g/noon.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/g/noon.png');  
     }
     &.ordealindigo {
         --color: var(--o-indigo);
-        --icon-local: url('../assets/icons/iconordnooni.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnooni.png'); 
+        --icon-local: url('../assets/icons/abno/ord/i/noon.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/i/noon.png'); 
     }
     &.ordealcrimson {
         --color: var(--o-crimson);
-        --icon-local: url('../assets/icons/iconordnoonc.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnoonc.png'); 
+        --icon-local: url('../assets/icons/abno/ord/c/noon.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/c/noon.png'); 
     }
     &.ordealviolet {
         --color: var(--o-violet);
-        --icon-local: url('../assets/icons/iconordnoonv.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnoonv.png'); 
-    }
-    &.ordealwhite {
-        --color: var(--o-white);
-        --icon-local: url('../assets/icons/iconordnoon.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordnoon.png'); 
+        --icon-local: url('../assets/icons/abno/ord/v/noon.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/v/noon.png'); 
     }
 }
 .dusk {
     &.ordealamber {
         --color: var(--o-amber);
-        --icon-local: url('../assets/icons/iconordduska.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordduska.png');  
+        --icon-local: url('../assets/icons/abno/ord/a/dusk.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/a/dusk.png');  
     }
     &.ordealgreen {
         --color: var(--o-green);
-        --icon-local: url('../assets/icons/iconordduskg.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordduskg.png');  
+        --icon-local: url('../assets/icons/abno/ord/g/dusk.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/g/dusk.png');  
     }
     &.ordealindigo {
         --color: var(--o-indigo);
-        --icon-local: url('../assets/icons/iconordduski.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordduski.png'); 
+        --icon-local: url('../assets/icons/abno/ord/i/dusk.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/i/dusk.png'); 
     }
     &.ordealcrimson {
         --color: var(--o-crimson);
-        --icon-local: url('../assets/icons/iconordduskc.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordduskc.png'); 
+        --icon-local: url('../assets/icons/abno/ord/c/dusk.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/c/dusk.png'); 
     }
     &.ordealviolet {
         --color: var(--o-violet);
-        --icon-local: url('../assets/icons/iconordduskv.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordduskv.png'); 
-    }
-    &.ordealwhite {
-        --color: var(--o-white);
-        --icon-local: url('../assets/icons/iconorddusk.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconorddusk.png'); 
+        --icon-local: url('../assets/icons/abno/ord/v/dusk.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/v/dusk.png'); 
     }
 }
 .midnight {
     &.ordealamber {
         --color: var(--o-amber);
-        --icon-local: url('../assets/icons/iconordmidnighta.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnighta.png');  
+        --icon-local: url('../assets/icons/abno/ord/a/midnight.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/a/midnight.png');  
     }
     &.ordealgreen {
         --color: var(--o-green);
-        --icon-local: url('../assets/icons/iconordmidnightg.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnightg.png');  
+        --icon-local: url('../assets/icons/abno/ord/g/midnight.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/g/midnight.png');  
     }
     &.ordealindigo {
         --color: var(--o-indigo);
-        --icon-local: url('../assets/icons/iconordmidnighti.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnighti.png'); 
+        --icon-local: url('../assets/icons/abno/ord/i/midnight.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/i/midnight.png'); 
     }
     &.ordealcrimson {
         --color: var(--o-crimson);
-        --icon-local: url('../assets/icons/iconordmidnightc.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnightc.png'); 
+        --icon-local: url('../assets/icons/abno/ord/c/midnight.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/c/midnight.png'); 
     }
     &.ordealviolet {
         --color: var(--o-violet);
-        --icon-local: url('../assets/icons/iconordmidnightv.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnightv.png'); 
-    }
-    &.ordealwhite {
-        --color: var(--o-white);
-        --icon-local: url('../assets/icons/iconordmidnight.png');
-        --icon: url('/lobotomy-corp/assets/icons/iconordmidnight.png'); 
+        --icon-local: url('../assets/icons/abno/ord/v/midnight.png');
+        --icon: url('/lobotomy-corp/assets/icons/abno/ord/v/midnight.png'); 
     }
 }
 
@@ -968,153 +1016,190 @@ h1, h2, h3 {
 .sp, .def, .spregen {
     --color: var(--sp);
 }
-.infoi, .suiti, .weapi, .gifti, .qliphoth, .rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .abno, .default {
+.infoi, .suiti, .weapi, .gifti, .confirmi, .denyi, .minusi, .plusi, .plus2i,
+.qliphoth, 
+.rank1, .rank2, .rank3, .rank4, .rank5, .rank6, 
+.abno, .default,
+.cap, .capr, .nug,
+.dawni, .nooni, .duski, .midnighti,
+.panici
+ {
     --color: var(--info);
 }
 .sp {
-    --icon-local: url('../assets/icons/statsp.png');
-    --icon: url('/lobotomy-corp/assets/icons/statsp.png');
+    --icon-local: url('../assets/icons/nugs/stats/sp.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/sp.png');
 }
 .spregen {
-    --icon-local: url('../assets/icons/statspregen.png');
-    --icon: url('/lobotomy-corp/assets/icons/statspregen.png');
+    --icon-local: url('../assets/icons/nugs/stats/spregen.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/spregen.png');
 }
 .hp {
     --color: var(--hp);
-    --icon-local: url('../assets/icons/stathp.png');
-    --icon: url('/lobotomy-corp/assets/icons/stathp.png');  
+    --icon-local: url('../assets/icons/nugs/stats/hp.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/hp.png');  
 }
 .hpregen {
     --color: var(--hp-regen);
-    --icon-local: url('../assets/icons/stathpregen.png');
-    --icon: url('/lobotomy-corp/assets/icons/stathpregen.png');  
+    --icon-local: url('../assets/icons/nugs/stats/hpregen.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/hpregen.png');  
 }
 .hploss, .sploss {
     --color: var(--deny);
 }
 .hploss {
-    
+    --icon-local: url('../assets/icons/nugs/stats/hploss.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/hploss.png');  
 }
 
 .sploss {
-
+    --icon-local: url('../assets/icons/nugs/stats/sploss.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/sploss.png');  
 }
 
 .atk {
     --color: var(--atk);
-    --icon-local: url('../assets/icons/statatkdmg.png');
-    --icon: url('/lobotomy-corp/assets/icons/statatkdmg.png');  
+    --icon-local: url('../assets/icons/nugs/stats/atk.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/atk.png');  
 }
 .def {
-    --icon-local: url('../assets/icons/statsuitdef.png');
-    --icon: url('/lobotomy-corp/assets/icons/statsuitdef.png');  
+    --icon-local: url('../assets/icons/nugs/stats/def.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/def.png');  
 }
 .defw {
     --color: var(--reverence);
-    --icon-local: url('../assets/icons/icondef.png');
-    --icon: url('/lobotomy-corp/assets/icons/icondef.png');  
+    --icon-local: url('../assets/icons/unused/icondef.png');
+    --icon: url('/lobotomy-corp/assets/icons/unused/icondef.png');  
 }
 .atkspd {
     --color: var(--atk-spd);
-    --icon-local: url('../assets/icons/statatkspd.png');
-    --icon: url('/lobotomy-corp/assets/icons/statatkspd.png');  
+    --icon-local: url('../assets/icons/nugs/stats/atkspd.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/atkspd.png');  
 }
 .spd {
     --color: var(--spd);
-    --icon-local: url('../assets/icons/statmovspd.png');
-    --icon: url('/lobotomy-corp/assets/icons/statmovspd.png');  
+    --icon-local: url('../assets/icons/nugs/stats/mvspd.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/mvspd.png');  
 }
 .wrkspd {
     --color: var(--wrk-spd);
-    --icon-local: url('../assets/icons/statwrkspd.png');
-    --icon: url('/lobotomy-corp/assets/icons/statwrkspd.png');  
+    --icon-local: url('../assets/icons/nugs/stats/wrkspd.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/wrkspd.png');  
 }
 .wrkscc {
     --color: var(--wrk-scc);
-    --icon-local: url('../assets/icons/statwrkscc.png');
-    --icon: url('/lobotomy-corp/assets/icons/statwrkscc.png');  
+    --icon-local: url('../assets/icons/nugs/stats/wrkscc.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/wrkscc.png');  
 }
 .growrate {
     --color: var(--grow-rate);
-    --icon-local: url('../assets/icons/statgrowrate.png');
-    --icon: url('/lobotomy-corp/assets/icons/statgrowrate.png');  
+    --icon-local: url('../assets/icons/nugs/stats/growrate.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/growrate.png');  
 }
 
 .nervous {
     --color: var(--nervous);
-    --icon-local: url('../assets/icons/panic2.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic2.png');  
+    --icon-local: url('../assets/icons/nugs/states/1.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/1.png');  
 }
 .terrify {
-    --icon-local: url('../assets/icons/panic3.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic3.png');  
+    --icon-local: url('../assets/icons/nugs/states/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/2.png');  
 }
 .terrifyi {
-    --icon-local: url('../assets/icons/panic3w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic3w.png');  
+    --icon-local: url('../assets/icons/nugs/states/2w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/2w.png');  
 }
 .hopeless {
-    --icon-local: url('../assets/icons/panic4.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic4.png');  
-
+    --icon-local: url('../assets/icons/nugs/states/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/3.png'); 
 }
-.hopeless {
-    --icon-local: url('../assets/icons/panic4w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic4w.png');  
+.hopelessi {
+    --icon-local: url('../assets/icons/nugs/states/3w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/3w.png'); 
 }
 .overwhelm {
-    --icon-local: url('../assets/icons/panic5.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic5.png');  
+    --icon-local: url('../assets/icons/nugs/states/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/4.png'); 
 }
 .overwhelmi {
-    --icon-local: url('../assets/icons/panic5w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic5w.png');  
+    --icon-local: url('../assets/icons/nugs/states/4w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/4w.png'); 
 }
 .reverence {
-    --icon-local: url('../assets/icons/panic6.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic6.png');  
+    --icon-local: url('../assets/icons/nugs/states/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/5.png'); 
 }
 
 .panic {
     --color: var(--panic);
-    --icon-local: url('../assets/icons/iconpanic2.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconpanic2.png');  
+    --icon-local: url('../assets/icons/nugs/states/panic.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/panic.png'); 
+}
+.murder {
+    --icon-local: url('../assets/icons/nugs/states/murder.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/murder.png'); 
+}
+.suicide {
+    --icon-local: url('../assets/icons/nugs/states/suicide.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/suicide.png'); 
+}
+.wander {
+    --icon-local: url('../assets/icons/nugs/states/wander.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/wander.png'); 
+}
+.shutdown {
+    --icon-local: url('../assets/icons/nugs/states/shutdown.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/shutdown.png'); 
 }
 .panici {
-    --icon-local: url('../assets/icons/iconpanic.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconpanic.png');  
+    --icon-local: url('../assets/icons/unused/iconpanic.png');
+    --icon: url('/lobotomy-corp/assets/icons/unused/iconpanic.png');  
 }
 .uncontrol {
     --color: var(--uncontrol);
-    --icon-local: url('../assets/icons/iconuncontrol.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconuncontrol.png');  
+    --icon-local: url('../assets/icons/nugs/states/uncontrol.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/uncontrol.png'); 
 }
 .suit {
     --color: var(--suit);
-    --icon-local: url('../assets/icons/iconsuit.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconsuit.png');  
+    --icon-local: url('../assets/icons/ui/suit3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/suit3.png');  
+}
+.suiti   {
+    --icon-local: url('../assets/icons/ui/suit.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/suit.png');  
+}
+.suitw   {
+    --color: var(--reverence);
+    --icon-local: url('../assets/icons/ui/suit2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/suit2.png');  
 }
 .weap {
     --color: var(--weap);
-    --icon-local: url('../assets/icons/iconweap.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconweap.png');  
+    --icon-local: url('../assets/icons/ui/weap3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/weap3.png');  
+}
+.weapi {
+    --icon-local: url('../assets/icons/ui/weap.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/weap.png');  
+}
+.weapw {
+    --icon-local: url('../assets/icons/ui/weap2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/weap2.png');  
 }
 .gift {
     --color: var(--gift);
-    --icon-local: url('../assets/icons/icongift.png');
-    --icon: url('/lobotomy-corp/assets/icons/icongift.png');  
-}
-.suiti   {
-    --icon-local: url('../assets/icons/equipsuit.png');
-    --icon: url('/lobotomy-corp/assets/icons/equipsuit.png');  
-}
-.weapi {
-    --icon-local: url('../assets/icons/equipweap.png');
-    --icon: url('/lobotomy-corp/assets/icons/equipweap.png');  
+    --icon-local: url('../assets/icons/ui/gift3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/gift3.png');  
 }
 .gifti {
-    --icon-local: url('../assets/icons/equipgift.png');
-    --icon: url('/lobotomy-corp/assets/icons/equipgift.png');  
+    --icon-local: url('../assets/icons/ui/gift.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/gift.png'); 
+}
+.giftw {
+    --icon-local: url('../assets/icons/ui/gift2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/gift2.png'); 
 }
 .damage {
     --color: var(--damage);
@@ -1123,19 +1208,24 @@ h1, h2, h3 {
     --color: var(--res);
 }
 .clash {
-    --color: var(--special);
-    --icon-local: url('../assets/icons/iconclash.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconclash.png');
+    --color: var(--res-w);
+    --icon-local: url('../assets/icons/nugs/clash.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/clash.png');
 }
-
-.absorb {
-    --color: var(--res-a);
+.clashw {
+    --color: var(--reverence);
+    --icon-local: url('../assets/icons/nugs/clash2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/clash2.png');
 }
-.immune {
-    --color: var(--res-i);
+.egoalt {
+    --color: var(--team-extr);
+    --icon-local: url('../assets/icons/nugs/alt.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/alt.png');
 }
-.endured {
-    --color: var(--res-e);
+.egoaltw {
+    --color: var(--reverence);
+    --icon-local: url('../assets/icons/nugs/alt2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/alt2.png');
 }
 
     /*
@@ -1143,98 +1233,140 @@ h1, h2, h3 {
     */
 .confirm {
     --color: var(--confirm);
-    --icon-local: url('../assets/icons/iconcheck.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconcheck.png');
+    --icon-local: url('../assets/icons/ui/conf3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/conf3.png');
+}
+.confirmw {
+    --color: var(--reverence);
+    --icon-local: url('../assets/icons/ui/conf2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/conf2.png');
+}
+.confirmi {
+    --icon-local: url('../assets/icons/ui/conf.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/conf.png');
 }
 .deny {
     --color: var(--deny);
-    --icon-local: url('../assets/icons/icondeny.png');
-    --icon: url('/lobotomy-corp/assets/icons/icondeny.png');
+    --icon-local: url('../assets/icons/ui/deny3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/deny3.png');
 }
 .denyw {
-    --icon-local: url('../assets/icons/icondeny2.png');
-    --icon: url('/lobotomy-corp/assets/icons/icondeny2.png');
+    --icon-local: url('../assets/icons/ui/deny2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/deny2.png');
+}
+.denyi {
+    --icon-local: url('../assets/icons/ui/deny.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/deny.png');
 }
 .plus {
-    --icon-local: url('../assets/icons/iconplus.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconplus.png');
+    --icon-local: url('../assets/icons/ui/plus2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/plus2.png');
 }
 .plusi {
-    --icon-local: url('../assets/icons/iconplus2.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconplus2.png');
+    --icon-local: url('../assets/icons/ui/plus.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/plus.png');
+}
+.plus2 {
+    --icon-local: url('../assets/icons/ui/plus4.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/plus4.png');
+}
+.plus2i {
+    --icon-local: url('../assets/icons/ui/plus3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/plus3.png');
 }
 .minus {
-    --icon-local: url('../assets/icons/iconminus.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconminus.png');
+    --icon-local: url('../assets/icons/ui/neu2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/neu2.png');
+}
+.minusi {
+        --icon-local: url('../assets/icons/ui/neu.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/neu.png');
 }
 .calmi {
-    --icon-local: url('../assets/icons/panic0w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic0w.png');
+    --icon-local: url('../assets/icons/nugs/states/0w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/0w.png');
 }
 .terrifyi {
-    --icon-local: url('../assets/icons/panic3w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic3w.png');
+    --icon-local: url('../assets/icons/nugs/states/2w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/2w.png');
 }
 .hopelessi {
-    --icon-local: url('../assets/icons/panic4w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic4w.png');
+    --icon-local: url('../assets/icons/nugs/states/3w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/3w.png');
 }
 .overwhelmi {
-    --icon-local: url('../assets/icons/panic5w.png');
-    --icon: url('/lobotomy-corp/assets/icons/panic5w.png');
+    --icon-local: url('../assets/icons/nugs/states/4w.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/states/4w.png');
+}
+.rank {
+    --color: var(--info);
+    --icon-local: url('../assets/icons/nugs/rank.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank.png');
 }
 .rank1 {
-    --icon-local: url('../assets/icons/rank1.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank1.png');
+    --icon-local: url('../assets/icons/ui/level/1.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/1.png');
 }
 .rank2 {
-    --icon-local: url('../assets/icons/rank2.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank2.png');
+    --icon-local: url('../assets/icons/ui/level/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/2.png');
 }
 .rank3 {
-    --icon-local: url('../assets/icons/rank3.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank3.png');
+    --icon-local: url('../assets/icons/ui/level/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/3.png');
 }
 .rank4 {
-    --icon-local: url('../assets/icons/rank4.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank4.png');
+    --icon-local: url('../assets/icons/ui/level/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/4.png');
 }
 .rank5 {
-    --icon-local: url('../assets/icons/rank5.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank5.png');
+    --icon-local: url('../assets/icons/ui/level/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/5.png');
 }
 .rank6 {
-    --icon-local: url('../assets/icons/rank6.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank6.png');
+    --icon-local: url('../assets/icons/ui/level/6.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/6.png');
 }
 .rank1w {
-    --icon-local: url('../assets/icons/rank1w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank1w.png');
+    --icon-local: url('../assets/icons/ui/level/1w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/1w.png');
 }
 .rank2w {
-    --icon-local: url('../assets/icons/rank2w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank2w.png');
+    --icon-local: url('../assets/icons/ui/level/2w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/2w.png');
 }
 .rank3w {
-    --icon-local: url('../assets/icons/rank3w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank3w.png');
+    --icon-local: url('../assets/icons/ui/level/3w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/3w.png');
 }
 .rank4w {
-    --icon-local: url('../assets/icons/rank4w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank4w.png');
+    --icon-local: url('../assets/icons/ui/level/4w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/4w.png');
 }
 .rank5w {
-    --icon-local: url('../assets/icons/rank5w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank5w.png');
+    --icon-local: url('../assets/icons/ui/level/5w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/5w.png');
 }
 .rank6w {
-    --icon-local: url('../assets/icons/rank6w.png');
-    --icon: url('/lobotomy-corp/assets/icons/rank6w.png');
+    --icon-local: url('../assets/icons/ui/level/6w.png');
+    --icon: url('/lobotomy-corp/assets/icons/ui/level/6w.png');
+}
+.nug {
+    --icon-local: url('../assets/icons/nugs/rank/1.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/1.png');
+}
+.cap {
+    --icon-local: url('../assets/icons/nugs/rank/cap/1.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/1.png');
+}
+.capr {
+    --icon-local: url('../assets/icons/nugs/rank/capr/1.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/1.png');
 }
 
 .qliphoth {
-    --icon-local: url('../assets/icons/iconqliphoth.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconqliphoth.png');
+    --icon-local: url('../assets/icons/abno/qlipcount.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/qlipcount.png');
 }
 
 .warn1, .terrify {
@@ -1247,347 +1379,549 @@ h1, h2, h3 {
     --color: var(--overwhelm);
 }
 .warn1 {
-    --icon-local: url('../assets/icons/warn1.png');
-    --icon: url('/lobotomy-corp/assets/icons/warn1.png');  
+    --icon-local: url('../assets/icons/lc/warn1.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn1.png');  
 }
 .warn2 {
-    --icon-local: url('../assets/icons/warn2.png');
-    --icon: url('/lobotomy-corp/assets/icons/warn2.png');  
+    --icon-local: url('../assets/icons/lc/warn2.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn2.png');  
 }
 .warn3 {
-    --icon-local: url('../assets/icons/warn3.png');
-    --icon: url('/lobotomy-corp/assets/icons/warn3.png');  
+    --icon-local: url('../assets/icons/lc/warn3.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn3.png');  
+}
+.warn4 {
+    --color: var(--warn-4);
+    --icon-local: url('../assets/icons/lc/warn4.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn4.png'); 
+}
+.warn5 {
+    --color: var(--warn-5);
+    --icon-local: url('../assets/icons/lc/warn5.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn5.png'); 
+}
+.warn6 {
+    --color: var(--warn-6);
+    --icon-local: url('../assets/icons/lc/warn6.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn6.png'); 
+}
+.warn7 {
+    --color: var(--warn-7);
+    --icon-local: url('../assets/icons/lc/warn7.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/warn7.png'); 
 }
 
 .bullets {
-    --icon-local: url('../assets/icons/iconbullet.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconbullet.png');  
+    --icon-local: url('../assets/icons/lc/bullet.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/bullet.png');  
 }
-.bulletsi {
-    --color: var(--bullet);
-    --icon-local: url('../assets/icons/iconbulleth.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconbulleth.png');  
+.bulletsh {
+    --icon-local: url('../assets/icons/lc/bullet2.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/bullet2.png');  
 }
 .bullet-slow {
     --color: var(--b-slow);
-    --icon-local: url('../assets/icons/bulletslow.png');
-    --icon: url('/lobotomy-corp/assets/icons/bulletslow.png');  
+    --icon-local: url('../assets/icons/lc/bulletslow.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/bulletslow.png');  
 }
 .execute {
-    --icon-local: url('../assets/icons/bulletexec.png');
-    --icon: url('/lobotomy-corp/assets/icons/bulletexec.png');  
+    --icon-local: url('../assets/icons/lc/bulletexec.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/bulletexec.png');  
 }
 .rabbits {
     --color: var(--rabbits);
-    --icon-local: url('../assets/icons/iconrabbits.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconrabbits.png');  
+    --icon-local: url('../assets/icons/lc/iconrabbits.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/iconrabbits.png');  
 }
 
-.dawn {
-    --icon-local: url('../assets/icons/iconorddawn.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconorddawn.png');   
+.dawn, .ordealwhite.dawn {
+    --color: var(--o-white);
+    --icon-local: url('../assets/icons/abno/ord/w/dawn.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/w/dawn.png');   
 }
-.noon {
-    --icon-local: url('../assets/icons/iconordnoon.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordnoon.png');   
+.noon, .ordealwhite.noon {
+    --color: var(--o-white);
+    --icon-local: url('../assets/icons/abno/ord/w/noon.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/w/noon.png');   
 }
-.dusk {
-    --icon-local: url('../assets/icons/iconorddusk.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconorddusk.png');   
+.dusk, .ordealwhite.dusk {
+    --icon-local: url('../assets/icons/abno/ord/w/dusk.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/w/dusk.png');   
 }
-.midnight {
-    --icon-local: url('../assets/icons/iconordmidnight.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconordmidnight.png');   
+.midnight, .ordealwhite.midnight {
+    --icon-local: url('../assets/icons/abno/ord/w/midnight.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/w/midnight.png');   
 }
 .dawni {
-    --icon-local: url('../assets/icons/icondawn.png');
-    --icon: url('/lobotomy-corp/assets/icons/icondawn.png');   
+    --icon-local: url('../assets/icons/abno/ord/dawn.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/dawn.png');   
 }
 .nooni {
-    --icon-local: url('../assets/icons/iconnoon.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconnoon.png');   
+    --icon-local: url('../assets/icons/abno/ord/noon.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/noon.png');   
 }
 .duski {
-    --icon-local: url('../assets/icons/icondusk.png');
-    --icon: url('/lobotomy-corp/assets/icons/icondusk.png');   
+    --icon-local: url('../assets/icons/abno/ord/dusk.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/dusk.png');   
 }
 .midnighti {
-    --icon-local: url('../assets/icons/iconmidnight.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconmidnight.png');   
+    --icon-local: url('../assets/icons/abno/ord/midnight.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/ord/midnight.png');   
 }
 
 .pos {
     --color: var(--pos);
-    --icon-local: url('../assets/icons/abnogood.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnogood.png');   
+    --icon-local: url('../assets/icons/abno/work/good.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/good.png');   
 }
 .neu {
     --color: var(--neu);
-    --icon-local: url('../assets/icons/abnoneu.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnoneu.png');   
+    --icon-local: url('../assets/icons/abno/work/neu.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/neu.png');   
 }
 .neg {
     --color: var(--neg);
-    --icon-local: url('../assets/icons/abnoneg.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnoneg.png');   
+    --icon-local: url('../assets/icons/abno/work/neg.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/neg.png');   
 }
 .ne {
     --color: var(--ne);
-    --icon-local: url('../assets/icons/iconen.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconen.png');   
+    --icon-local: url('../assets/icons/abno/work/ne.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/ne.png');   
 }
 .pe {
-    --icon-local: url('../assets/icons/iconep.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconep.png');   
+    --icon-local: url('../assets/icons/abno/work/pe.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/pe.png');   
 }
 
 .aleph {
-    --icon-local: url('../assets/icons/riskaleph.png');
-    --icon: url('/lobotomy-corp/assets/icons/riskaleph.png');   
+    --icon-local: url('../assets/icons/abno/risk/a.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/risk/a.png');   
 }
 .waw {
     --color: var(--risk-w);
-    --icon-local: url('../assets/icons/riskwaw.png');
-    --icon: url('/lobotomy-corp/assets/icons/riskwaw.png');   
+    --icon-local: url('../assets/icons/abno/risk/w.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/risk/w.png');   
 }
 .he {
     --color: var(--risk-h);
-    --icon-local: url('../assets/icons/riskhe.png');
-    --icon: url('/lobotomy-corp/assets/icons/riskhe.png');   
+    --icon-local: url('../assets/icons/abno/risk/h.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/risk/h.png');   
 }
 .teth {
     --color: var(--risk-t);
-    --icon-local: url('../assets/icons/riskteth.png');
-    --icon: url('/lobotomy-corp/assets/icons/riskteth.png');   
+    --icon-local: url('../assets/icons/abno/risk/t.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/risk/t.png');   
 }
 .zayin {
     --color: var(--risk-z);
-    --icon-local: url('../assets/icons/riskzayin.png');
-    --icon: url('/lobotomy-corp/assets/icons/riskzayin.png');   
+    --icon-local: url('../assets/icons/abno/risk/z.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/risk/z.png');   
 }
 .unknown {
     --color: var(--risk-u);
-    --icon-local: url('../assets/icons/riskunknown.png');
-    --icon: url('lobotomy-corp/assets/icons/riskunknown.png');   
+    --icon-local: url('../assets/icons/abno/risk/u.png');
+    --icon: url('lobotomy-corp/assets/icons/abno/risk/u.png');   
 }
     /*
         sephirot
     */
-
-.team-control, [data-callout="control"] {
+.team-control, .nug.control, .cap.control, .capr.control, [data-callout="control"] {
     --color: var(--team-control);
-    --icon-local: url('../assets/icons/teamcont.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamcont.png');   
+}
+.nug.control {
+    --icon-local: url('../assets/icons/nugs/rank/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/3.png');   
+}
+.cap.control {
+    --icon-local: url('../assets/icons/nugs/rank/capr/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/3.png');   
+}
+.capr.control {
+    --icon-local: url('../assets/icons/nugs/rank/cap/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/3.png');   
+}
+.team-control, [data-callout="control"] {
+    --icon-local: url('../assets/icons/nugs/rank/teams/3.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/3.png');   
+}
+
+.team-info, .nug.info, .cap.info, .capr.info, [data-callout="info"] {
+    --color: var(--team-info);
+}
+.nug.info {
+    --icon-local: url('../assets/icons/nugs/rank/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/4.png');  
+}
+.cap.info {
+    --icon-local: url('../assets/icons/nugs/rank/capr/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/4.png');  
+}
+.capr.info {
+    --icon-local: url('../assets/icons/nugs/rank/cap/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/4.png');  
 }
 .team-info, [data-callout="info"] {
-    --color: var(--team-info);
-    --icon-local: url('../assets/icons/teaminfo.png');
-    --icon: url('/lobotomy-corp/assets/icons/teaminfo.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/4.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/4.png');
+}
+
+.team-train, .nug.train, .cap.train, .capr.train, [data-callout="train"] {
+    --color: var(--team-train);
+}
+.nug.train {
+    --icon-local: url('../assets/icons/nugs/rank/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/5.png');
+}
+.cap.train {
+    --icon-local: url('../assets/icons/nugs/rank/capr/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/5.png');
+}
+.capr.train {
+    --icon-local: url('../assets/icons/nugs/rank/cap/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/5.png');
 }
 .team-train, [data-callout="train"] {
-    --color: var(--team-train);
-    --icon-local: url('../assets/icons/teamtrain.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamtrain.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/5.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/5.png');
+}
+
+.team-safety, .nug.safety, .cap.safety, .capr.safety, [data-callout="safety"] {
+    --color: var(--team-safety);
+}
+.nug.safety {
+    --icon-local: url('../assets/icons/nugs/rank/6.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/6.png'); 
+}
+.cap.safety {
+    --icon-local: url('../assets/icons/nugs/rank/capr/6.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/6.png'); 
+}
+.capr.safety {
+    --icon-local: url('../assets/icons/nugs/rank/cap/6.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/6.png'); 
 }
 .team-safety, [data-callout="safety"] {
-    --color: var(--team-safety);
-    --icon-local: url('../assets/icons/teamsafe.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamsafe.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/6.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/6.png'); 
+}
+
+.team-cmd, .nug.cmd, .cap.cmd, .capr.cmd, [data-callout="cmd"] {
+    --color: var(--team-central);
+}
+.nug.cmd {
+    --icon-local: url('../assets/icons/nugs/rank/7.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/7.png');  
+}
+.cap.cmd {
+    --icon-local: url('../assets/icons/nugs/rank/capr/7.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/7.png');  
+}
+.capr.cmd {
+    --icon-local: url('../assets/icons/nugs/rank/cap/7.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/7.png');  
 }
 .team-cmd, [data-callout="cmd"] {
-    --color: var(--team-central);
-    --icon-local: url('../assets/icons/teamcmd.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamcmd.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/7.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/7.png');  
+}
+
+.team-welfare, .nug.welfare, .cap.welfare, .capr.welfare, [data-callout="welfare"] {
+    --color: var(--team-welfare);
+}
+.nug.welfare {
+    --icon-local: url('../assets/icons/nugs/rank/9.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/9.png');  
+}
+.cap.welfare {
+    --icon-local: url('../assets/icons/nugs/rank/capr/9.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/9.png');  
+}
+.capr.welfare {
+    --icon-local: url('../assets/icons/nugs/rank/cap/9.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/9.png');  
 }
 .team-welfare, [data-callout="welfare"] {
-    --color: var(--team-welfare);
-    --icon-local: url('../assets/icons/teamwelf.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamwelf.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/9.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/9.png');  
+}
+
+.team-disc, .nug.disc, .cap.disc, .capr.disc, [data-callout="disc"] {
+    --color: var(--dead);
+}
+.nug.disc {
+    --icon-local: url('../assets/icons/nugs/rank/8.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/8.png');  
+}
+.cap.disc {
+    --icon-local: url('../assets/icons/nugs/rank/capr/8.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/8.png');  
+}
+.capr.disc {
+    --icon-local: url('../assets/icons/nugs/rank/cap/8.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/8.png');  
 }
 .team-disc, [data-callout="disc"] {
-    --color: var(--dead);
-    --icon-local: url('../assets/icons/teamdisc.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamdisc.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/8.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/8.png');  
+}
+
+.team-extract, .nug.extract, .cap.extract, .capr.extract, [data-callout="extract"] {
+    --color: var(--team-extr);
+}
+.nug.extract {
+    --icon-local: url('../assets/icons/nugs/rank/10.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/10.png');  
+}
+.cap.extract {
+    --icon-local: url('../assets/icons/nugs/rank/capr/10.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/10.png');  
+}
+.capr.extract {
+    --icon-local: url('../assets/icons/nugs/rank/cap/10.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/10.png');  
 }
 .team-extract, [data-callout="extract"] {
-    --color: var(--team-extr);
-    --icon-local: url('../assets/icons/teamextract.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamextract.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/10.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/10.png');  
+}
+
+.team-record, .nug.record, .cap.record, .capr.record, [data-callout="record"] {
+    --color: var(--team-record);
+}
+.nug.record {
+    --icon-local: url('../assets/icons/nugs/rank/11.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/11.png');  
+}
+.cap.record {
+    --icon-local: url('../assets/icons/nugs/rank/capr/11.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/11.png');  
+}
+.capr.record {
+    --icon-local: url('../assets/icons/nugs/rank/cap/11.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/11.png');  
 }
 .team-record, [data-callout="record"] {
-    --color: var(--team-record);
-    --icon-local: url('../assets/icons/teamrecord.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamrecord.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/11.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/11.png');  
+}
+
+.team-arch, .nug.arch, .cap.arch, .capr.arch, [data-callout="arch"] {
+    --color: var(--team-arch);
+}
+.nug.arch {
+    --icon-local: url('../assets/icons/nugs/rank/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/2.png');  
+}
+.cap.arch {
+    --icon-local: url('../assets/icons/nugs/rank/capr/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/2.png');  
+}
+.capr.arch {
+    --icon-local: url('../assets/icons/nugs/rank/cap/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/2.png');  
 }
 .team-arch, [data-callout="arch"] {
-    --icon-local: url('../assets/icons/teamarch.png');
-    --icon: url('/lobotomy-corp/assets/icons/teamarch.png');   
+    --icon-local: url('../assets/icons/nugs/rank/teams/2.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/2.png');   
 }
 
 .asiyah {
     --color: var(--l-asiyah);
+    --icon-local: url('../assets/icons/nugs/rank/teams/up.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/up.png');   
+}
+.briah {
+    --color: var(--l-briah);
+    --icon-local: url('../assets/icons/nugs/rank/teams/mid.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/mid.png');   
 }
 .atziluth {
     --color: var(--l-atziluth);
+    --icon-local: url('../assets/icons/nugs/rank/teams/down.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/rank/teams/down.png');   
 }
 
     /*
        work icons
     */
 .inst {
-    --icon-local: url('../assets/icons/workinst.png');
-    --icon: url('/lobotomy-corp/assets/icons/workinst.png');    
+    --icon-local: url('../assets/icons/abno/work/inst.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/inst.png');    
 }
 .insi {
-    --icon-local: url('../assets/icons/workinsi.png');
-    --icon: url('/lobotomy-corp/assets/icons/workinsi.png');
-        
+    --icon-local: url('../assets/icons/abno/work/insi.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/insi.png');
 }
 .atta {
-    --icon-local: url('../assets/icons/workatta.png');
-    --icon: url('/lobotomy-corp/assets/icons/workatta.png');
+    --icon-local: url('../assets/icons/abno/work/atta.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/atta.png');
 }
 .repr {
-    --icon-local: url('../assets/icons/workrepr.png');
-    --icon: url('/lobotomy-corp/assets/icons/workrepr.png');
+    --icon-local: url('../assets/icons/abno/work/repr.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/repr.png');
 }
 .sacr {
-    --icon-local: url('../assets/icons/worksacr.png');
-    --icon: url('/lobotomy-corp/assets/icons/worksacr.png');  
+    --icon-local: url('../assets/icons/abno/work/sacr.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/sacr.png');  
 }
 .perf {
-    --icon-local: url('../assets/icons/workperf.png');
-    --icon: url('/lobotomy-corp/assets/icons/workperf.png');  
+    --icon-local: url('../assets/icons/abno/work/perf.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/perf.png');  
 }
 .conf {
-    --icon-local: url('../assets/icons/workconf.png');
-    --icon: url('/lobotomy-corp/assets/icons/workconf.png');  
+    --icon-local: url('../assets/icons/abno/work/conf.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/conf.png');  
 }
 .req {
-    --icon-local: url('../assets/icons/workreq.png');
-    --icon: url('/lobotomy-corp/assets/icons/workreq.png');  
+    --icon-local: url('../assets/icons/abno/work/req.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/req.png');  
 }
 .prot {
-    --icon-local: url('../assets/icons/workprot.png');
-    --icon: url('/lobotomy-corp/assets/icons/workprot.png');  
+    --icon-local: url('../assets/icons/abno/work/prot.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/prot.png');  
 }
 .neu {
-    --icon-local: url('../assets/icons/abnoneu.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnoneu.png');  
+    --icon-local: url('../assets/icons/abno/work/neu.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/neu.png');  
 }
 .pos {
-    --icon-local: url('../assets/icons/abnogood.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnogood.png');  
+    --icon-local: url('../assets/icons/abno/work/good.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/good.png');  
 }
 .neg {
-    --icon-local: url('../assets/icons/abnobad.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnobad.png');  
+    --icon-local: url('../assets/icons/abno/work/bad.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/bad.png');  
 }
 .neuw {
-    --icon-local: url('../assets/icons/abnogood.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnoneuw.png');  
+    --icon-local: url('../assets/icons/abno/work/neuw.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/neuw.png');  
 }
 .posw {
-    --icon-local: url('../assets/icons/abnogood.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnogoodw.png');  
+    --icon-local: url('../assets/icons/abno/work/goodw.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/goodw.png');  
 }
 .negw {
-    --icon-local: url('../assets/icons/abnobad.png');
-    --icon: url('/lobotomy-corp/assets/icons/abnobadw.png');  
+    --icon-local: url('../assets/icons/abno/work/badw.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/work/badw.png');  
 }
 .meltdown {
     --color: var(--meltdown);
-    --icon-local: url('../assets/icons/iconmeltdown.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconmeltdown.png');  
+    --icon-local: url('../assets/icons/abno/qlipmelt.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/qlipmelt.png');  
 }
 .abno {
-    --icon-local: url('../assets/icons/iconabno.png');
-    --icon: url('/lobotomy-corp/assets/icons/iconabno.png');  
+    --icon-local: url('../assets/icons/abno/icon.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/icon.png');  
 }
     /*
         stat icons
     */
 .fort {
-    --icon-local: url('../assets/icons/statfort.png');
-    --icon: url('/lobotomy-corp/assets/icons/statfort.png');    
+    --icon-local: url('../assets/icons/nugs/stats/fort.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/fort.png');    
 }
 .prud {
-    --icon-local: url('../assets/icons/statprud.png');
-    --icon: url('/lobotomy-corp/assets/icons/statprud.png');
+    --icon-local: url('../assets/icons/nugs/stats/prud.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/prud.png');
         
 }
 .temp {
-    --icon-local: url('../assets/icons/stattemp.png');
-    --icon: url('/lobotomy-corp/assets/icons/stattemp.png');
+    --icon-local: url('../assets/icons/nugs/stats/temp.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/temp.png');
 }
 .just {
-    --icon-local: url('../assets/icons/statJust.png');
-    --icon: url('/lobotomy-corp/assets/icons/statJust.png');
+    --icon-local: url('../assets/icons/nugs/stats/just.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/just.png');
 }
 
     /*
         other icons
     */
 .shieldred {
-    --icon-local: url('../assets/icons/shieldr.png');
-    --icon: url('/lobotomy-corp/assets/icons/shieldr.png');    
+    --icon-local: url('../assets/icons/nugs/shieldr.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/shieldr.png');    
 }
 .shieldwhite {
-    --icon-local: url('../assets/icons/shieldw.png');
-    --icon: url('/lobotomy-corp/assets/icons/shieldw.png');    
+    --icon-local: url('../assets/icons/nugs/shieldw.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/shieldw.png');    
 }
 .shieldblack {
-    --icon-local: url('../assets/icons/shieldb.png');
-    --icon: url('/lobotomy-corp/assets/icons/shieldb.png');    
+    --icon-local: url('../assets/icons/nugs/shieldb.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/shieldb.png');    
 }
 .shieldpale {
-    --icon-local: url('../assets/icons/shieldp.png');
-    --icon: url('/lobotomy-corp/assets/icons/shieldp.png');    
+    --icon-local: url('../assets/icons/nugs/shieldp.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/shieldp.png');    
 }
     /*
         damages
     */
 .red {
-    --icon-local: url('../assets/icons/dmgr.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgr.png');    
+    --icon-local: url('../assets/icons/abno/dmg/o/r.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/r.png');    
 }
 .white {
-    --icon-local: url('../assets/icons/dmgw.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgw.png');    
+    --icon-local: url('../assets/icons/abno/dmg/o/w.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/o/w.png');    
 }
 .black {
-    --icon-local: url('../assets/icons/dmgb.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgb.png');    
+    --icon-local: url('../assets/icons/abno/dmg/o/b.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/o/b.png');    
 }
 .pale {
-    --icon-local: url('../assets/icons/dmgp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgp.png');    
+    --icon-local: url('../assets/icons/abno/dmg/o/p.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/o/p.png');    
 }
-    /*
-        special gradients
-    */
-.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, .regen {
-    --color: transparent;
-    background-clip: text;
-}
+
     /*
         thicker shadow, no text-shadow
+        this is for thinner icons / icons w/o borders, or gradient text
     */
-        // NOTE TO FUTURE DUMBASS
-            // PLEASE MAKE THIS A CLASS YOU BUFFOON
-.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp,
-.regen, .execute, .hp, .hpregen, .sp, .spregen, .def, .atkspd, 
+// keep due to gradient
+.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, .regen,
+
+// don't think so, added border to them
+// .execute, .hp, .hpregen, .sp, .spregen, .def, .atkspd, 
+
+// shields 
 .shieldblack, .shieldpale, .shieldwhite, .shieldred, 
+
+// equipmnt icons
 .suit, .weap, .gift, .suiti, .weapi, .gifti,
-.rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w,
-.logo, .minus, .plus, .plusi, .deny, .denyw, .abno, .defw,
-.pos, .posw, .neu, .neuw, .neg, .negw,
-.dawn, .noon, .dusk, .midnight, .dawni, .nooni, .duski, .midnighti,
-.insi, .inst, .atta, .repr, .req, .conf, .sacr, .perf, .prot,
-.clash, .growrate, .wrkscc, .wrkspd, .atk, .bullets, .bullet-slow, .bulletsi,
-.confirm, .ordealamber, .ordealcrimson, .ordealgreen, .ordealindigo, .ordealviolet, .ordealwhite {
+
+// ranks
+.rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, 
+
+// ui related
+.logo, 
+.minus, .minusi, 
+.plus, .plusw, .plusi, 
+.deny, .denyw, .denyi, 
+.abno, .defw, .meltdown,
+.confirm, .confirmi, .confirmw,
+.asiyah, .briah, .atziluth, 
+
+// ordeals
+.dawn, .noon, .dusk, .midnight, .dawni, .nooni, .duski, .midnighti, .ordealamber, .ordealcrimson, .ordealgreen, .ordealindigo, .ordealviolet, .ordealwhite,
+
+// works
+.insi, .inst, .atta, .repr, .req, .conf, .sacr, .perf, .prot, .pos, .posw, .neu, .neuw, .neg, .negw,
+
+// don't think so, added border to them
+// .clash, .growrate, .wrkscc, .wrkspd, .atk, .bullets, .bullet-slow, .bulletsi,
+
+// risks
+.aleph, .waw, .he, .teth, .zayin, .unknown,
+
+// warns
+.warn1, .warn2, .warn3, .warn4, .warn5, .warn6, .warn7,
+
+// panics
+.murder, .suicide, .wander, .shutdown
+{
     text-shadow: unset;
-    --shadow: 0.6px;
+    --shadow: 0.4px;
     --bordtwo: /* border */
         drop-shadow(var(--shadow) var(--shadow) 0px var(--border))
         drop-shadow(var(--invert) var(--shadow) 0px var(--border))
@@ -1600,65 +1934,94 @@ h1, h2, h3 {
 }
 
     /*
+        thinner shadow, more text-shadow
+    */
+// works
+
+// abno, qliphoth
+
+// panics: .relaxed, .calm, .nervous, .terrify, .hopeless, .overwhelm, .reverence,  calmi, terrifyi, hopelessi, overwhelmi
+
+// damage (base): red, white, black, pale
+
+    /*
         special (wider) icons
     */
 .regen {
-    --size-w: 50px;
+    --size-w: 30px;
+}
+
+    /*
+        inverted text test
+    */
+.capr {
+    --border: var(--color);
+    color: #1a1a1a;
+}
+
+    /* 
+        gradients
+     */
+
+.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, 
+.regen {
+    --color: transparent;
+    background-clip: text;
 }
 
 .regen {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--hp-regen) var(--gradient) var(--begin), var(--sp-regen) var(--end));
-    --icon-local: url('../assets/icons/sphpregen.png');
-    --icon: url('/lobotomy-corp/assets/icons/sphpregen.png');  
+    --icon-local: url('../assets/icons/nugs/stats/regen.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/stats/regen.png');  
 }
 
 .rb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--black) var(--end));
-    --icon-local: url('../assets/icons/dmgrb.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrb.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rb.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rb.png');  
 }
 .rbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgrbp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrbp.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rbp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rbp.png');  
 }
 .rp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgrp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrp.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rp.png');  
 }
 .rw {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white) var(--end));
-    --icon-local: url('../assets/icons/dmgrw.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrw.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rw.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rw.png');  
 }
 .rwb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--black) var(--end));
-    --icon-local: url('../assets/icons/dmgrwb.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrwb.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rwb.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rwb.png');  
 }
 .rwp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgrwp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrwp.png');  
+    --icon-local: url('../assets/icons/abno/dmg/rwp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rwp.png');  
 }
 .wb {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--black) var(--end));
-    --icon-local: url('../assets/icons/dmgwb.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgwb.png');  
+    --icon-local: url('../assets/icons/abno/dmg/wb.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/wb.png');  
 }
 .wbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgwbp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgwbp.png');  
+    --icon-local: url('../assets/icons/abno/dmg/wbp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/wbp.png');  
 }
 .wp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--white) var(--gradient) var(--begin), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgwp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgwp.png');  
+    --icon-local: url('../assets/icons/abno/dmg/wp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/wp.png');  
 }
 .rwbp {
     background-image: linear-gradient(to right, transparent var(--gradient), var(--red) var(--gradient) var(--begin), var(--white), var(--black), var(--pale) var(--end));
-    --icon-local: url('../assets/icons/dmgrwbp.png');
-    --icon: url('/lobotomy-corp/assets/icons/dmgrwbp.png');
+    --icon-local: url('../assets/icons/abno/dmg/rwbp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/dmg/rwbp.png');
 }

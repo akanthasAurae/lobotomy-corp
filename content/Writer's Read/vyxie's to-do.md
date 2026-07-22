@@ -13,7 +13,8 @@ post-work:
 - [x] update dead icon for a skull instead
 - [x] make layer icons (use the up /down / minus ones)
 - [ ] resize certain classes (ranks and plus/minus/confirm/deny)
-- [ ] make ally1, ally2 and ally3 classes
+- [x] make ally1, ally2 and ally3 classes
+	- Added as ``warn4``, ``warn5``, ``warn6``
 - [x] got rid of light mode
 - [ ] add handwriting fonts and classes
 - [ ] make templates

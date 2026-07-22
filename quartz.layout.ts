@@ -33,16 +33,16 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        // { Component: Component.Darkmode() },
+         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
     }),
     Component.Explorer(),
+    Component.Graph(),
   ],
   right: [
     Component.DesktopOnly(Component.Logo()),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Graph(),
     Component.Backlinks(),
   ],
 }
