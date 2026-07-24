@@ -189,7 +189,7 @@ cheatsheet yeahhhhhhh
 
 <span class="icon bullets">bullets</span>
 <span class="icon bullet-slow">bullet-slow</span>
-<span class="icon bulletsi">bulletsi</span>
+<span class="icon bulletsh">bulletsh</span>
 <span class="icon execute">execute</span>
 <span class="icon rabbits">rabbits</span>
 

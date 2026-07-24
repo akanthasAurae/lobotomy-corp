@@ -73,8 +73,8 @@ Due to an unforeseen effect, when opening the Welfare Department, the Qliphoth D
 >- <span class="icon abno">Abnormalities</span> gain +100% <span class="no-icon weap">damage</span> and +100% <span class="no-icon suit">defense</span>
 >- <span class="icon clash">Clash Power</span> +5
 >- <span class="icon abno">Abnormality</span> attacks are <span class="icon warn2">Unbreakable</span>
->- <span class="icon warn3">The Fourth Trumpet</span> will activate for the Day
->- <span class="icon warn3">The Facility has a risk of collapse</span>
+>- <span class="icon warn7">The Fourth Trumpet</span> will activate for the Day
+>- <span class="icon warn7">The Facility has a risk of collapse</span>
 
 These malfunctions however can be controlled, but in order to do so Core Suppressions need to be completed.
 

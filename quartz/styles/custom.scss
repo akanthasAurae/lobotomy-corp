@@ -232,41 +232,39 @@ html{
     font-weight: bold;
     color: var(--color);
     --color: unset;
-    --shadow: 1px;
+    --shadow: 0px;
     --invert: calc(var(--shadow) * -1);
-    --shadow-2: calc(var(--shadow) / 2);
-    --invert-2: calc(var(--shadow-2) * -1);
-    --border: #1a1a1a;
-    --bordone: /* text shadow */
-        var(--shadow) var(--shadow) 0px var(--border),
-        var(--invert) var(--shadow) 0px var(--border),
-        var(--shadow) var(--invert) 0px var(--border),
-        var(--invert) var(--invert) 0px var(--border);
-    --bordtwo: /* border */
-        drop-shadow(var(--shadow-2) 0px 0px var(--border))
-        drop-shadow(0px var(--shadow-2) 0px var(--border))
-        drop-shadow(var(--invert-2) 0px 0px var(--border))
-        drop-shadow(0px var(--invert-2) 0px var(--border));
-    filter: var(--bordtwo);
-    text-shadow: var(--bordone);
+    --border: black;
+    --bord: /* border */
+        drop-shadow(var(--shadow) 0px 0px var(--border))
+        drop-shadow(0px var(--shadow) 0px var(--border))
+        drop-shadow(var(--invert) 0px 0px var(--border))
+        drop-shadow(0px var(--invert) 0px var(--border))
+        drop-shadow(var(--shadow) var(--shadow) 0px var(--border))
+        drop-shadow(var(--invert) var(--shadow) 0px var(--border))
+        drop-shadow(var(--shadow) var(--invert) 0px var(--border))
+        drop-shadow(var(--invert) var(--invert) 0px var(--border));
+    filter: var(--bord);
     --gradient: calc(0.1em + var(--size-w));
     --begin: calc(var(--gradient) + 0.5em);
     --end: calc(100% - 0.2em);
 }
 
 /* set up some rules for stuff that'll have icons */
-.stat, .work, .risk, .icon, .infoi, h1[class^="team"] {
+.icon, .infoi, h1[class^="team"] {
     &::before {
         content: '';
         position: relative;
         display: inline-block;
         vertical-align: bottom;
-        margin-right: 0.2em;
-        margin-left: 0.1em;    
-        min-height: var(--size-h);
-        min-width: var(--size-w);
+        margin-left: 0.1em;
+        --padding: 0.15em;
+        padding: var(--padding);
+        min-height: calc(var(--size-h) - var(--padding));
+        min-width: calc(var(--size-w) - var(--padding));
         background-position-y: center;
         background-position-x: center;
+        background-origin: content-box;
         background-size: contain;
         background-image: var(--icon-local), var(--icon);
         background-repeat: no-repeat;
@@ -274,7 +272,6 @@ html{
         filter: none;
     }
 }
-
     /*
         checkboxes
     */
@@ -319,7 +316,8 @@ code {
     }
 }
 span {
-    padding: 0.15em;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
 }
 
 .page-header {
@@ -1430,8 +1428,8 @@ h1, h2, h3 {
 }
 .rabbits {
     --color: var(--rabbits);
-    --icon-local: url('../assets/icons/lc/iconrabbits.png');
-    --icon: url('/lobotomy-corp/assets/icons/lc/iconrabbits.png');  
+    --icon-local: url('../assets/icons/lc/rabbits.png');
+    --icon: url('/lobotomy-corp/assets/icons/lc/rabbits.png');  
 }
 
 .dawn, .ordealwhite.dawn {
@@ -1530,15 +1528,15 @@ h1, h2, h3 {
     --color: var(--team-control);
 }
 .nug.control {
-    --icon-local: url('../assets/icons/nugs/rank/3.png');
+    --icon-local: url('../assets/icons/nugs/test.png');
     --icon: url('/lobotomy-corp/assets/icons/nugs/rank/3.png');   
 }
 .cap.control {
-    --icon-local: url('../assets/icons/nugs/rank/capr/3.png');
+    --icon-local: url('../assets/icons/nugs/test2.png');
     --icon: url('/lobotomy-corp/assets/icons/nugs/rank/capr/3.png');   
 }
 .capr.control {
-    --icon-local: url('../assets/icons/nugs/rank/cap/3.png');
+    --icon-local: url('../assets/icons/nugs/test3.png');
     --icon: url('/lobotomy-corp/assets/icons/nugs/rank/cap/3.png');   
 }
 .team-control, [data-callout="control"] {
@@ -1875,88 +1873,27 @@ h1, h2, h3 {
 }
 
     /*
-        thicker shadow, no text-shadow
-        this is for thinner icons / icons w/o borders, or gradient text
-    */
-// keep due to gradient
-.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, .regen,
-
-// don't think so, added border to them
-// .execute, .hp, .hpregen, .sp, .spregen, .def, .atkspd, 
-
-// shields 
-.shieldblack, .shieldpale, .shieldwhite, .shieldred, 
-
-// equipmnt icons
-.suit, .weap, .gift, .suiti, .weapi, .gifti,
-
-// ranks
-.rank1, .rank2, .rank3, .rank4, .rank5, .rank6, .rank1w, .rank2w, .rank3w, .rank4w, .rank5w, .rank6w, 
-
-// ui related
-.logo, 
-.minus, .minusi, 
-.plus, .plusw, .plusi, 
-.deny, .denyw, .denyi, 
-.abno, .defw, .meltdown,
-.confirm, .confirmi, .confirmw,
-.asiyah, .briah, .atziluth, 
-
-// ordeals
-.dawn, .noon, .dusk, .midnight, .dawni, .nooni, .duski, .midnighti, .ordealamber, .ordealcrimson, .ordealgreen, .ordealindigo, .ordealviolet, .ordealwhite,
-
-// works
-.insi, .inst, .atta, .repr, .req, .conf, .sacr, .perf, .prot, .pos, .posw, .neu, .neuw, .neg, .negw,
-
-// don't think so, added border to them
-// .clash, .growrate, .wrkscc, .wrkspd, .atk, .bullets, .bullet-slow, .bulletsi,
-
-// risks
-.aleph, .waw, .he, .teth, .zayin, .unknown,
-
-// warns
-.warn1, .warn2, .warn3, .warn4, .warn5, .warn6, .warn7,
-
-// panics
-.murder, .suicide, .wander, .shutdown
-{
-    text-shadow: unset;
-    --shadow: 0.4px;
-    --bordtwo: /* border */
-        drop-shadow(var(--shadow) var(--shadow) 0px var(--border))
-        drop-shadow(var(--invert) var(--shadow) 0px var(--border))
-        drop-shadow(var(--shadow) var(--invert) 0px var(--border))
-        drop-shadow(var(--invert) var(--invert) 0px var(--border))
-        drop-shadow(var(--shadow-2) 0px 0px var(--border))
-        drop-shadow(0px var(--shadow-2) 0px var(--border))
-        drop-shadow(var(--invert-2) 0px 0px var(--border))
-        drop-shadow(0px var(--invert-2) 0px var(--border));
-}
-
-    /*
-        thinner shadow, more text-shadow
-    */
-// works
-
-// abno, qliphoth
-
-// panics: .relaxed, .calm, .nervous, .terrify, .hopeless, .overwhelm, .reverence,  calmi, terrifyi, hopelessi, overwhelmi
-
-// damage (base): red, white, black, pale
-
-    /*
         special (wider) icons
     */
 .regen {
     --size-w: 30px;
 }
-
     /*
-        inverted text test
+        bigger icons
     */
-.capr {
-    --border: var(--color);
-    color: #1a1a1a;
+.red, .white, .black, .pale,
+.rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp,
+.relaxed, .calm, .nervous, .terrify, .hopeless, .overwhelm, .reverence,
+.calmi, .nervousi, .terrifyi, .hopelessi, .overwhelmi,
+.bullets, .bulletsh, .execute, .rabbits,
+.panic, .uncontrol,
+.warn1, .warn2, .warn3, .warn4, .warn5, .warn6, .warn7,
+.abno, .ordealamber, .ordealcrimson, .ordealgreen, .ordealindigo, .ordealviolet, .ordealwhite,
+.meltdown,
+.aleph, .waw, .he, .teth, .zayin, .unknown,
+.defw, .wrkspd
+{
+    --padding: 0px;
 }
 
     /* 
