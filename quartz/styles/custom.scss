@@ -701,7 +701,7 @@ h1, h2, h3 {
             }
         }
     }
-    &[data-callout-metadata~="subtitle"] {
+    &[data-callout-metadata~="subtitle"], &[data-callout-metadata~="abno-wiki"] {
         margin-top: 0px;
         position: relative;
         clip-path: var(--clip);
@@ -716,10 +716,15 @@ h1, h2, h3 {
             --color: var(--darkgray);
             & > .content {
                 background-color: var(--light);
-                clip-path: var(--clip);
                 margin-bottom: 0px;
                 padding-bottom: 0rem;
                 --color: var(--darkgray);
+                &:last-child:not(:first-child) {
+                    margin-top: 0px;
+                }
+                &:last-child {
+                    clip-path: var(--clip);
+                }
             }
         }
         & > div.callout-title {
@@ -739,7 +744,73 @@ h1, h2, h3 {
             }      
         }
     }
-    &:not([data-callout-metadata~="subtitle"],[data-callout-metadata~="span"],[data-callout-metadata~="content"], [data-callout-metadata~="faux"], .subtitle, .span, .content) {
+    &[data-callout-metadata~="abno-wiki"] {
+        & .table-container {
+            & td, thead {
+                max-width: min-content;
+                padding: 0;
+            }
+            & > table {
+                margin: 0;
+                & thead {
+                    background-color: transparent;
+                    color: var(--light);
+                    & th {
+                        padding-bottom: 0;
+                        &:first-child {
+                            min-width: 100%;
+                        }
+                        &:last-child {
+                            max-width: 0;
+                        }
+                    }
+                }
+                .white, .red, .black, .pale,
+                .rb, .rbp, .rp, .rw, .rwb, .rwp,
+                .wb, .wp, .wbp, .rwbp {
+                    padding-right: 0.8em;
+                }
+            }
+        }
+
+        & > .callout-content > blockquote {
+            & > .callout-title {
+                display: none;
+            }
+            & > .callout-content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                align-content: stretch;
+                & > p, blockquote[data-callout="content"] {
+                    flex-grow: 1;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    & > .callout-title {
+                        display: none;
+                    }
+                    & > .callout-content {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        
+                    }
+                }
+                & > p:has(img) {
+                    min-width: 12em;
+                    order: 99;
+                    & > img {
+                        min-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not([data-callout-metadata~="subtitle"],[data-callout-metadata~="row"],[data-callout-metadata~="abno-col"],[data-callout-metadata~="abno-wiki"],[data-callout-metadata~="span"],[data-callout-metadata~="content"], [data-callout-metadata~="faux"], .subtitle, .span, .abno-wiki, .content, .row, .abno-col) {
         div.callout-title {
             padding-bottom: 0px;
             div.callout-icon {

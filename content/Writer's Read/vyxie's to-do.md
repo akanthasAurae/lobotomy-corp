@@ -28,43 +28,90 @@ post-work:
 > help
 
 
-```stat
-layout: abno
-name: "Abno Test"
-code: "f-oo-oo"
-risk: "WAW"
-qliphoth: 3
-dmg_type: "RED"
-dmg_range: "1~2"
-results:
-  - good: "5~8"
-  - neutral: "2~4"
-  - bad: "0~1"
-# Work Preferences
-instinct:
-  - I: 50
-  - II: 55
-  - III: 60
-  - IV: 65
-  - V: 70
-insight:
-  - I: 50
-  - II: 55
-  - III: 60
-  - IV: 65
-  - V: 70
-attachment:
-  - I: 80
-  - II: 85
-  - III: 90
-  - IV: 95
-  - V: 100
-repression:
-  - I: 0
-  - II: 5
-  - III: 10
-  - IV: 15
-  - V: 20
-```
+> [!abno-wiki|risk] Name of Abno
+> ![[image]]
+> > [!abno-col]
+> > foo: aaaa
+> > foo: aaaaaaa
+> 
+> > [!abno-col]
+> > foo: aaaaaaaaa
+> > foo: aaaaaaaaaaaa
+
+<h1 class="zayin icon faux has-subtitle">One Sin and Hundreds of Good Deeds</h1>
+
+> [!zayin|abno-wiki faux] 
+> > [!content|abno-col]
+> > 
+> > ![[onesin.png]]
+> > > [!content]
+> > > 
+> > > | Basic Information |  |
+> > > | :---: | :---: |
+> > > | **Classification Code** | O-03-03 |
+> > > | **Work Damage** | <span class="icon white">1 - 2</span> |
+> > > | **Observation Lv.** | <span class="icon rank4"></span> |
+> > > | **E.G.O. Available** | <span class="icon weap"></span> <span class="icon suit"></span> <span class="icon gift"></span> |
+> >
+> > > [!content]
+> > > 
+> > > | Outcome Ranges |  |
+> > > | :---: | :---: |
+> > > | <span class="icon pos">Good</span> | <span class="no-icon pos">8 - 10</span> |
+> > > | <span class="icon neu">Normal</span> | <span class="no-icon neu">4 - 7</span> |
+> > > | <span class="icon neg">Bad</span> | <span class="no-icon neg">0 - 3</span> |
+> > > | <span class="icon pe">Max. E-Boxes</span> | 10 |
+>
+> > [!content|row]
+> > 
+> > > [!row]
+> > > 
+> > > ![[inst.png]]
+> > >
+> > > |     |     |
+> > > | :-- | --: |
+> > > | I  | Common (%) |
+> > > | II  | Common (%) |
+> > > | III | Low (%) |
+> > > | IV | Low (%) |
+> > > | V | Low (%) |
+> >
+> > > [!row]
+> > > 
+> > > ![[insi.png]]
+> > >
+> > > |     |     |
+> > > | :-- | --: |
+> > > | I  | Common (%) |
+> > > | II  | Common (%) |
+> > > | III | Low (%) |
+> > > | IV | Low (%) |
+> > > | V | Low (%) |
+> >
+> > > [!row]
+> > > 
+> > > ![[atta.png]]
+> > >
+> > > |     |     |
+> > > | :-- | --: |
+> > > | I  | Common (%) |
+> > > | II  | Common (%) |
+> > > | III | Low (%) |
+> > > | IV | Low (%) |
+> > > | V | Low (%) |
+> >
+> > > [!row]
+> > > 
+> > > ![[repr.png]]
+> > >
+> > > |     |     |
+> > > | :-- | --: |
+> > > | I  | Common (%) |
+> > > | II  | Common (%) |
+> > > | III | Low (%) |
+> > > | IV | Low (%) |
+> > > | V | Low (%) |
+
+
 
 ![[read (again)]]
