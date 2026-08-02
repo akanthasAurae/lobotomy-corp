@@ -152,13 +152,13 @@ When its health drops below a certain point, it will enter a second, much more d
 >Cost: 120 <span class="icon pe">PE</span>
 >Requirements: <span class="icon rank4">Lv. 4</span><span class="icon fort">Fortitude</span> 4
 >
-> >[!warn1] Wound
+> >[!warn4] Wound
 > >
 > > With a simple squeeze of the rosebud, a thorned vine shaped like a blade rises from it which can be used to attack
 > ><code>Atk Weight ⯀</code>
 > ><code>- 8~14 RED</code>
 >
-> >[!warn2] Endless Spring of Blood (Unlocked by E.G.O Gift)
+> >[!warn5] Endless Spring of Blood (Unlocked by E.G.O Gift)
 > >
 > > With a strong squeeze, crush the rosebud to send multiple roots swimming towards the target. Once close enough, they rise and constrict themselves around the target before squeezing.
 > ><code>Atk Weight ⯀⯀</code>
@@ -168,9 +168,9 @@ When its health drops below a certain point, it will enter a second, much more d
 > ><code>- Attack End: Take 20% <span class="icon sp">SP</span> and 10% <span class="icon hp">HP</span> damage</code>
 > >
 >
-> >[!warn2] Passive
+> >[!warn5] Passive
 > >
-> ><span class="icon warn2">Bloodthirsty Banquet</span>
+> ><span class="icon warn5">Bloodthirsty Banquet</span>
 > ><code>- The weapon’s minimum <span class="icon weap">damage</span> increases by 4 if the wielder is wearing the matching <span class="icon gift">E.G.O Gift</span>.</code>
 > ><code>- The weapon’s maximum damage increases by 4 if the wielder is wearing the matching <span class="icon suit">E.G.O Suit</span>.</code>
 > ><code> The wielder <span class="icon hpregen">heals</span> by 20% of damage dealt</code>

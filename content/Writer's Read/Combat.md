@@ -145,3 +145,23 @@ With that out of the way, <span class="icon clash">Clashing</span> requires at l
 > <span class="icon terrify">Terrified:</span> <span class="icon wrkscc">Work Success Rate</span> -5%, <span class="icon clash">Clash Power</span> -1, -10% <span class="no-icon weap">damage</span>, -10% <span class="no-icon suit">defense</span>
 > <span class="icon hopeless">Hopeless:</span> <span class="icon wrkscc">Work Success Rate</span> -10%, <span class="icon clash">Clash Power</span> -2, -20% <span class="no-icon weap">damage</span>, -20% <span class="no-icon suit">defense</span>
 > <span class="icon overwhelm">Overwhelmed:</span> <span class="icon wrkscc">Work Success Rate</span> -20%, <span class="icon clash">Clash Power</span> -4, -40% <span class="no-icon weap">damage</span>, -40% <span class="no-icon suit">defense</span>
+
+<h2 class="team-disc">Executions</h2>
+
+Sometimes Ordeals and even Abnormalities get really annoying to suppress and take a lot of time from the writers, so there's a solution to that, too. Executions are here to shorten the suppression process on small threats that would otherwise take a lot of time.
+
+Executions can be performed at any point as long as the specific HP threshold is met. Down below will be the HP thresholds required for every Agent Level to execute an Ordeal or Abnormality.
+
+>[!default] Execution Thresholds
+>
+>
+>| Ordeals | Agent Lv. 1 | Agent Lv. 2 | Agent Lv. 3 | Agent Lv. 4 | Agent Lv. 5 | Agent Lv. EX |
+>| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+>| <span class="icon teth">TETH</span> | 20% | 40% | 50% | 90% | 100% | 100% |
+>| <span class="icon he">HE</span> | 0% | 0% | 20% | 60% | 80% | 100% |
+>| <span class="icon waw">WAW</span> | 0% | 0% | 0% | 20% | 40% | 60% | 
+>| <span class="icon aleph">ALEPH</span> | 0% | 0% | 0% | 0% | 10% | 20% |
+>
+>Executions cannot be performed if the Abnormality or Ordeal is Resistant or Immune (0.2-0.0) to the executioner's damage type. Some Abnormalities or Ordeals such as Nothing There (third form) and The Claw may counter executions depending on a Skill Check.
+>When failing a counter-execution Skill Check, the Agent may lose 40-60% of their max HP instantly.
+>
