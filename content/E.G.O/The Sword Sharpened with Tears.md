@@ -20,9 +20,9 @@ As mandated by chivalry, foul play is strictly forbidden in combat; however, mer
 > >[!default] Passive
 > >
 > ><span class="icon warn6">The Sword Sharpened with Tears</span>
-> ><code>- Turn Start: At 30%+ <span class="icon sp">SP</span>, gain <span class="icon warn5">Blessing</span></code>
-> ><code>- On Clash Win: Gain 1 <span class="icon warn4">Protective Sword</span></code>
-> ><code>- On Clash Win with Assist Defense: Gain 2 <span class="icon warn4">Protective Sword</span></code>
+> ><code>- Turn Start: At 30%+ <span class="icon sp">SP</span>, gain <span class="icon blessing">Blessing</span></code>
+> ><code>- On Clash Win: Gain 1 <span class="icon sword2">Protective Sword</span></code>
+> ><code>- On Clash Win with <span class="icon assist">Assist Defense</span>: Gain 2 <span class="icon warn4">Protective Sword</span></code>
 > ><code>- When taking 20 or less damage, consume 1 <span class="icon warn4">Protective Sword</span> to <span class="icon clash">BLOCK</span> it. If the damage exceeds 20, instead deflect the damage by 30%</code>
 > >
 > > <span class="icon warn3">Break, Tear, and Pierce</span>

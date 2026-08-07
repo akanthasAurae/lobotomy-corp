@@ -28,7 +28,7 @@ People used to be afraid of machines in the beginning, but a mechanical rebellio
 > > Jab the saw and activate it, grinding against the enemy.
 > > <code> Requires 1 <span class="icon warn1">Action</span></code>
 > ><code>Atk Weight ⯀</code>
-> ><code>- Spend 5 <span class="icon warn4">Charge</span> to apply a Bleeding effect that deals 4 <span class="icon red">RED</span> damage every time the enemy uses an <span class="icon warn1">Action</span> (3 times)</code>
+> ><code>- Spend 5 <span class="icon charge">Charge</span> to apply a Bleeding effect that deals 4 <span class="icon red">RED</span> damage every time the enemy uses an <span class="icon warn1">Action</span> (3 times)</code>
 > ><code>- 1~3 <span class="icon red">RED</span>, repeat 3 times</code>
 > ><code>- At 8+ <span class="icon spd">SPD</span>, perform an additional sweep attack that deals 12 <span class="icon red">RED</span> damage</code>
 >
@@ -37,7 +37,7 @@ People used to be afraid of machines in the beginning, but a mechanical rebellio
 > > Take on a defensive stance as the suit begins charging up.
 > ><code> Requires 3 <span class="icon warn1">Actions</span></code>
 > ><code>Atk Weight ⯀</code>
-> ><code>- Gain +10 <span class="icon warn4">Charge</span></code>
+> ><code>- Gain +10 <span class="icon charge">Charge</span></code>
 > ><code>- Reduce damage taken by 30%</code>
 > ><code>- Gain +2 <span class="icon clash">Clash Power</span> and 2 <span class="icon spd">SPD</span> next turn</code>
 > ><code>- Goes on Cooldown for 3 turns</code>

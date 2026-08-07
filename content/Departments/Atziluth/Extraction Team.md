@@ -49,9 +49,9 @@ title: 8. Extraction Team
 
 > [!extract|0.5] 3. E.G.O Restoration (Unknown)
 > Through continued research into extracted E.G.O, damaged equipment can now be restored without requiring complete re-extraction. E.G.O won't leave long lasting effects from corrosion.
-> <code>- Damaged or partially corroded E.G.O can be repaired between deployments.</code>
+> <code>- Damaged or partially <span class="icon corrosion">corroded E.G.O</span> can be repaired between deployments.</code>
 > <code> - Minor defects caused by prolonged use may be removed by the Extraction Team</code>
-> <code> - <span class="icon warn3">E.G.O Corrosion</span> is no longer lethal, one may come back from it to rehabilitate with extended therapy</code>
+> <code> - <span class="icon corrosion">E.G.O Corrosion</span> is no longer lethal, one may come back from it to rehabilitate with extended therapy</code>
 
 > [!extract|0.5] 4. E.G.O Refinement (Unknown)
 > Careful refinement of extracted E.G.O has improved its stability without altering its original nature.
