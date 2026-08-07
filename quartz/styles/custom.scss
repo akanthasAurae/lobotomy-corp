@@ -773,6 +773,65 @@ h1, h2, h3 {
             }
         }
 
+        & blockquote[data-callout~="row"] {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            
+            &[data-callout-metadata~="inst"] {
+                border: 1px solid var(--red);
+            }
+            &[data-callout-metadata~="insi"] {
+                border: 1px solid var(--white);
+            }
+            &[data-callout-metadata~="atta"] {
+                border: 1px solid var(--black);
+            }
+            &[data-callout-metadata~="repr"] {
+                border: 1px solid var(--pale);
+            }
+            &[data-callout-metadata~="spec"] {
+                border: 1px solid var(--special);
+            }
+
+            & > .callout-title {
+                display: none;
+            }
+            & > .callout-content {
+                display: inline-flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                & > p {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                }
+            }
+            &:first-of-type {
+                max-width: calc(100% - 39rem);
+            }
+
+            & table {
+                thead th {
+                    border: 0;
+                }
+                tr {
+                    line-height: 1.5rem;
+                    border-color: transparent;
+                    & > td:first-child {
+                        display: inline-block;
+                        max-width: 61%;
+                        min-width: 1px;
+                    }
+                }
+            }
+        }
+
         & > .callout-content > blockquote {
             & > .callout-title {
                 display: none;
@@ -1438,7 +1497,7 @@ h1, h2, h3 {
     --icon: url('/lobotomy-corp/assets/icons/abno/qlipcount.png');
 }
 
-.warn1, .terrify {
+.terrify {
     --color: var(--terrify);
 }
 .warn2, .hopeless {
@@ -1944,7 +2003,613 @@ h1, h2, h3 {
 }
 
     /*
-        special (wider) icons
+        new statuses
+    */
+.cguard {
+    --icon-local: url('../assets/icons/nugs/cguard.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/cguard.png'); 
+    --color: #55cdec;  
+}
+.assist {
+    --icon-local: url('../assets/icons/nugs/assist.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/assist.png'); 
+    --color: #e9bf02;  
+}
+.charge {
+    --icon-local: url('../assets/icons/abno/stat/charge.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/charge.png'); 
+    --color: #12bec7;  
+}
+.corrosion {
+    --icon-local: url('../assets/icons/nugs/corrosion.png');
+    --icon: url('/lobotomy-corp/assets/icons/nugs/corrosion.png'); 
+    --color: #dcc7a6;
+}
+    
+    /* Judgement Bird */
+.scales {
+    --icon-local: url('../assets/icons/abno/stat/jb/scales.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/jb/scales.png');      
+    --color: #9df3f5;
+}
+.sin {
+    --icon-local: url('../assets/icons/abno/stat/jb/sin.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/jb/sin.png');      
+    --color: #a68747;
+}
+
+    /* Dream of a Black Swan */
+.leaf {
+    --icon-local: url('../assets/icons/abno/stat/doabs/leaf.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/doabs/leaf.png');      
+    --color: #6a9c4b;
+}
+
+    /* Singing Machine */
+.hyped {
+    --icon-local: url('../assets/icons/abno/stat/sm/hyped.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sm/hyped.png'); 
+    --color: #eedb30;  
+}
+.rhythm {
+    --icon-local: url('../assets/icons/abno/stat/sm/rhythm.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sm/rhythm.png'); 
+    --color: #d5b614;  
+}
+.rhythm2 {
+    --icon-local: url('../assets/icons/abno/stat/sm/rhythm2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sm/rhythm2.png'); 
+    --color: #ffff00;  
+}
+
+
+    /* Isn't this a Silent Orchestra effect...? */
+.adoration {
+    --icon-local: url('../assets/icons/abno/stat/so/adoration.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/so/adoration.png'); 
+    --color: #6e6d6d;  
+}
+
+    /* Blue Star */
+.martyr {
+    --icon-local: url('../assets/icons/abno/stat/bs/martyr.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bs/martyr.png');      
+    --color: #7cd3f2;
+}
+.star {
+    --icon-local: url('../assets/icons/abno/stat/bs/star.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bs/star.png');      
+    --color: #00fbff;
+}
+.sound {
+    --icon-local: url('../assets/icons/abno/stat/bs/sound.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bs/sound.png');     
+    --color: #bbbebf;
+}
+
+
+    /* Nothing There */
+.shell {
+    --icon-local: url('../assets/icons/abno/stat/nt/shell.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/nt/shell.png');      
+    --color: #9b160d;
+}
+.terror {
+    --icon-local: url('../assets/icons/abno/stat/nt/terror.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/nt/terror.png');      
+    --color: #790b03;
+}
+.mimic {
+    --icon-local: url('../assets/icons/abno/stat/nt/mimic.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/nt/mimic.png');      
+    --color: #fa7066;
+}
+
+    /* Big Bird (i think dark/intrud is bb?) */
+.darkness {
+    --icon-local: url('../assets/icons/abno/stat/bb/darkness.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/darkness.png');      
+    --color: #8a6000;
+}
+.intruder {
+    --icon-local: url('../assets/icons/abno/stat/bb/intruder.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/intruder.png');      
+    --color: #8a6000;
+}
+.guardian {
+    --icon-local: url('../assets/icons/abno/stat/bb/guardian.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/guardian.png');      
+    --color: #eeeb5b;
+}
+.dazzle {
+    --icon-local: url('../assets/icons/abno/stat/bb/dazzle.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/dazzle.png');    
+    --color: #a51313;
+}
+.lamp {
+    --icon-local: url('../assets/icons/abno/stat/bb/lamp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/lamp.png');     
+    --color: #e8a623;
+}
+.lamp2 {
+    --icon-local: url('../assets/icons/abno/stat/bb/lamp2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/lamp2.png');   
+    --color: #c46c00;
+}
+.darkness {
+    --icon-local: url('../assets/icons/abno/stat/bb/darkness.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/darkness.png');   
+    --color: #8a6000;
+}
+.enlight {
+    --icon-local: url('../assets/icons/abno/stat/bb/enlight.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bb/enlight.png');   
+    --color: #fad066;
+}
+
+    /* Punishing Bird */
+.punishee {
+    --icon-local: url('../assets/icons/abno/stat/pb/punishee.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/pb/punishee.png');   
+    --color: #9c0000;
+}
+.vigil {
+    --icon-local: url('../assets/icons/abno/stat/pb/vigil.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/pb/vigil.png');   
+    --color: #cd8200; 
+}
+
+    /* Queen of Hatred */
+.villain {
+    --icon-local: url('../assets/icons/abno/stat/qoh/villain.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/villain.png');   
+    --color: #6600bf;
+}
+.slave {
+    --icon-local: url('../assets/icons/abno/stat/qoh/slave.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/slave.png');      
+    --color: #dda6ce;
+}
+.chant {
+    --icon-local: url('../assets/icons/abno/stat/qoh/chant.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/chant.png');      
+    --color: #e97dcc;
+}
+.dumbass {
+    --icon-local: url('../assets/icons/abno/stat/qoh/dumbass.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/dumbass.png');      
+    --color: #9060c6;
+}
+.hysteria {
+    --icon-local: url('../assets/icons/abno/stat/qoh/hysteria.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/hysteria.png');      
+    --color: #7239c4;
+}
+.lovehate {
+    --icon-local: url('../assets/icons/abno/stat/qoh/lovehate.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/lovehate.png');      
+    --color: #ec129d;
+}
+.justice {
+    --icon-local: url('../assets/icons/abno/stat/qoh/justice.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/justice.png');      
+    --color: #e940a8;
+}
+.useless {
+    --icon-local: url('../assets/icons/abno/stat/qoh/useless.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/useless.png');      
+    --color: #a71b48;
+}
+.magical {
+    --icon-local: url('../assets/icons/abno/stat/qoh/magical.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/magical.png');      
+    --color: #75e7f7;
+}
+.arcana {
+    --icon-local: url('../assets/icons/abno/stat/qoh/arcana.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/qoh/arcana.png');      
+    --color: #713cc4;
+}
+
+    /* Knight of Despair */
+.blessing {
+    --icon-local: url('../assets/icons/abno/stat/kod/blessing.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/blessing.png');      
+    --color: #4e81e3;
+}
+.blessing2 {
+    --icon-local: url('../assets/icons/abno/stat/kod/blessing2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/blessing2.png');      
+    --color: #08cbe9;
+}
+.blessing3 {
+    --icon-local: url('../assets/icons/abno/stat/kod/blessing3.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/blessing3.png');      
+    --color: #103c6b;
+}
+.despair {
+    --icon-local: url('../assets/icons/abno/stat/kod/despair.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/despair.png');      
+    --color: #b4b4b3;
+}
+.knight {
+    --icon-local: url('../assets/icons/abno/stat/kod/knight.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/knight.png');      
+    --color: #0955a9;
+}
+.pride {
+    --icon-local: url('../assets/icons/abno/stat/kod/pride.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/pride.png');      
+    --color: #0965bf;
+}
+.sword {
+    --icon-local: url('../assets/icons/abno/stat/kod/sword.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/sword.png');      
+    --color: #213fa5;
+}
+.sword2 {
+    --icon-local: url('../assets/icons/abno/stat/kod/sword2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/sword2.png');      
+    --color: #112b73;
+}
+.tears {
+    --icon-local: url('../assets/icons/abno/stat/kod/tears.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/tears.png');      
+    --color: #565556;
+}
+.tears2 {
+    --icon-local: url('../assets/icons/abno/stat/kod/tears2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/tears2.png');      
+    --color: #0202c0;
+}
+.tears3 {
+    --icon-local: url('../assets/icons/abno/stat/kod/tears3.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/tears3.png');      
+    --color: #0b488f;
+}
+.tearsharp {
+    --icon-local: url('../assets/icons/abno/stat/kod/tearsharp.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/kod/tearsharp.png');      
+    --color: #223981;
+}
+
+    /* Snow Queen */
+.frozen {
+    --icon-local: url('../assets/icons/abno/stat/sq/frozen.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sq/frozen.png');
+    --color: #4d7fa8;
+}
+.splinter {
+    --icon-local: url('../assets/icons/abno/stat/sq/splinter.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sq/splinter.png');
+    --color: #9febed;
+}
+
+    /* Mountain of Smiling Bodies */
+.mass {
+    --icon-local: url('../assets/icons/abno/stat/mosb/mass.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/mosb/mass.png');
+    --color: #554c4a;
+}
+
+    /* Yinglong */
+.mercy {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/mercy.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/mercy.png');
+    --color: #ee928d;
+}
+.flowerpin {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/pin.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/pin.png');
+    --color: #e93830;
+}
+.flowerwedge {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/wedge.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/wedge.png');
+    --color: #e93830;
+}
+.scale {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/scale.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/scale.png');
+    --color: #dab1b1;
+}
+.spirit {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/spirit.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/spirit.png');
+    --color: #ceaeaa;
+}
+.tarnished {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/tarnished.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/tarnished.png');
+    --color: #ee5b6e;
+}
+.tarnished2 {
+    --icon-local: url('../assets/icons/abno/stat/yinglong/tarnished2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/yinglong/tarnished2.png');
+    --color: #bb335d;
+}
+
+    /* Wayward Passenger */
+.pdim {
+    --icon-local: url('../assets/icons/abno/stat/wwp/pdim.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/pdim.png');
+    --color: #a0d761;
+}
+.hdim {
+    --icon-local: url('../assets/icons/abno/stat/wwp/hdim.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/hdim.png');
+    --color: #cd0202;
+}
+.edim {
+    --icon-local: url('../assets/icons/abno/stat/wwp/edim.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/edim.png');
+    --color: #1bccdb;
+}
+.tdim {
+    --icon-local: url('../assets/icons/abno/stat/wwp/tdim.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/tdim.png');
+    --color: #eeb117;
+}
+.castaway {
+    --icon-local: url('../assets/icons/abno/stat/wwp/castaway.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/castaway.png');
+    --color: #bd66da;
+}
+.rift {
+    --icon-local: url('../assets/icons/abno/stat/wwp/rift.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/rift.png');
+    --color: #93a6ca;
+}
+.quad {
+    --icon-local: url('../assets/icons/abno/stat/wwp/quad.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wwp/quad.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #d33127 var(--gradient) var(--begin), #eec002, #8cd833, #44b9c7 var(--end));
+
+}
+
+    /* Whitenight */
+.paradise {
+    --icon-local: url('../assets/icons/abno/stat/wn/paradise.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/paradise.png');
+    --color: #d8cfc2;
+}
+.revelation {
+    --icon-local: url('../assets/icons/abno/stat/wn/revelation.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/revelation.png');
+    --color: #ec0231;
+}
+
+    /* Unbrilliant Glory */
+.scabbard {
+    --icon-local: url('../assets/icons/abno/stat/ug/scabbard.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/ug/scabbard.png');
+    --color: #d7a250;
+}
+
+    /* Great Trichilochosm */
+.disjunction {
+    --icon-local: url('../assets/icons/abno/stat/gt/disjunction.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/disjunction.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #ee811a var(--gradient) var(--begin), #d3d2d2, #74311d var(--end));
+}
+.dustfuture {
+    --icon-local: url('../assets/icons/abno/stat/gt/dustfuture.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/dustfuture.png');
+    --color: #7d3d21;
+}
+.dustpast {
+    --icon-local: url('../assets/icons/abno/stat/gt/dustpast.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/dustpast.png');
+    --color: #db7c38;
+}
+.dustpresent {
+    --icon-local: url('../assets/icons/abno/stat/gt/dustpresent.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/dustpresent.png');
+    --color: #c5c2c2;
+}
+.infuture {
+    --icon-local: url('../assets/icons/abno/stat/gt/infuture.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/infuture.png');
+    --color: #d7a250;
+}
+.infutureoff {
+    --icon-local: url('../assets/icons/abno/stat/gt/infutureoff.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/infutureoff.png');
+    --color: #382d29;
+}
+.inpast {
+    --icon-local: url('../assets/icons/abno/stat/gt/inpast.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/inpast.png');
+    --color: #eab024;
+}
+.inpastoff {
+    --icon-local: url('../assets/icons/abno/stat/gt/inpastoff.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/inpastoff.png');
+    --color: #61554f;
+}
+.inpresent {
+    --icon-local: url('../assets/icons/abno/stat/gt/inpresent.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/inpresent.png');
+    --color: #d0d1d1;
+}
+.inpresentoff {
+    --icon-local: url('../assets/icons/abno/stat/gt/inpresentoff.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/inpresentoff.png');
+    --color: #737374;
+}
+.tornout {
+    --icon-local: url('../assets/icons/abno/stat/gt/tornout.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/gt/tornout.png');
+    --color: #bc0202;
+}
+
+    /* Funeral of the Dead Butterflies */
+.butterfly, .slammo, .slreload {
+    /* need to mess with this more */
+     background-image: linear-gradient(to right, transparent var(--gradient), #e5e9ed var(--gradient) var(--begin), #e5e9ed calc(40% + var(--gradient)), #404145 calc(40% + var(--gradient)), #404145 var(--end));
+}
+.butterfly {
+    --icon-local: url('../assets/icons/abno/stat/fotdb/butterfly.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fotdb/butterfly.png');
+}
+.slammo {
+    --icon-local: url('../assets/icons/abno/stat/fotdb/slammo.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fotdb/slammo.png');
+}
+.slreload {
+    --icon-local: url('../assets/icons/abno/stat/fotdb/slreload.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fotdb/slreload.png');
+}
+
+    /* Four-hundred Roses */
+.carmilla {
+    --icon-local: url('../assets/icons/abno/stat/fhr/carmilla.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/carmilla.png');
+    --color: #9a1f4b;
+}
+.nourish {
+    --icon-local: url('../assets/icons/abno/stat/fhr/nourish.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/nourish.png');
+    --color: #bc0b11;
+}
+.polydip {
+    --icon-local: url('../assets/icons/abno/stat/fhr/polydip.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/polydip.png');
+    --color: #af0914;
+}
+.rose {
+    --icon-local: url('../assets/icons/abno/stat/fhr/rose.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/rose.png');
+    --color: #d8090e;
+}
+.thorn {
+    --icon-local: url('../assets/icons/abno/stat/fhr/thorn.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/thorn.png');
+    --color: #4c5f45;
+}
+.wedge {
+    --icon-local: url('../assets/icons/abno/stat/fhr/wedge.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fhr/wedge.png');
+    --color: #ae0c1c;
+}
+
+    /* Der Freischütz */
+.mbammo {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbammo.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbammo.png');
+    --color: #2434b6;
+}
+.mbflame {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbflame.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbflame.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #134a7c var(--gradient) var(--begin), #1673df, #b1c8e9, #1673df, #134a7c var(--end));
+}
+.mbtarget {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbtarget.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbtarget.png');
+    --color: #3184e6;
+}
+.mbullet1 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet1.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet1.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #19193a var(--gradient) var(--begin), #252fa6, #19193a var(--end));
+}
+.mbullet2 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet2.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #19193a var(--gradient) var(--begin), #252fa6, #19193a var(--end));
+}
+.mbullet3 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet3.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet3.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #19193a var(--gradient) var(--begin), #252fa6, #0e4aeb, #252fa6, #19193a var(--end));
+}
+.mbullet4 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet4.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet4.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #19193a var(--gradient) var(--begin), #252fa6, #0e4aeb, #252fa6, #19193a var(--end));
+}
+.mbullet5 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet5.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet5.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #65a1ff var(--gradient) var(--begin), #19193a, #252fa6, #0e4aeb, #252fa6, #19193a, #65a1ff var(--end));
+}
+.mbullet6 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet6.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet6.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #65a1ff var(--gradient) var(--begin), #19193a, #252fa6, #0e4aeb, #252fa6, #19193a, #65a1ff var(--end));
+}
+.mbullet7 {
+    --icon-local: url('../assets/icons/abno/stat/dfrei/mbullet7.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dfrei/mbullet7.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #c7ffff var(--gradient) var(--begin), #19193a, #0e4aeb, #65a1ff, #0e4aeb, #19193a, #c7ffff var(--end));
+}
+
+    /* Der Fluchschütze */
+.fellammo {
+    --icon-local: url('../assets/icons/abno/stat/dflu/fellammo.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dflu/fellammo.png');
+    --color: #a30b02;
+}
+.memory {
+    --icon-local: url('../assets/icons/abno/stat/dflu/memory.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dflu/memory.png');
+    --color: #da5b2d;
+}
+.stigma {
+    --icon-local: url('../assets/icons/abno/stat/dflu/stigma.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dflu/stigma.png');
+    --color: #c90b02;
+}
+
+    /* Drifting Fox */
+.dfthorns {
+    --icon-local: url('../assets/icons/abno/stat/df/dfthorns.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/df/dfthorns.png');
+    --color: #21625a;
+}
+.umbrella {
+    --icon-local: url('../assets/icons/abno/stat/df/umbrella.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/df/umbrella.png');
+    --color: #3e604c;
+}
+.umbrella2 {
+    --icon-local: url('../assets/icons/abno/stat/df/umbrella2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/df/umbrella2.png');
+    --color: #62b0b6;
+}
+
+    /* Dream-devouring Siltcurrent */
+.shard {
+    --icon-local: url('../assets/icons/abno/stat/dds/shard.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dds/shard.png');
+    --color: #07c5b2;
+}
+.obsession {
+    --icon-local: url('../assets/icons/abno/stat/dds/obsession.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/dds/obsession.png');
+    --color: #058e8d;
+}
+
+    /* Alriune */
+.aroma {
+    --icon-local: url('../assets/icons/abno/stat/alriune/aroma.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/aroma.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #e9accf var(--gradient) var(--begin), #94d0da var(--end));
+}
+.petals {
+    --icon-local: url('../assets/icons/abno/stat/alriune/petals.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/petals.png');
+    background-image: linear-gradient(to right, transparent var(--gradient), #da7dbb var(--gradient) var(--begin), #54bfbe var(--end));
+}
+.pink {
+    --icon-local: url('../assets/icons/abno/stat/alriune/pink.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/pink.png');
+    --color: #dab3cd;
+}
+
+    /*
+        special (wider) icons 2434b6
     */
 .regen {
     --size-w: 30px;
@@ -1972,7 +2637,12 @@ h1, h2, h3 {
      */
 
 .rb, .rbp, .rp, .rw, .rwb, .rwp, .wb, .wp, .wbp, .rwbp, 
-.regen {
+.regen,
+.quad, 
+.disjunction, 
+.butterfly, .slammo, .slreload,
+.mbflame, .mbullet1, .mbullet2, .mbullet3, .mbullet4, .mbullet5, .mbullet6, .mbullet7,
+.aroma, .petals {
     --color: transparent;
     background-clip: text;
 }
