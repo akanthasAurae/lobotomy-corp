@@ -19,27 +19,27 @@ The weapon's bullets travel across the corridor, along the horizon.
 > >[!default] Passive
 > >
 > ><span class="icon warn5">Magic Bullet</span>
-> ><code>- When there is no <span class="icon warn2">Request Target</span> present, the first enemy this unit hits is marked as one</code>
-> ><code>- Deal <span class="icon weap">+3 damage</span> against the <span class="icon warn2">Requested Target</span></code>
-> ><code>- When this unit defeats the <span class="icon warn2">Requested Target</span>, recover 50% of this unit's <span class="icon spregen">SP</span></code>
+> ><code>- When there is no <span class="icon mbtarget">Request Target</span> present, the first enemy this unit hits is marked as one</code>
+> ><code>- Deal <span class="icon weap">+3 damage</span> against the <span class="icon mbtarget">Requested Target</span></code>
+> ><code>- When this unit defeats the <span class="icon mbtarget">Requested Target</span>, heal 40 <span class="icon spregen">SP</span> and then improve <span class="icon atkspd">Attack Speed</span> by one stage (max 1)</code>
 >
 > >[!default] Ignition
 > >
-> > A swing from the rifle
+> > The wearer uses professional bayonet combat to strike the target
 > > <code> Requires 1 <span class="icon warn1">Action</span></code>
 > ><code>Atk Weight ⯀</code>
 > ><code>- 4~9 <span class="icon red">RED</span></code>
 >
 > >[!default] Magic Bullet: Fire
 > >
-> > The employee loads a Magic Bullet in the chamber and aims, creating magic circles in front of the barrel depending on the count of Magic Bullet before shooting.
-> ><code> Requires 3 <span class="icon warn1">Actions</span></code>
+> > The wearer loads a Magic Bullet in the chamber and aims, creating magic circles in front of the barrel depending on the count of Magic Bullet before shooting.
+> ><code> Requires <span class="icon warn1">Actions</span> equal to <span class="icon mbammo">Magic Bullet</span> on self (max 7)</code>
 > ><code>Atk Weight ⯀</code>
-> ><code>- Before Attack: Gain 1 <span class="icon warn5">Magic Bullet</span> and lose (<span class="icon warn5">Magic Bullet</span> x 5) <span class="icon sploss">SP%</span></code>
+> ><code>- Before Attack: Gain 1 <span class="icon mbammo">Magic Bullet</span> and lose (<span class="icon mbammo">Magic Bullet</span> x 5) <span class="icon sploss">SP%</span></code>
 > ><code>- 20~22 <span class="icon black">BLACK</span></code>
 > ><code>- At  40% SP or less, this becomes indiscriminate</code>
-> ><code>- Atk Weight becomes equal to <span class="icon warn5">Magic Bullet</span> value</code>
-> ><code>- If at 7 <span class="icon warn5">Magic Bullet</span>, reset to 0</code>
+> ><code>- Atk Weight becomes equal to <span class="icon mbammo">Magic Bullet</span> value</code>
+> ><code>- If at 7 <span class="icon mbammo">Magic Bullet</span>, reset to 0</code>
 
 >[!default] E.G.O Suit 
 ><span class="icon teth">Fragments from Somewhere</span>

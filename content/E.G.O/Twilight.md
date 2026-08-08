@@ -19,12 +19,9 @@ The wielder of this armament may also bring peace as they did.
 > >[!default] Passive
 > >
 > ><span class="icon warn6">Twilight</span>
-> > <code>- Battle Start: The strongest enemy is marked with <span class="icon warn3">Intruder</span> for the rest of the battle. If said enemy is defeated and there's still other enemies alive, mark the next strongest enemy with <span class="icon warn3">Intruder</span></code>
+> > <code><span class="no-icon warn3">Battle Start:</span> The strongest enemy is marked with <span class="icon intruder">Intruder</span> for the rest of the battle. If said enemy is defeated and there's still other enemies alive, mark the next strongest enemy with <span class="icon intruder">Intruder</span></code>
 > > <code>- Turn Start: All allies gain 2 <span class="icon spd">SPD</span> for as long as they're fighting alongside this unit.</code>
-> > <code>- If one or more of said allies are wearing the full E.G.O Gear of the following Abnormalities, they gain +2 <span class="icon clash">Clash Power</span>:</code>
-> ><code> - Beak</code>
-> ><code> - Justitia</code>
-> ><code> - Lamp</code>
+> > <code>- Allies wearing <span class="icon gift">E.G.O Gear</span> from Punishing Bird, Big Bird or Judgement Bird gain +2 <span class="icon clash">Clash Power</span> and <span class="icon guardian">Guardians of the Forest</span></code>
 > 
 > 
 > >[!default] Prowl
@@ -40,8 +37,9 @@ The wielder of this armament may also bring peace as they did.
 > > Perform three heavy attacks, then follow up with an overhead slash that deals all damage types at once.
 > ><code> Requires 3 <span class="icon warn1">Actions</span></code>
 > ><code>Atk Weight ⯀</code>
-> ><code>- 18~24 <span class="icon rwbp">RWBP</span>, repeat 2 times: 25% chance to deal one of the four damage types</code>
+> ><code>- 18~24 <span class="icon rwbp">RWBP</span>, repeat 2 times: deals one of the four damage types at a 25% chance</code>
 > ><code>- 12\~18 <span class="icon rwbp">RWBP</span></code>
+> ><code>- Order an Ally with <span class="icon guardian">Guardians of the Forest</span> to <span class="icon weap">Assist Attack</span> with their strongest skill (except Overlock)</code>
 > ><code>- Goes on Cooldown for 3 turns</code>
 > 
 > > [!default] Peace For All
@@ -71,8 +69,8 @@ This could stop countless incidents, but you’ll have to be prepared to step in
 > >
 > ><span class="icon warn3">The Beast</span>
 > ><code>- Attacks directed toward this unit lose 2 <span class="icon clash">Clash Power</span></code>
-> ><code>- <span class="icon uncontrol">Enchanted</span> enemies prioritize this unit and deal <span class="icon weap">+2 damage</span> with attacks</code>
-> ><code>- <span class="icon clash">Clash Power</span> +2 against <span class="icon uncontrol">Enchanted</span> enemies, and recover 5 <span class="icon hpregen">HP</span> upon winning a clash</code>
+> ><code>- <span class="icon lamp">Enchanted</span> enemies prioritize this unit and deal <span class="icon weap">+2 damage</span> with attacks</code>
+> ><code>- <span class="icon clash">Clash Power</span> +2 against <span class="icon lamp">Enchanted</span> enemies, and recover 10 <span class="icon hpregen">HP</span> upon winning a clash</code>
 > ><code>- Turn Start: All enemies receive 5 <span class="icon black">BLACK</span> damage. The damage can be extended to <span class="icon rwbp">RWBP</span> by equipping all E.G.O parts from <span class="icon abno">Apocalypse Bird</span>; equipping said parts also unlock unique skills</code>
 > ><code>- When reaching 40% <span class="icon hp">HP</span> or lower, gain the following effects:</code>
 > ><code>- Min. Attack Power +6 and Max. Attack Power +9</code>
@@ -90,8 +88,8 @@ This could stop countless incidents, but you’ll have to be prepared to step in
 > ><code>Acts out before any other unit</code>
 > ><code>- Take 25% <span class="icon sploss">SP</span> damage before using this Skill</code>
 > ><code>- 18~26 <span class="icon black">BLACK</span></code>
-> ><code>- Main target becomes <span class="icon uncontrol">Enchanted</span></code>
-> ><code>- Other enemies have a 25% chance of becoming <span class="icon uncontrol">Enchanted</span></code>
+> ><code>- Main target becomes <span class="icon lamp">Enchanted</span></code>
+> ><code>- Other enemies have a 25% chance of becoming <span class="icon lamp">Enchanted</span></code>
 > ><code>- All allies including this unit gain 3 additional<span class="icon warn1">Actions</span> and gain <span class="icon warn6">Through the Dark Twilight</span></code>
 > ><code>- Goes on Cooldown for 6 turns</code>
 >
@@ -103,6 +101,7 @@ This could stop countless incidents, but you’ll have to be prepared to step in
 > ><code>- Take 15% <span class="icon sploss">SP</span> damage before using this Skill</code>
 > ><code>- 60~80 <span class="icon red">RED</span></code>
 > ><code>- Apply a Bleeding effect that deals 8 <span class="icon red">RED</span> damage every 10s for 30s</code>
+> ><code>- Inflict <span class="icon punishee">Punishee</span> to target; if this unit is struck by the <span class="icon punishee">Punishee</span> while below 40%, use this skill as a counter (ignores cooldown)</code>
 > ><code>- Recover <span class="icon hpregen">HP</span> by half of damage dealt with this Skill</code>
 > ><code>- Goes on Cooldown for 6 turns</code>
 > 
@@ -113,7 +112,7 @@ This could stop countless incidents, but you’ll have to be prepared to step in
 > ><code>Atk Weight ⯀⯀⯀</code>
 > ><code>- Take 25% <span class="icon sploss">SP</span> damage before using this Skill</code>
 > ><code>- 40 <span class="icon pale">PALE</span></code>
-> ><code>- Inflict 3 <span class="icon warn2">Heavy Guilt</span></code>
+> ><code>- Inflict 3 <span class="icon scales">Heavy Guilt</span></code>
 > ><code>- Goes on Cooldown for 6 turns</code>
 
 
@@ -141,6 +140,17 @@ This could stop countless incidents, but you’ll have to be prepared to step in
 ><code>- A golden barrier protects this unit, reducing any incoming damage by 90%</code>
 ><code>- Expires after Turn End</code>
 >
-><span class="icon warn2">Heavy Guilt</span>
+><span class="icon scales">Heavy Guilt</span>
 ><code>- If the amount is 5 or greater at the end of the turn, take 10 <span class="icon pale">PALE</span> damage for every Stack on self</code>
 ><code>- Expires after activation</code>
+>
+><span class="icon intruder">Intruder:</span>
+><code>- Deal<span class="icon weap">-20% damage</span>; deal <span class="icon weap">-30% damage</span> to units with <span class="icon guardian">Guardians of the Forest</span></code>
+><code>- Take <span class="icon weap">+20% damage</span>; take <span class="icon weap">+30% damage</span> from units that have <span class="icon guardian">Guardians of the Forest</span></code>
+>
+><span class="icon punishee">Punishee:</span>
+><code>- This unit takes <span class="icon weap">+50% damage</span> from Twilight and units with <span class="icon guardian">Guardians of the Forest</span></code>
+><code>- Expires after one turn</code>
+>
+><span class="icon guardian">Guardians of the Forest:</span>
+><code>- Before using a Skill, recover 5% of max <span class="icon sp">SP</span></code>

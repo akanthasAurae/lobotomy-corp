@@ -26,8 +26,8 @@ Hopefully this E.G.O will aid in keeping the peace as it was originally meant to
 > > <code>- After attacking the enemy with the most <span class="icon hp">HP</span>, recover the <span class="icon hpregen">HP</span> of the ally with the least <span class="icon hp">HP%</span> by 4 (3 times per turn)</code>
 > > 
 > > <span class="icon warn6">The Weight of Sin</span>
-> > <code>- At the start of a Turn, inflict 1 <span class="icon warn2">Mark of Sin</span> to the unit that dealt the most damage to allies last turn</code>
-> > <code>- <span class="icon clash">Clash Power</span> +1 for every <span class="icon warn2">Mark of Sin</span> on target (max 5)</code>
+> > <code>- At the start of a Turn, inflict 1 <span class="icon sin">Mark of Sin</span> to the unit that dealt the most damage to allies last turn</code>
+> > <code>- <span class="icon clash">Clash Power</span> +1 for every <span class="icon sin">Mark of Sin</span> on target (max 5)</code>
 > 
 > >[!default] For Peace
 > >
@@ -51,7 +51,7 @@ Hopefully this E.G.O will aid in keeping the peace as it was originally meant to
 > ><code> Requires 5 <span class="icon warn1">Actions</span></code>
 > ><code>Atk Weight ⯀⯀⯀</code>
 > ><code> Take 15% <span class="icon sploss">SP</span> damage before using this Skill</code>
-> ><code>- Can only be used if main target has 5+ <span class="icon warn2">Marks of Sin</span></code>
+> ><code>- Can only be used if main target has 5+ <span class="icon sin">Marks of Sin</span></code>
 > ><code>- 20 <span class="icon pale">PALE</span></code>
 > ><code>- Targets take 10 <span class="icon pale">PALE</span> bonus damage for every Mark of Sin that they have (max 50)</code>
 > ><code>- Goes on Cooldown for 5 turns</code>

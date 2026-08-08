@@ -24,7 +24,7 @@ However, it may be wise to leave some audience alive to applaud at the end.
 > ><span class="icon warn6">Da Capo</span>
 > > <code>- Whenever this unit <span class="icon warn2">Staggers</span> an enemy, all enemies lose 3 <span class="icon warn1">Actions</span> at the start of the next Turn</code>
 > ><code>- If another ally <span class="icon warn2">Staggers</span> an enemy, heal their <span class="icon spregen">SP</span> based on 20% of this unit's Max. <span class="icon sp">SP</span></code>
-> ><code>- As long as this unit is in the room, <span class="icon rank4">Level 4 Agents</span> or higher will not be affected by <span class="icon warn3">Fervent Adoration</span></code>
+> ><code>- As long as this unit is in the room, <span class="icon rank4">Level 4 Agents</span> or higher will not be affected by <span class="icon adoration">Fervent Adoration</span></code>
 > 
 > 
 > >[!default] Adagio Cantabile
@@ -45,14 +45,16 @@ However, it may be wise to leave some audience alive to applaud at the end.
 > 
 > > [!default] Finale
 > >
-> > A grand finale that deals a massive amount of WHITE damage
-> ><code> Requires all <span class="icon warn1">Actions</span></code>
-> ><code>Atk Weight ⯀⯀⯀⯀⯀⯀⯀⯀⯀⯀⯀⯀</code>
+> > Da Capo levitates away from the user, slowly spinning as a tune starts playing across the area. A moment after, the user bows as all musical staffs release into a blast, dealing massive amounts of WHITE damage that reduces the Facility's energy supply.
+> ><code> Spends all <span class="icon warn1">Actions</span></code>
+> ><code> Can only be used if The Fourth Movement is active</code>
+> ><code>Atk Weight: Department Wide</code>
 > ><code> Take 50% <span class="icon sploss">SP</span> damage before using this Skill</code>
-> ><code>- 100 <span class="icon white">WHITE</span></code>
-> ><code>- If the targets are <span class="icon endured">Endured</span> or <span class="icon resistant">Resistant</span> to <span class="icon white">WHITE</span> damage, their <span class="icon white">WHITE</span> resistance will be set to <span class="icon weak">Weak (1.5)</span> for this Skill</code>
+> ><code>- 200 <span class="icon white">WHITE</span></code>
+> ><code>- If the targets are <span class="icon endured">Endured</span> or <span class="icon resistant">Resistant</span> to <span class="icon white">WHITE</span> damage, set their <span class="icon white">WHITE</span> resistance to <span class="icon weak">Weak (1.5)</span> for the duration of this Skill</code>
 > ><code>- Allies will recover <span class="icon spregen">SP</span> based on 50% of this unit's Max. <span class="icon sp">SP</span></code>
-> ><code>- All Characters except this unit will suffer from <span class="icon warn3">Fervent Adoration</span> next turn</code>
+> ><code>- Inflict <span class="icon adoration">Fervent Adoration</span> to all characters next turn</code>
+> ><code>- After Attack: consume 20% of the Facility's maximum <span class="icon pe">Energy</span></code>
 > ><code>- Can only be used once a day</code>
 
 >[!default] E.G.O Suit 
@@ -82,7 +84,7 @@ It would be wise to leave some of the audience alive until the finale to hear th
 > > <code>- During The Fourth Movement, this unit's <span class="icon red">RED</span> resistance decreases by 0.2 and allies have their <span class="icon red">RED</span> resistance decreased by 0.1 (cannot go lower than 0.1)</code>
 > > 
 > > <code>- During the Turn that Finale would be used, all of this unit's resistances decrease by 0.3 and all allies' resistances decrease by 0.2</code>
-> > <code>- If the Movements aren't advanced in 2 turns, this unit will <span class="icon panic">panic</span></code>
+> > <code>- If the Movements aren't advanced in 2 turns, this unit will <span class="icon panic">panic</span> and gain <span class="icon adoration">Fervent Adoration</span></code>
 > >
 > 
 > > [!default] The First Movement
