@@ -2158,6 +2158,16 @@ h1, h2, h3 {
     --icon: url('/lobotomy-corp/assets/icons/abno/stat/pb/vigil.png');   
     --color: #cd8200; 
 }
+.punisher {
+    --icon-local: url('../assets/icons/abno/stat/pb/punisher.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/pb/punisher.png');   
+    --color: #9f1212;
+}
+.punish {
+    --icon-local: url('../assets/icons/abno/stat/pb/punish.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/pb/punish.png');   
+    --color: #e3e3e3;
+}
 
     /* Queen of Hatred */
 .villain {
@@ -2378,6 +2388,21 @@ h1, h2, h3 {
     --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/revelation.png');
     --color: #ec0231;
 }
+.thorns {
+    --icon-local: url('../assets/icons/abno/stat/wn/thorns.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/thorns.png');
+    --color: #8b3131;
+}
+.apostle {
+    --icon-local: url('../assets/icons/abno/stat/wn/apostle.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/apostle.png');
+    --color: #dcd9dc;
+}
+.bless {
+    --icon-local: url('../assets/icons/abno/stat/wn/bless.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/wn/bless.png');
+    --color: #e8e35f;
+}
 
     /* Unbrilliant Glory */
 .scabbard {
@@ -2459,6 +2484,11 @@ h1, h2, h3 {
 .slreload {
     --icon-local: url('../assets/icons/abno/stat/fotdb/slreload.png');
     --icon: url('/lobotomy-corp/assets/icons/abno/stat/fotdb/slreload.png');
+}
+.butterfly2 {
+    --icon-local: url('../assets/icons/abno/stat/fotdb/butterfly2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/fotdb/butterfly2.png');
+    --color: #fdfdfd;
 }
 
     /* Four-hundred Roses */
@@ -2606,6 +2636,79 @@ h1, h2, h3 {
     --icon-local: url('../assets/icons/abno/stat/alriune/pink.png');
     --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/pink.png');
     --color: #dab3cd;
+}
+.petal {
+    --icon-local: url('../assets/icons/abno/stat/alriune/petal.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/petal.png');
+    --color: #fcc8ec;
+}
+.aroma2 {
+    --icon-local: url('../assets/icons/abno/stat/alriune/aroma2.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/aroma2.png');
+    --color: #d969c6;
+}
+.laurel {
+    --icon-local: url('../assets/icons/abno/stat/alriune/laurel.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/alriune/laurel.png');
+    --color: #f7aaef;
+}
+
+    /* Big and Will be Bad Wolf */
+.savage {
+    --icon-local: url('../assets/icons/abno/stat/bawbbw/savage.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/bawbbw/savage.png');
+    --color: #0f5ce9;
+}
+
+    /* Laetitia */
+.pitapat {
+    --icon-local: url('../assets/icons/abno/stat/laetitia/pitapat.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/laetitia/pitapat.png');
+    --color: #c5003e;
+}
+
+    /* Little Red Riding Hooded Mercenary */
+.astray {
+    --icon-local: url('../assets/icons/abno/stat/lrrhm/astray.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/lrrhm/astray.png');
+    --color: #9c0404;
+}
+.redmark {
+    --icon-local: url('../assets/icons/abno/stat/lrrhm/redmark.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/lrrhm/redmark.png');
+    --color: #a20903;
+}
+.rage {
+    --icon-local: url('../assets/icons/abno/stat/lrrhm/rage.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/lrrhm/rage.png');
+    --color: #f97909;
+}
+.scars {
+    --icon-local: url('../assets/icons/abno/stat/lrrhm/scars.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/lrrhm/scars.png');
+    --color: #d10000;
+}
+
+    /* Silent Girl */
+.anxiety {
+    --icon-local: url('../assets/icons/abno/stat/sg/anxiety.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sg/anxiety.png');
+    --color: #ff1400;
+}
+.selfreproach {
+    --icon-local: url('../assets/icons/abno/stat/sg/selfreproach.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sg/selfreproach.png');
+    --color: #fff500;
+}
+.fright {
+    --icon-local: url('../assets/icons/abno/stat/sg/fright.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sg/fright.png');
+    --color: #009aff;
+}
+.gaze {
+    --icon-local: url('../assets/icons/abno/stat/sg/gaze.png');
+    --icon: url('/lobotomy-corp/assets/icons/abno/stat/sg/gaze.png');
+    --color: #cca6ff;
 }
 
     /*

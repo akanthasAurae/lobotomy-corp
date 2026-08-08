@@ -29,6 +29,7 @@ post-work:
 		- <span class="icon lamp">lamp</span>, <span class="icon dazzle">dazzle</span>, <span class="icon guardian">guardian</span>, <span class="icon lamp2">lamp2</span>, <span class="icon intruder">intruder</span>, <span class="icon darkness">darkness</span>, <span class="icon enlight">enlight</span>
 	- Punishing Bird:
 		- <span class="icon punishee">punishee</span>, <span class="icon vigil">vigil</span>
+		- (8th aug) <span class="icon punish">punish</span>, <span class="icon punisher">punisher</span>
 	- Queen of Hatred:
 		- <span class="icon slave">slave</span>, <span class="icon villain">villain</span>, <span class="icon dumbass">dumbass</span>, <span class="icon chant">chant</span>, <span class="icon hysteria">hysteria</span>, <span class="icon lovehate">lovehate</span>, <span class="icon justice">justice</span>, <span class="icon useless">useless</span>, <span class="icon arcana">arcana</span>
 	- Silent Orchestra:
@@ -47,6 +48,7 @@ post-work:
 		- <span class="icon mass">mass</span>
 	- Alriune:
 		- <span class="icon aroma">aroma</span>, <span class="icon petals">petals</span>, <span class="icon pink">pink</span>
+		- (8th aug) <span class="icon aroma2">aroma2</span>, <span class="icon petal">petal</span>, <span class="icon laurel">laurel</span>
 	- Dream-Devouring Siltcurrent:
 		- <span class="icon obsession">obsession</span>, <span class="icon shard">shard</span>
 	- Drifting Fox:
@@ -59,16 +61,26 @@ post-work:
 		- <span class="icon carmilla">carmilla</span>, <span class="icon nourish">nourish</span>, <span class="icon polydip">polydip</span>, <span class="icon rose">rose</span>, <span class="icon thorn">thorn</span>, <span class="icon wedge">wedge</span>
 	- Funeral of the Dead Butterflies:
 		- <span class="icon butterfly">butterfly</span>, <span class="icon slammo">slammo</span>, <span class="icon slreload">slreload</span>
+		- (8th aug) <span class="icon butterfly2">butterfly2</span>
 	- Great Trichilochosm:
 		- <span class="icon disjunction">disjunction</span>, <span class="icon dustfuture">dustfuture</span>, <span class="icon dustpresent">dustpresent</span>, <span class="icon dustpast">dustpast</span>, <span class="icon infuture">infuture</span>, <span class="icon inpresent">inpresent</span>, <span class="icon inpast">inpast</span>, <span class="icon infutureoff">infutureoff</span>, <span class="icon inpresentoff">inpresentoff</span>, <span class="icon inpastoff">inpastoff</span>, <span class="icon tornout">tornout</span>
 	- Unbrilliant Glory:
 		- <span class="icon scabbard">scabbard</span>
 	- Whitenight:
 		- <span class="icon revelation">revelation</span>, <span class="icon paradise">paradise</span>
+		- (8th aug) <span class="icon bless">bless</span>, <span class="icon thorns">thorns</span>, <span class="icon apostle">apostle</span>
 	- Wayward Passenger:
 		- <span class="icon pdim">pdim</span>, <span class="icon hdim">hdim</span>, <span class="icon tdim">tdim</span>, <span class="icon edim">edim</span>, <span class="icon castaway">castaway</span>, <span class="icon rift">rift</span>, <span class="icon quad">quad</span>
 	- Yinglong:
 		- <span class="icon mercy">mercy</span>, <span class="icon flowerpin">flowerpin</span>, <span class="icon flowerwedge">flowerwedge</span>, <span class="icon scale">scale</span>, <span class="icon spirit">spirit</span>, <span class="icon tarnished">tarnished</span>, <span class="icon tarnished2">tarnished2</span>
+	- Silent Girl (8th aug):
+		- <span class="icon anxiety">anxiety</span>, <span class="icon fright">fright</span>, <span class="icon selfreproach">selfreproach</span>, <span class="icon gaze">gaze</span>
+	- Little Red Riding Hooded Mercenary (8th aug):
+		- <span class="icon astray">astray</span>, <span class="icon rage">rage</span>, <span class="icon redmark">redmark</span>, <span class="icon scars">scars</span>
+	- Laetitia (8th aug):
+		- <span class="icon pitapat">pitapat</span>
+	- Big and Will be Bad Wolf (8th aug):
+		- <span class="icon savage">savage</span>
 	- Non-abno:
 		- <span class="icon cguard">cguard</span>, <span class="icon assist">assist</span>, <span class="icon charge">charge</span>, <span class="icon corrosion">corrosion</span>
 
